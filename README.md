@@ -1,3 +1,7 @@
+# View published page
+
+https://ivakamila.github.io/BuildUpNepal/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
