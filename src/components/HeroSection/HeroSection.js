@@ -6,7 +6,7 @@ import Menu from "./Menu";
 const HeroSection = () => {
   return (
     <div>
-      <HeroSlider />
+      <HeroSlider style={{}} />
       <Menu />
       <HeroImpact />
     </div>
