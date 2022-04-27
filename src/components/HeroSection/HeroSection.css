@@ -2,15 +2,30 @@
 
 .heroSlider {
     width: 100vw;
-    max-height: 100vh;
+    height: 100vh;
     overflow: hidden;
     position: relative;
 }
 
-.slide.active {
+.slide { 
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    transition: all 500ms ease-in-out;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all 0.5s ease;
+}
+
+.slideImg {
+    width: 100%;
+    height: 100%;
+}
+  
+.slide.current {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .logo {
@@ -22,21 +37,21 @@
 
 .slideDesc {
     position: absolute;
-    top: 30%;
+    top: 3.6em;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 55%;
     color: #fff;
     font-size: 4rem;
     font-weight: 400;
-    text-align: center;
     letter-spacing: -0.5px;
     line-height: 119%;
+    text-align: center;
 }
 
 .slideNav {
     position: absolute;
-    top: 60%;
+    top: 29em;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -46,7 +61,7 @@
 .slideNavLine {
     width: 28px;
     border: 4px solid #fff;
-    transition: all 300ms ease-out;
+    transition: all 600ms ease-out;
 }
 
 .slideNavLine.active {
@@ -57,72 +72,69 @@
 
 /* Menu */
 
-.menuIcon {
+.menuIcon, .menu {
     position: absolute;
-    z-index: 100;
     top: 3.8em;
     right: 3.8em;
-    border-radius: 50%;
-    padding: 0.4em;
+    z-index: 100;
     background: #fff;
-    display: flex;
-    align-items: center;
     cursor: pointer;
     transition: all 300ms ease-out;
 }
 
+.menuIcon {
+    border-radius: 50%;
+    padding: 0.4em;
+    display: flex;
+    align-items: center;
+}
+
 .menu {
-    position: absolute;
-    z-index: 100;
-    top: 3.8em;
-    right: 3.8em;
+    height: max-content;
     border-radius: 18px;
-    background: #fff;
     padding: 2.14em 3.8em 0 2.5em;
-    cursor: pointer;
-    transition: all 300ms ease-out;
-    box-shadow: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
 }
 
 .menu p {
     font-size: 0.7rem;
     font-weight: 500;
-    color: rgba(121, 116, 126, 1);
+    color: #79747E;
     margin: 0;
 }
 
 .menuItems {
-    margin: 2.2em 0 3.4em 0;
     display: flex;
     flex-direction: column;
+    margin: 2.2em 0 3.4em 0;
 }
 
 .menu a {
+    color: #1863AF;
     font-size: 1.5rem;
-    text-decoration: none;
-    color: rgba(24, 99, 175, 1);
     line-height: 1.5;
+    text-decoration: none;
 }
 
 .closeIcon {
-    font-size: 1.5rem;
     position: absolute;
     top: 1.1em;
     right: 1.1em;
+    font-size: 1.5rem;
     color: #1863AF;
 }
 
 /* Hero Impact */
 
 .impactContainer {
-    width: 88%;
-    background: rgba(248, 248, 248, 1);
-    padding: 2.5em 10em 2em 10em;
-    border-radius: 16px;
     position: absolute;
-    top: 68%;
+    top: 31em;
     left: 50%;
     transform: translateX(-50%);
+    width: 88%;
+    background: #F8F8F8;
+    padding: 2.5em 10em 2em 10em;
+    border-radius: 16px;
 }
 
 .impactItems {
@@ -142,9 +154,9 @@
 
 .impactCount {
     font-size: 2.2rem;
+    line-height: 100%;
     font-weight: 300;
     color: #1863AF;
-    line-height: 100%;
 }
 
 .impactItem > p {
@@ -159,11 +171,12 @@
 }
 
 .infoIcon:hover {
-    color: rgba(24, 99, 175, 1);
+    color: #1863AF;
 }
 
 .dataLinkContainer {
     width: max-content;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0.05em 1em;
     background: #fff;
@@ -174,8 +187,8 @@
     text-align: center;
     color: #79747E;
     font-size: 0.688rem;
-    font-weight: 500;
     line-height: 16px;
+    font-weight: 500;
 }
 
 .dataLinkContainer p a {
@@ -195,17 +208,17 @@
   }
 
 .impactModal {
-    width: 50%;
-    background: #fff;
-    box-shadow: 0px 8px 42px 6px rgba(24, 99, 175, 0.15), 
-        0px 4px 23px rgba(24, 99, 175, 0.15);
-    border-radius: 8px;
-    padding: 3.4em 5.9em 2.4em 4em;
     position: absolute;
     top: 12em;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
+    width: 50%;
+    background: #fff;
+    border-radius: 8px;
+    padding: 3.4em 5.9em 2.4em 4em;
+    box-shadow: 0px 8px 42px 6px rgba(24, 99, 175, 0.15), 
+        0px 4px 23px rgba(24, 99, 175, 0.15);
 }
 
 .impactModal h2 {
@@ -224,18 +237,12 @@
     margin: 0;
 }
 
-.modalInfo > img {
-    width: 64px;
-    height: 64px;
-    
-}
-
 .closeIcon {
-    cursor: pointer;
     background: #dae8f4;
-    border-radius: 50%;
     padding: 5px;
-    transition: all 300ms ease-out;
+    border-radius: 50%;
+    transition: all 500ms ease-out;
+    cursor: pointer;
 }
 
 .impactModal h3 {
@@ -251,17 +258,17 @@
 }
 
 .closeBtn {
-    max-width: 102px;
-    background: #1863AF;
-    font-size: 0.875rem;
-    color: #fff;
-    font-weight: 500;
-    border: none;
-    border-radius: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
+    max-width: 102px;
+    background: #1863AF;
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 100px;
     padding: 10px 24px 10px 16px;
     margin: 3em auto 0;
     cursor: pointer;
@@ -276,8 +283,238 @@
 
 /* Media queries */
 
-@media screen and (min-width: 1440px) {
-    .slide.active {
-        width: 100vw;
+@media screen and (max-width: 1024px) {
+    .slideDesc {
+        width: 70%;
+        font-size: 3.5rem;
+    }
+
+    .slideNav {
+        top: 24em;
+    }
+
+    .slideNavLine {
+        height: 6px;
+        border: 3px solid #fff;
+    }    
+
+    .slideNavLine.active {
+        border: 3px solid #E54647;
+    }
+
+    .menu {
+        padding: 2em 3.8em 0 2em;
+    }
+
+    .impactContainer {
+        padding: 2em 7em; 
+        top: 26em;
+    }
+
+    .impactIcon {
+        max-width: 3.5em;
+    }
+
+    .impactCount {
+        font-size: 2rem;
+    }
+
+    .impactItem > p {
+        font-size: 1.3rem;
+    }
+
+    .menuItems {
+        margin: 2em 0 3em 0;
+    }
+
+    .menu a {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .slideDesc {
+        width: 80%;
+        font-size: 2.5rem;
+    }
+
+    .slideNav {
+        top: 18em;
+    }
+
+    .slideNavLine {
+        height: 4px;
+        border: 2px solid #fff;
+    }    
+
+    .slideNavLine.active {
+        border: 2px solid #E54647;
+    }
+
+    .menuIcon {
+        padding: .2em;
+    }
+
+    .closeIcon {
+        top: 1.3em;
+        right: 1.3em;
+        font-size: 1.2rem;
+    }
+
+    .menuItems {
+        margin: 1em 0;
+    }
+
+    .menu a {
+        font-size: 1.1rem;
+    }
+
+    .impactContainer {
+        top: 20em;
+        padding: 1em 3em;
+    }
+
+    .impactIcon {
+        max-width: 2.5em;
+    }
+
+    .impactCount {
+        font-size: 1.5rem;
+    }
+
+    .impactItem > p {
+        font-size: 1rem;
+    }
+
+    .infoIcon {
+        margin-bottom: .8em;
+    }
+
+    .impactModal {
+        top: 8em;
+        width: 80%;
+        padding: 3em 4em 2em 3em; 
+    }
+
+    .impactModal h2 { 
+        font-size: 2rem;
+    }
+
+    .closeBtn {
+        margin: 2em auto 0;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .slideDesc {
+        top: 4em;
+        font-size: 1.8em;
+    }
+
+    .slideNav {
+        top: 14em;
+    }
+
+    .slideNavLine {
+        width: 1em;
+    }
+
+    .logo {
+        top: 1em;
+    }
+
+    .menuIcon, .menu {
+        top: 1.5em;
+        right: 1.5em;
+    }
+
+    .impactContainer {
+        top: 20em;
+    }
+
+    .impactItems {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .impactModal {
+        top: 5em;
+        width: 80%;
+        padding: 3em 3em 2em 2em;
+    }
+
+    .impactModal h2 {
+        font-size: 2rem;
+    }
+
+    .modalInfo img {
+        width: 50px;
+        height: 50px;     
+    }
+
+    .modalInfo p {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .slideDesc {
+        top: 4.5em;
+        font-size: 1.2em;
+    }
+
+    .slideNav {
+        top: 11em;
+    }
+
+    .slideNavLine {
+        width: 1em;
+    }
+
+    .logo {
+        width: 20%;
+    }
+
+    .menuIcon, .menu {
+        top: 1.2em;
+        right: 1.2em;
+    }
+
+    .menuIcon span {
+        font-size: 1rem;
+    }
+
+    .impactContainer {
+        top: 14em;
+    }
+
+    .impactCount {
+        font-size: 1.5rem;
+    }
+
+    .impactItem p {
+        font-size: .8rem;
+    }
+
+    .infoIcon {
+        font-size: 1.1rem;
+    }
+
+    .impactModal {
+        width: 90%;
+        padding: 3em 3em 2em 2em;
+    }
+
+    .impactModal h2 {
+        font-size: 1.5rem;
+    }
+
+    .impactModal h3 {
+        font-size: 1.2rem;
+    }
+
+    .modalInfo p {
+        font-size: .8rem;
     }
 }

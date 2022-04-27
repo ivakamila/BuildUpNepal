@@ -28,7 +28,7 @@ const HeroImpact = () => {
                 onClick={openModal}
                 id={index}
               >
-                <img src={item.icon} alt={item.text} />
+                <img src={item.icon} alt={item.text} className="impactIcon" />
                 <CountUp
                   start={0}
                   end={item.count}

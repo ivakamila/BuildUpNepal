@@ -2,11 +2,12 @@ import React from "react";
 import HeroImpact from "./HeroImpact";
 import HeroSlider from "./HeroSlider";
 import Menu from "./Menu";
+import "./HeroSection.css";
 
 const HeroSection = () => {
   return (
     <div>
-      <HeroSlider style={{}} />
+      <HeroSlider />
       <Menu />
       <HeroImpact />
     </div>

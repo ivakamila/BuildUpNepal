@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import { HeroSliderData } from "../../data/HeroSliderData";
 import BunLogo from "../../assets/bun-logo.png";
-import "./HeroSection.css";
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const sliderLength = HeroSliderData.length;
+
+  useEffect(() => {
+    setCurrentSlide(0);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -18,17 +21,20 @@ const HeroSlider = () => {
     <div className="heroSlider">
       {HeroSliderData.map((slide, index) => {
         return (
-          <div key={index}>
+          <div
+            key={index}
+            className={index === currentSlide ? "slide current" : "slide"}
+          >
             {currentSlide === index && (
-              <div className="slide">
-                <img src={slide.img} alt={slide.label} />
-                <img src={BunLogo} alt="Build Up Nepal Logo" className="logo" />
+              <div>
+                <img src={slide.img} alt={slide.label} className="slideImg" />
                 <h2 className="slideDesc">{slide.desc}</h2>
               </div>
             )}
           </div>
         );
       })}
+      <img src={BunLogo} alt="Build Up Nepal Logo" className="logo" />
       <div className="slideNav">
         {HeroSliderData.map((slide, index) => {
           return (

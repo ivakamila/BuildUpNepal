@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { MenuData } from "../../data/MenuData";
-import "./HeroSection.css";
 
 const Menu = () => {
   const [activeMenu, setActiveMenu] = useState(false);
