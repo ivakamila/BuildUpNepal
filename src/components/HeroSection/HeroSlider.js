@@ -15,7 +15,7 @@ const HeroSlider = () => {
       setCurrentSlide(currentSlide === sliderLength - 1 ? 0 : currentSlide + 1);
     }, 3000);
     return () => clearInterval(interval);
-  }, [currentSlide]);
+  }, [currentSlide, sliderLength]);
 
   return (
     <div className="heroSlider">
