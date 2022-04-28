@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ivakamila/BuildUpNepal/static/css/main.41d47474.css",
+    "main.js": "/ivakamila/BuildUpNepal/static/js/main.c13598a9.js",
+    "static/media/Hero-slider-3.png": "/ivakamila/BuildUpNepal/static/media/Hero-slider-3.1a010e6ddb814cafed1e.png",
+    "static/media/Hero-slider-1.png": "/ivakamila/BuildUpNepal/static/media/Hero-slider-1.300a8a85bf40e991d2bc.png",
+    "static/media/Hero-slider-2.png": "/ivakamila/BuildUpNepal/static/media/Hero-slider-2.53291c51e4b9a4c6334e.png",
+    "index.html": "/ivakamila/BuildUpNepal/index.html",
+    "main.41d47474.css.map": "/ivakamila/BuildUpNepal/static/css/main.41d47474.css.map",
+    "main.c13598a9.js.map": "/ivakamila/BuildUpNepal/static/js/main.c13598a9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.41d47474.css",
+    "static/js/main.c13598a9.js"
+  ]
+}
