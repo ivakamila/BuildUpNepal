@@ -41,7 +41,7 @@ const HeroImpact = () => {
                 <img
                   src={item.icon}
                   alt={item.text}
-                  className="impact-item-icon"
+                  className="impact-item__icon"
                 />
                 <CountUp
                   start={0}

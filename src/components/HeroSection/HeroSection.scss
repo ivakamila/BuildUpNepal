@@ -254,9 +254,9 @@ $mediaMobileSmall: 420px;
     left: 50%;
     transform: translateX(-50%);
     width: 88%;
-    height: fit-content;
-    background: #F8F8F8;
+    max-height: fit-content;
     padding: 2em 10em;
+    background: #F8F8F8;
     border-radius: 16px;
 
     @media (max-width: $mediaDesktop) {
@@ -312,20 +312,21 @@ $mediaMobileSmall: 420px;
 
         &__count {
             font-size: 3rem;
-            line-height: 100%;
+            line-height: 76px;
             font-weight: 300;
             color: #1863AF;
 
             @media (max-width: $mediaDesktop) {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
 
             @media (max-width: $mediaTablet) {
-                font-size: 1.5rem;
+                font-size: 2rem;
+                line-height: 50px;
             }
 
             @media (max-width: $mediaMobileSmall) {
-                font-size: 1.2rem;
+                font-size: 1.5rem;
             }
         }
 
@@ -411,15 +412,31 @@ $mediaMobileSmall: 420px;
 
 .impact-modal {
     width: 50%;
+
+    @media (max-width: $mediaMobileSmall) {
+        top: 10%;
+    }  
 }
 
 .impact-measure {
     width: 70%;
     top: 25%;
 
-    @media (max-width: $mediaMobileSmall) {
-        top: 50%; 
+    @media (max-width: $mediaDesktop) {
+        top: 22em;
     }
+
+    @media (max-width: $mediaTablet) {
+        top: 20em;
+    }
+
+    @media (max-width: $mediaMobile) {
+        top: 30em; 
+    }
+
+    @media (max-width: $mediaMobileSmall) {
+        top: 34em;
+    } 
 }
 
 .impact-modal, 
