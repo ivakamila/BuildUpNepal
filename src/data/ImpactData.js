@@ -1,7 +1,7 @@
-import PeopleIcon from "../assets/icons/people-icon.png";
-import HouseIcon from "../assets/icons/house-icon.png";
-import BricksIcon from "../assets/icons/bricks-icon.png";
-import CarbonIcon from "../assets/icons/co2-icon.png";
+import HouseIcon from "../assets/icons/house-icon.svg";
+import BricksIcon from "../assets/icons/bricks-icon.svg";
+import CarbonIcon from "../assets/icons/co2-icon.svg";
+import PeopleIcon from "../assets/icons/people-icon.svg";
 
 export const ImpactData = [
   {

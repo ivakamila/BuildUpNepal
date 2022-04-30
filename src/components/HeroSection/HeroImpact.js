@@ -2,10 +2,12 @@ import { useState } from "react";
 import { ImpactData } from "../../data/ImpactData";
 import CountUp from "react-countup";
 import ImpactModal from "./ImpactModal";
+import MeasureImpact from "./MeasureImpact";
 
 const HeroImpact = () => {
   const [showModal, setShowModal] = useState(false);
   const [itemIndex, setItemIndex] = useState("");
+  const [measureImpact, setMeasureImpact] = useState(false);
 
   const openModal = (e) => {
     setShowModal(true);
@@ -16,37 +18,49 @@ const HeroImpact = () => {
     setShowModal(false);
   };
 
+  const showImpactMeasure = () => {
+    setMeasureImpact(true);
+  };
+
+  const closeImpactMeasure = () => {
+    setMeasureImpact(false);
+  };
+
   return (
     <>
-      <div className="impactContainer">
-        <div className="impactItems">
+      <div className="impact-container">
+        <div className="impact-items">
           {ImpactData.map((item, index) => {
             return (
               <div
-                className="impactItem"
+                className="impact-item"
                 key={index}
                 onClick={openModal}
                 id={index}
               >
-                <img src={item.icon} alt={item.text} className="impactIcon" />
+                <img
+                  src={item.icon}
+                  alt={item.text}
+                  className="impact-item-icon"
+                />
                 <CountUp
                   start={0}
                   end={item.count}
                   duration={2}
                   separator=","
-                  className="impactCount"
+                  className="impact-item__count"
                 />
                 <p>{item.text}</p>
-                <span className="material-icons infoIcon">info</span>
+                <span className="material-icons impact-item__info">info</span>
               </div>
             );
           })}
         </div>
-        <div className="dataLinkContainer">
+        <div className="impact-data__link">
           <p>
             Data collected &amp; verifed by Yunus Social Business Center, CERAD
             Center for Research &amp; Development.{" "}
-            <a href="/">How we measure our impact?</a>
+            <span onClick={showImpactMeasure}>How we measure our impact?</span>
           </p>
         </div>
       </div>
@@ -54,6 +68,10 @@ const HeroImpact = () => {
         show={showModal.toString()}
         item={itemIndex}
         close={closeModal}
+      />
+      <MeasureImpact
+        showImpactMeasure={measureImpact.toString()}
+        closeImpactMeasure={closeImpactMeasure}
       />
     </>
   );

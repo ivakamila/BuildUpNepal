@@ -1,53 +1,46 @@
-import { useEffect, useState } from "react";
 import { HeroSliderData } from "../../data/HeroSliderData";
-import BunLogo from "../../assets/bun-logo.png";
+import { v4 as uuid } from "uuid";
+import SwiperCore, { Pagination, Autoplay, EffectFade } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import BunLogo from "../../assets/bun-logo.svg";
+import "swiper/scss";
+import "swiper/scss/pagination";
+import "swiper/scss/autoplay";
+import "swiper/scss/effect-fade";
 
 const HeroSlider = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const sliderLength = HeroSliderData.length;
-
-  useEffect(() => {
-    setCurrentSlide(0);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide(currentSlide === sliderLength - 1 ? 0 : currentSlide + 1);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [currentSlide, sliderLength]);
+  SwiperCore.use([Pagination, Autoplay, EffectFade]);
 
   return (
-    <div className="heroSlider">
-      {HeroSliderData.map((slide, index) => {
-        return (
-          <div
-            key={index}
-            className={index === currentSlide ? "slide current" : "slide"}
-          >
-            {currentSlide === index && (
-              <div>
-                <img src={slide.img} alt={slide.label} className="slideImg" />
-                <h2 className="slideDesc">{slide.desc}</h2>
-              </div>
-            )}
-          </div>
-        );
-      })}
-      <img src={BunLogo} alt="Build Up Nepal Logo" className="logo" />
-      <div className="slideNav">
-        {HeroSliderData.map((slide, index) => {
+    <div className="hero-slider">
+      <Swiper
+        spaceBetween={0}
+        slidesPerView={1}
+        autoplay={{ delay: 3000, disableOnInteraction: true }}
+        pagination={{
+          el: ".swiper-pagination",
+          clickable: true,
+          bulletClass: "swiper-pagination-bullet",
+        }}
+        effect={"fade"}
+        fadeEffect={{ crossFade: true }}
+        className="hero-slider__slide"
+      >
+        {HeroSliderData.map((slide) => {
           return (
-            <div
-              key={index}
-              id={index}
-              className={
-                currentSlide === index ? "slideNavLine active" : "slideNavLine"
-              }
-            ></div>
+            <SwiperSlide key={uuid()}>
+              <img src={slide.img} alt={slide.label} />
+              <h2>{slide.desc}</h2>
+            </SwiperSlide>
           );
         })}
-      </div>
+      </Swiper>
+      <div className="swiper-pagination"></div>
+      <img
+        src={BunLogo}
+        alt="Build Up Nepal Logo"
+        className="hero-slider__logo"
+      />
     </div>
   );
 };
