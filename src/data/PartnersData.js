@@ -33,6 +33,10 @@ export const PartnersData = [
     name: "Tibet Relief Fund",
   },
   {
+    img: Ewb,
+    name: "Engineers Without Borders",
+  },
+  {
     img: Hotlab,
     name: "Hotlab",
   },
@@ -43,5 +47,45 @@ export const PartnersData = [
   {
     img: TibetReliefFund,
     name: "Tibet Relief Fund",
+  },
+  {
+    img: Ewb,
+    name: "Engineers Without Borders",
+  },
+  {
+    img: Hotlab,
+    name: "Hotlab",
+  },
+  {
+    img: Oxfam,
+    name: "Oxfam",
+  },
+  {
+    img: TibetReliefFund,
+    name: "Tibet Relief Fund",
+  },
+  {
+    img: Ewb,
+    name: "Engineers Without Borders",
+  },
+  {
+    img: TibetReliefFund,
+    name: "Tibet Relief Fund",
+  },
+  {
+    img: Hotlab,
+    name: "Hotlab",
+  },
+  {
+    img: Oxfam,
+    name: "Oxfam",
+  },
+  {
+    img: TibetReliefFund,
+    name: "Tibet Relief Fund",
+  },
+  {
+    img: Ewb,
+    name: "Engineers Without Borders",
   },
 ];

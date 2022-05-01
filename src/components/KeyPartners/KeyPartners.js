@@ -1,28 +1,30 @@
-import "./KeyPartners.css";
+import "./KeyPartners.scss";
 import { PartnersData } from "../../data/PartnersData";
 import { v4 as uuid } from "uuid";
 import { useState } from "react";
 
 const KeyPartners = () => {
-  const [showMore, setShowMore] = useState(false);
+  const [visiblePartners, setVisiblePartners] = useState(7);
 
   const showMorePartners = () => {
-    if (!showMore) setShowMore(true);
-    if (showMore) setShowMore(false);
+    setVisiblePartners(visiblePartners + visiblePartners + 1);
   };
 
   return (
     <div className="partners">
       <h2>Key Partners</h2>
-      <div className="partnerLogos">
-        {PartnersData.slice(0, 7).map((item) => (
-          <div className="partnerLogo" key={uuid()}>
+      <div className="partner__logos">
+        {PartnersData.slice(0, visiblePartners).map((item) => (
+          <div className="partner__logo" key={uuid()}>
             <img src={item.img} alt={item.name} />
           </div>
         ))}
-        <div className="partnerLogo showMore" onClick={showMorePartners}>
+        <div
+          className="partner__logo partner__show-more"
+          onClick={showMorePartners}
+        >
           <span className="material-icons">add</span>
-          {showMore ? <p>Show Less</p> : <p>Show More</p>}
+          <p>Show More</p>
         </div>
       </div>
     </div>

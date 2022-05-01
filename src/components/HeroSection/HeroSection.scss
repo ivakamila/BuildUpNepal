@@ -1,9 +1,4 @@
-// Media break points
-$mediaMaxWidth: 1480px;
-$mediaDesktop: 1024px;
-$mediaTablet: 840px;
-$mediaMobile: 570px;
-$mediaMobileSmall: 420px;
+@import "../../utilities/_variables.scss";
 
 /* Hero Slider */
 
@@ -12,6 +7,11 @@ $mediaMobileSmall: 420px;
     height: 100vh;
     overflow: hidden;
     position: relative;
+    max-height: 1080px;
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        max-height: 60vh;
+    }
 
     &__slide {
         z-index: -1;
@@ -153,7 +153,7 @@ $mediaMobileSmall: 420px;
     align-items: center;
 
     &:hover {
-        background: #1863AF;
+        background: $primaryColor;
         color: #fff;
         transform: scale(1.2);
     }
@@ -212,7 +212,7 @@ $mediaMobileSmall: 420px;
         }
 
         a {
-            color: #1863AF;
+            color: $primaryColor;
             font-size: 1.5rem;
             line-height: 1.5;
             text-decoration: none;
@@ -232,7 +232,7 @@ $mediaMobileSmall: 420px;
         top: 1em;
         right: 1em;
         font-size: 1.5rem;
-        color: #1863AF;
+        color: $primaryColor;
 
         &:hover {
             color: #000000;
@@ -314,7 +314,7 @@ $mediaMobileSmall: 420px;
             font-size: 3rem;
             line-height: 76px;
             font-weight: 300;
-            color: #1863AF;
+            color: $primaryColor;
 
             @media (max-width: $mediaDesktop) {
                 font-size: 2.5rem;
@@ -333,7 +333,7 @@ $mediaMobileSmall: 420px;
         p {
             font-size: 1.5rem;
             line-height: 100%;
-            color: #1863AF;
+            color: $primaryColor;
             margin: 0;
 
             @media (max-width: $mediaDesktop) {
@@ -353,7 +353,7 @@ $mediaMobileSmall: 420px;
             margin-bottom: 2em;
 
             &:hover {
-                color: #1863AF;
+                color: $primaryColor;
             }
 
             @media (max-width: $mediaTablet) {
@@ -384,7 +384,7 @@ $mediaMobileSmall: 420px;
 
         span {
             text-decoration: none;
-            color: #1863AF;
+            color: $primaryColor;
             cursor: pointer;
 
             &:hover {
@@ -471,7 +471,7 @@ $mediaMobileSmall: 420px;
     h2 {
         font-size: 2.7rem;
         font-weight: 400;
-        color: #1863AF;
+        color: $primaryColor;
         margin-top: 0;
         margin-bottom: .5em;
 
@@ -530,7 +530,7 @@ $mediaMobileSmall: 420px;
         cursor: pointer;
 
         &:hover {
-            background: #1863AF;
+            background: $primaryColor;
             color: #fff;
         }
     }
@@ -542,7 +542,7 @@ $mediaMobileSmall: 420px;
     align-items: center;
     gap: 8px;
     max-width: 102px;
-    background: #1863AF;
+    background: $primaryColor;
     color: #fff;
     font-size: 0.875rem;
     font-weight: 500;

@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <HeroSection />
-      {/* <KeyPartners /> */}
+      <KeyPartners />
     </div>
   );
 }
