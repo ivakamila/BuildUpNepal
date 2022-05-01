@@ -1,21 +1,26 @@
 {
   "files": {
-    "main.css": "/BuildUpNepal/static/css/main.6565dc48.css",
-    "main.js": "/BuildUpNepal/static/js/main.767b3501.js",
+    "main.css": "/BuildUpNepal/static/css/main.f6abd9f8.css",
+    "main.js": "/BuildUpNepal/static/js/main.a9ead006.js",
     "static/media/Hero-slider-3.png": "/BuildUpNepal/static/media/Hero-slider-3.1a010e6ddb814cafed1e.png",
     "static/media/Hero-slider-1.png": "/BuildUpNepal/static/media/Hero-slider-1.300a8a85bf40e991d2bc.png",
     "static/media/Hero-slider-2.png": "/BuildUpNepal/static/media/Hero-slider-2.53291c51e4b9a4c6334e.png",
+    "static/media/Key-partners-img.png": "/BuildUpNepal/static/media/Key-partners-img.36ba65e405226fd13142.png",
+    "static/media/tibet-relief-fund.svg": "/BuildUpNepal/static/media/tibet-relief-fund.f0486eebce685ba604a24f88e5dee658.svg",
+    "static/media/oxfam.svg": "/BuildUpNepal/static/media/oxfam.959dbf7f13832cad2addf241e7f5d7ea.svg",
+    "static/media/hotlab.svg": "/BuildUpNepal/static/media/hotlab.892b983ac7d47c7bd549aec4aa1c90fa.svg",
+    "static/media/ewb.svg": "/BuildUpNepal/static/media/ewb.767163361d0d43372cd54f75667f919c.svg",
     "static/media/bun-logo.svg": "/BuildUpNepal/static/media/bun-logo.633504ff6c300ac35371c8f236393b11.svg",
     "static/media/co2-icon.svg": "/BuildUpNepal/static/media/co2-icon.1b2df1a7fdc56a151d49c5fd0fb202e6.svg",
     "static/media/people-icon.svg": "/BuildUpNepal/static/media/people-icon.7c5c5bdb8c33c5c430faedb13c27c4ee.svg",
     "static/media/bricks-icon.svg": "/BuildUpNepal/static/media/bricks-icon.0b3b96dfc1d7424fd994b44437fea960.svg",
     "index.html": "/BuildUpNepal/index.html",
     "static/media/house-icon.svg": "/BuildUpNepal/static/media/house-icon.a0b43fa891ffb92c9552feac67b71514.svg",
-    "main.6565dc48.css.map": "/BuildUpNepal/static/css/main.6565dc48.css.map",
-    "main.767b3501.js.map": "/BuildUpNepal/static/js/main.767b3501.js.map"
+    "main.f6abd9f8.css.map": "/BuildUpNepal/static/css/main.f6abd9f8.css.map",
+    "main.a9ead006.js.map": "/BuildUpNepal/static/js/main.a9ead006.js.map"
   },
   "entrypoints": [
-    "static/css/main.6565dc48.css",
-    "static/js/main.767b3501.js"
+    "static/css/main.f6abd9f8.css",
+    "static/js/main.a9ead006.js"
   ]
 }
