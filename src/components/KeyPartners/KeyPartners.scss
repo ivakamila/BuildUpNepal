@@ -1,7 +1,7 @@
 @import "../../utilities/_variables.scss";
 
 .partners {
-    width: 80vw;
+    width: 100vw;
     margin: 10em auto;
     text-align: center;
 
@@ -28,8 +28,8 @@
     grid-template-columns: repeat(auto-fill, minmax(max(100px, 137px), 1fr));
     grid-auto-rows: minmax(114px, auto);
     gap: 0.3125em;
-    width: 80vw;
-    margin-top: 2em;
+    width: 80%;
+    margin: 2em auto;
 
     @media screen and (min-width: $mediaMaxWidth) {
         grid-template-columns: repeat(auto-fill, minmax(max(137px, 180px), 1fr));

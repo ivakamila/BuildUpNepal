@@ -16,7 +16,11 @@ const KeyPartners = () => {
       <div className="partner__logos">
         {PartnersData.slice(0, visiblePartners).map((item) => (
           <div className="partner__logo" key={uuid()}>
-            <img src={item.img} alt={item.name} />
+            <img
+              src={item.img}
+              alt={item.name}
+              className="partners__logo--img"
+            />
           </div>
         ))}
         <div

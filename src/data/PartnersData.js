@@ -1,7 +1,7 @@
-import Hotlab from "../assets/partners/hotlab.png";
-import Oxfam from "../assets/partners/oxfam.png";
-import TibetReliefFund from "../assets/partners/tibet-relief-fund.png";
-import Ewb from "../assets/partners/ewb.png";
+import Hotlab from "../assets/partners/hotlab.svg";
+import Oxfam from "../assets/partners/oxfam.svg";
+import TibetReliefFund from "../assets/partners/tibet-relief-fund.svg";
+import Ewb from "../assets/partners/ewb.svg";
 
 export const PartnersData = [
   {

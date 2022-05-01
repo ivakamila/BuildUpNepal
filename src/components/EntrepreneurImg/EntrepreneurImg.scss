@@ -1,0 +1,57 @@
+@import "../../utilities/_variables.scss";
+
+.partners__img {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin-top: 6em;
+    text-align: center;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .partners__img--text {
+        position: absolute;
+        bottom: 0;
+        padding: 3.75em 9.75em 2.3em;
+        background: rgba(0, 0, 0, 0.28);
+
+        @media screen and (max-width: $mediaDesktop) {
+            padding: 2em 5em;
+        }
+
+        @media screen and (max-width: $mediaMobile) {
+            padding: 2em 0.8em;
+        }
+
+        h2 {
+            font-size: 2.813rem;
+            line-height: 52px;
+            color: #FFFFFF;
+            font-weight: 400;
+            margin-bottom: 0.5em;
+
+            @media screen and (max-width: $mediaDesktop) {
+                font-size: 2.5rem
+            }
+
+            @media screen and (max-width: $mediaMobile) {
+                font-size: 1.5rem;
+                line-height: 32px;
+            }
+        }
+
+        p {
+            font-size: 1.375rem;
+            line-height: 28px;
+            color: #FFFFFF;
+
+            @media screen and (max-width: $mediaMobile) {
+                font-size: 0.875rem;
+            }
+        }
+    }
+}
