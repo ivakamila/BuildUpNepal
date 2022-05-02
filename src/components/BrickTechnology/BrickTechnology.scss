@@ -1,0 +1,153 @@
+@import "../../utilities/_variables.scss";
+
+.technology {
+    width: 100vw;
+    text-align: center;
+    padding-top: 8em;
+    margin-bottom: 8.71em;
+
+    @media screen and (max-width: $mediaMobile) {
+        padding-top: 2.5em;
+    }
+
+    h2 {
+        color: $primaryColor;
+        font-size: 3.563rem;
+        font-weight: 400;
+        line-height: 4rem;
+        margin-left: 1em;
+        margin-right: 1em;
+
+        @media screen and (max-width: $mediaDesktop) {
+            font-size: 3rem;
+        }
+
+        @media screen and (max-width: $mediaMobile) {
+            font-size: 1.75rem;
+            line-height: 2.25rem;
+        }
+    }
+
+    p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        width: 51%;
+        margin: 0 auto 4em;
+
+        @media screen and (max-width: $mediaDesktop) {
+            width: 75%;
+        }
+
+        @media screen and (max-width: $mediaMobile) {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            margin-bottom: 2em;
+        }
+
+        span {
+            font-size: 1.5rem;
+            color: #938F99;
+            cursor: pointer;
+            display: inline;
+            vertical-align: middle;
+
+            &:hover {
+                transform: scale(3);
+                color: $primaryColor;
+            }
+        }
+    }
+}
+
+.technology__formula {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1em;
+    margin: 0 auto;
+    overflow-y: auto;
+    width: 80vw;
+
+    @media screen and (max-width: 940px) {
+        justify-content: flex-start;
+    }
+
+    @media screen and (max-width: $mediaMobile) {
+        width: 75%;
+        margin-right: 0;
+    }
+
+    .technology__formula--item {
+        display: grid; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1.6fr 0.4fr; 
+        justify-items: center;
+        align-items: center;
+        background: $bgColor;
+        border-radius: 12px;
+        width: 216px;
+        height: 218px;
+
+        @media screen and (max-width: $mediaMaxWidth) {
+            width: 203px;
+            height: 205px;
+        }
+
+        @media screen and (max-width: $mediaDesktop) {
+            width: 188px;
+            height: 190px;
+        }
+
+        @media screen and (max-width: 940px) {
+            min-width: 156px;
+            min-height: 162px;
+        }
+
+        img {
+            margin: 0 auto;
+        }
+
+        p {
+            font-size: 1.125rem;
+            line-height: 1.5rem;
+            margin-bottom: 2em;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .technology__formula--item:last-child {
+        position: relative;
+        margin-right: 4em;
+
+        span {
+            font-size: 1.188rem;
+            position: absolute;
+            top: 1em;
+            right: 1em;
+            cursor: pointer;
+
+            @media screen and (max-width: $mediaMaxWidth) {
+                top: 0.8em;
+                right: 0.8em;
+            }
+
+            @media screen and (max-width: $mediaTablet) {
+                top: 0.5em;
+                right: 0.5em;
+                font-size: 0.875rem;
+            }
+
+            &:hover {
+                transform: scale(1.5);
+                color: $primaryColor;
+            }
+        }
+    }
+
+    span {
+        font-size: 1.19rem;
+        color: #938F99;
+    }
+}
