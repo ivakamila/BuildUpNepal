@@ -1,0 +1,108 @@
+@import "../../utilities/_variables.scss";
+
+.cost {
+    width: 79vw;
+    margin: 0 auto 7.94em;
+
+    @media screen and (max-width: $mediaMobile) {
+        width: 90vw;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+
+        @media screen and (max-width: $mediaMobile) {
+            font-size: 1.125rem;
+        }
+    }
+
+    img {
+        margin-top: 1em;
+        margin-bottom: 0.75em;
+
+        @media screen and (max-width: $mediaMobile) {
+            width: 100px;
+        }
+    }
+
+    p {
+        margin-top: 0.5em;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+.cost__line--container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    width: 100%;
+
+    p {
+        font-size: 3rem;
+        margin: 0;
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+
+        @media screen and (max-width: $mediaMobile) {
+            font-size: 2.375rem;
+            margin-left: 0.25em;
+        }
+    }
+
+    .cost__fired-brick {
+        color: $redColor;
+    }
+
+    .cost__earth-brick {
+        color: $primaryTextColor;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+          }
+        
+          100% {
+            opacity: 1;
+          }
+    }
+    
+    .cost__line--one {
+        width: 65%;
+        height: 0.5em;
+        background: $redColor;
+        border-radius: 6px;
+        animation: lineOne 2s linear forwards;
+    }
+    
+    @keyframes lineOne {
+        0% {
+            width: 0;
+        }
+    
+        100% {
+            width: 65vw;
+        }
+    }
+
+    .cost__line--two {
+        width: 45%;
+        height: 0.5em;
+        background: $primaryTextColor;
+        border-radius: 6px;
+        animation: lineTwo 2s linear forwards;
+    }
+    
+    @keyframes lineTwo {
+        0% {
+            width: 0;
+        }
+    
+        100% {
+            width: 45vw;
+        }
+    }
+}

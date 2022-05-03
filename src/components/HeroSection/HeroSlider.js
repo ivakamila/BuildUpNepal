@@ -10,16 +10,17 @@ import "swiper/scss/effect-fade";
 import { useEffect, useState } from "react";
 
 const HeroSlider = () => {
-  // const [startAutoplay, setStartAutoplay] = useState(false);
-  // const [duration, setDuration] = useState(3000);
+  const [startSlider, setStartSlider] = useState(false);
 
   SwiperCore.use([Pagination, Autoplay, EffectFade]);
 
   // useEffect(() => {
-  //   setTimeout(() => {
-  //     setStartAutoplay(true);
-  //   }, 4000);
-  // }, []);
+  //   const timer = setTimeout(() => {
+  //     setStartSlider(true);
+  //     console.log(startSlider);
+  //   }, 3000);
+  //   return () => clearTimeout(timer);
+  // }, [startSlider]);
 
   return (
     <div className="hero-slider">
@@ -30,6 +31,8 @@ const HeroSlider = () => {
           delay: 3000,
           disableOnInteraction: true,
         }}
+        onSwiper={(Swiper) => console.log(Swiper)}
+        // enabled={startSlider && true}
         pagination={{
           el: ".swiper-pagination",
           clickable: true,

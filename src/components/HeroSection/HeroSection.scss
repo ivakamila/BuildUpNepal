@@ -9,7 +9,7 @@
     position: relative;
     max-height: 1080px;
 
-    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    @media only screen and (min-width: 768px) and (max-width: $mediaDesktop) {
         max-height: 60vh;
     }
 
@@ -153,7 +153,7 @@
     align-items: center;
 
     &:hover {
-        background: $primaryColor;
+        background: $primaryTextColor;
         color: #fff;
         transform: scale(1.2);
     }
@@ -212,7 +212,7 @@
         }
 
         a {
-            color: $primaryColor;
+            color: $primaryTextColor;
             font-size: 1.5rem;
             line-height: 1.5;
             text-decoration: none;
@@ -232,7 +232,7 @@
         top: 1em;
         right: 1em;
         font-size: 1.5rem;
-        color: $primaryColor;
+        color: $primaryTextColor;
 
         &:hover {
             color: #000000;
@@ -256,7 +256,7 @@
     width: 88%;
     max-height: fit-content;
     padding: 2em 10em;
-    background: #F8F8F8;
+    background: $bgColorPrimary;
     border-radius: 16px;
 
     @media (max-width: $mediaDesktop) {
@@ -314,7 +314,7 @@
             font-size: 3rem;
             line-height: 76px;
             font-weight: 300;
-            color: $primaryColor;
+            color: $primaryTextColor;
 
             @media (max-width: $mediaDesktop) {
                 font-size: 2.5rem;
@@ -333,7 +333,7 @@
         p {
             font-size: 1.5rem;
             line-height: 100%;
-            color: $primaryColor;
+            color: $primaryTextColor;
             margin: 0;
 
             @media (max-width: $mediaDesktop) {
@@ -353,7 +353,7 @@
             margin-bottom: 2em;
 
             &:hover {
-                color: $primaryColor;
+                color: $primaryTextColor;
             }
 
             @media (max-width: $mediaTablet) {
@@ -384,7 +384,7 @@
 
         span {
             text-decoration: none;
-            color: $primaryColor;
+            color: $primaryTextColor;
             cursor: pointer;
 
             &:hover {
@@ -397,15 +397,13 @@
 /* Hero Impact Modal */
 
 .impact-overlay {
+    @include flex-center;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow-y: scroll;
     background-color: rgba(255,255,255,0.7); 
 }
@@ -471,7 +469,7 @@
     h2 {
         font-size: 2.7rem;
         font-weight: 400;
-        color: $primaryColor;
+        color: $primaryTextColor;
         margin-top: 0;
         margin-bottom: .5em;
 
@@ -530,19 +528,17 @@
         cursor: pointer;
 
         &:hover {
-            background: $primaryColor;
+            background: $primaryTextColor;
             color: #fff;
         }
     }
 }
 
 .impact-modal__close {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     gap: 8px;
     max-width: 102px;
-    background: $primaryColor;
+    background: $primaryTextColor;
     color: #fff;
     font-size: 0.875rem;
     font-weight: 500;

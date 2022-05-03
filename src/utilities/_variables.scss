@@ -1,3 +1,10 @@
+// Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 // Media break points
 $mediaMaxWidth: 1480px;
 $mediaDesktop: 1024px;
@@ -6,5 +13,8 @@ $mediaMobile: 570px;
 $mediaMobileSmall: 420px;
 
 // Colors
-$primaryColor: #1863AF;
-$bgColor: #F6F4F5;
+$primaryTextColor: #1863AF;
+$smallTextColor: #938F99;
+$redColor: #E54647;
+$bgColorPrimary: #F8F8F8;
+$bgColorSecondary: #F6F4F5;

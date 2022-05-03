@@ -11,7 +11,7 @@
     }
 
     h2 {
-        color: $primaryColor;
+        color: $primaryTextColor;
         font-size: 3.563rem;
         font-weight: 400;
         line-height: 4rem;
@@ -46,23 +46,21 @@
 
         span {
             font-size: 1.5rem;
-            color: #938F99;
+            color: $smallTextColor;
             cursor: pointer;
             display: inline;
             vertical-align: middle;
 
             &:hover {
                 transform: scale(3);
-                color: $primaryColor;
+                color: $primaryTextColor;
             }
         }
     }
 }
 
 .technology__formula {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     flex-wrap: nowrap;
     gap: 1em;
     margin: 0 auto;
@@ -84,7 +82,7 @@
         grid-template-rows: 1.6fr 0.4fr; 
         justify-items: center;
         align-items: center;
-        background: $bgColor;
+        background: $bgColorSecondary;
         border-radius: 12px;
         width: 216px;
         height: 218px;
@@ -141,13 +139,13 @@
 
             &:hover {
                 transform: scale(1.5);
-                color: $primaryColor;
+                color: $primaryTextColor;
             }
         }
     }
 
     span {
         font-size: 1.19rem;
-        color: #938F99;
+        color: $smallTextColor;
     }
 }
