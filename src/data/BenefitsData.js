@@ -24,7 +24,7 @@ export const BenefitsData = [
         legend: false,
       },
       animation: {
-        duration: 2000,
+        duration: 3000,
       },
     },
   },
@@ -49,7 +49,7 @@ export const BenefitsData = [
         legend: false,
       },
       animation: {
-        duration: 2000,
+        duration: 3000,
       },
     },
   },
@@ -74,7 +74,7 @@ export const BenefitsData = [
         legend: false,
       },
       animation: {
-        duration: 2000,
+        duration: 3000,
       },
     },
   },

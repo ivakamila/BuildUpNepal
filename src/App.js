@@ -1,3 +1,4 @@
+import LazyLoad from "react-lazyload";
 import "./App.scss";
 import BrickBenefits from "./components/BrickBenefits/BrickBenefits";
 import BrickTechnology from "./components/BrickTechnology/BrickTechnology";
@@ -10,11 +11,21 @@ function App() {
   return (
     <div className="App">
       <HeroSection />
-      <KeyPartners />
-      <EntrepreneurImg />
-      <BrickTechnology />
-      <BrickBenefits />
-      <CostPerHouse />
+      <LazyLoad height={200} offset={100}>
+        <KeyPartners />
+      </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <EntrepreneurImg />
+      </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <BrickTechnology />
+      </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <BrickBenefits />
+      </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <CostPerHouse />
+      </LazyLoad>
     </div>
   );
 }
