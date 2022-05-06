@@ -6,6 +6,8 @@ import CostPerHouse from "./components/CostPerHouse/CostPerHouse";
 import EntrepreneurImg from "./components/EntrepreneurImg/EntrepreneurImg";
 import HeroSection from "./components/HeroSection/HeroSection";
 import KeyPartners from "./components/KeyPartners/KeyPartners";
+import ScalableEnterprises from "./components/ScalableEnterprises/ScalableEnterprises";
+import VideoSlider from "./components/VideoSlider/VideoSlider";
 
 function App() {
   return (
@@ -25,6 +27,12 @@ function App() {
       </LazyLoad>
       <LazyLoad height={200} offset={100}>
         <CostPerHouse />
+      </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <ScalableEnterprises />
+      </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <VideoSlider />
       </LazyLoad>
     </div>
   );

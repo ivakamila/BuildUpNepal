@@ -1,0 +1,76 @@
+@import "../../utilities/_variables.scss";
+
+.video-slider {
+    width: 78vw;
+    margin: 0 auto 10.5em;
+    text-align: center;
+
+    h2 {
+        color: $primaryTextColor;
+        font-size: 3.563rem;
+    }
+}
+
+.video-slider__swiper {
+    .video__slide {
+        position: relative;
+        text-align: center;
+        padding-bottom: 3em;
+    
+        h3 {
+            position: absolute;
+            bottom: 25%;
+            color: #ffffff;
+            font-size: 2.25rem;
+            font-weight: 400;
+            line-height: 2.75rem;
+            margin: 0 3.2em;
+        }
+    
+        p {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #ffffff;
+            font-size: 1.375rem;
+            line-height: 1.75rem;
+            text-align: center;
+        }
+    
+        .slide__img {
+            width: 100%;
+            height: 100%;
+        }
+    
+        .play-button {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+    
+        &--player {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+    }
+
+    &__pagination {
+        @include swiper-pagination;
+    }
+
+    .swiper-pagination {
+
+        &-bullet {
+            @include swiper-pagination-bullet;
+        }
+    
+        &-bullet-active {
+            @include swiper-pagination-bullet-active;
+        }
+    }
+}

@@ -1,0 +1,221 @@
+@import "../../utilities/_variables.scss";
+
+.enterprises {
+    width: 100vw;
+    text-align: center;
+    margin-bottom: 8em;
+
+    h2 {
+        color: $primaryTextColor;
+        font-size: 3.563rem;
+        line-height: 4rem;
+
+        @media screen and (max-width: $mediaMobile) {
+            margin: 0 1em;
+        }
+    }
+
+    p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-bottom: 2.7em;
+    }
+}
+
+.sustainability {
+    width: 78%;
+    margin: 0 auto 8em; 
+
+    @media screen and (max-width: $mediaMobile) {
+        width: 100vw;
+        margin: 0 1.5em 3.188em 1em;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        text-align: left;
+        margin-bottom: 1em;
+
+        @media screen and (max-width: $mediaMobile) {
+            font-size: 1.125rem;
+        }
+    }
+
+    .sustainability__lines {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0.5em;
+
+        @media screen and (max-width: $mediaMobile) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0;
+        }
+
+        .sustainability__line--wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            @media screen and (max-width: $mediaMobile) {
+                margin-bottom: 1.1875em;
+            }
+
+            .sustainability__line {
+                width: 100%;
+                height: 0.5em;
+                border-radius: 6px;
+            }
+
+            .sustainability__line--blue {
+                background: $primaryTextColor;
+                height: 0.5em;
+                border-radius: 6px;
+
+                @media screen and (max-width: $mediaMobile) {
+                    width: 90%;
+                }
+            }
+    
+            .sustainability__line--red {
+                background: $redColor;
+
+                @media screen and (max-width: $mediaMobile) {
+                    width: 25%;
+                }
+            }
+    
+            .sustainability__line--grey {
+                background: #DADADA;
+
+                @media screen and (max-width: $mediaMobile) {
+                    width: 10%;
+                }
+            }
+
+            p {
+                font-size: 1rem;
+
+                @media screen and (max-width: $mediaMobile) {
+                    font-size: 0.875rem;
+                    margin: 0;
+                }
+
+                span {
+                    vertical-align: middle;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $primaryTextColor;
+                    }
+                }
+            }
+        }
+
+        .wrapper-blue {
+            width: 75%;
+            animation: blueLine 1s linear forwards;
+            animation-delay: 0;
+
+            @media screen and (min-width: $mediaMobile) {
+                @keyframes blueLine {
+                    0% {
+                        width: 0;
+                      }
+                    
+                      100% {
+                        width: 75%;
+                      }
+                }
+            }
+
+            @media screen and (max-width: $mediaMobile) {
+                width: 100%;
+
+                @keyframes blueLine {
+                    0% {
+                        width: 0;
+                      }
+                    
+                    100% {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .wrapper-red {
+            width: 15%;
+            animation: redLine 1s linear forwards;
+            animation-delay: 1s;
+            animation-fill-mode: both;
+
+            @media screen and (min-width: $mediaMobile) {
+
+                @keyframes redLine {
+                    0% {
+                        width: 0;
+                        color: #fff;
+                      }
+                    
+                      100% {
+                        width: 15%;
+                        color: #000;
+                      }
+                }
+            }
+
+            @media screen and (max-width: $mediaMobile) {
+                width: 100%;
+
+                @keyframes redLine {
+                    0% {
+                        width: 0;
+                      }
+                    
+                    100% {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .wrapper-grey {
+            width: 10%;
+            animation: greyLine 1s linear forwards;
+            animation-delay: 2s;
+            animation-fill-mode: both;
+
+            @media screen and (min-width: $mediaMobile) {
+                @keyframes greyLine {
+                    0% {
+                        width: 0;
+                        color: #fff;
+                      }
+                    
+                      100% {
+                        width: 10%;
+                        color: #000;
+                      }
+                }
+            }
+
+            @media screen and (max-width: $mediaMobile) {
+                width: 100%;
+
+                @keyframes greyLine {
+                    0% {
+                        width: 0;
+                      }
+                    
+                    100% {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
