@@ -3,6 +3,8 @@ import "./App.scss";
 import BrickBenefits from "./components/BrickBenefits/BrickBenefits";
 import BrickTechnology from "./components/BrickTechnology/BrickTechnology";
 import CostPerHouse from "./components/CostPerHouse/CostPerHouse";
+import CreatedHousesChart from "./components/CreatedHousesChart/CreatedHousesChart";
+import EmmissionsSaved from "./components/EmissionsSaved/EmissionsSaved";
 import EntrepreneurImg from "./components/EntrepreneurImg/EntrepreneurImg";
 import HeroSection from "./components/HeroSection/HeroSection";
 import KeyPartners from "./components/KeyPartners/KeyPartners";
@@ -34,6 +36,12 @@ function App() {
       <LazyLoad height={200} offset={100}>
         <VideoSlider />
       </LazyLoad>
+      <LazyLoad height={200} offset={100}>
+        <CreatedHousesChart />
+      </LazyLoad>
+      {/* <LazyLoad height={200} offset={100}>
+        <EmmissionsSaved />
+      </LazyLoad> */}
     </div>
   );
 }

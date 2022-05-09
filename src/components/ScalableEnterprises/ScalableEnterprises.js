@@ -6,7 +6,7 @@ const ScalableEnterprises = () => {
       <h2>Scalable Enterprises</h2>
       <p>Meet the enterprises &amp; communities</p>
       <div className="sustainability">
-        <h3>Enterprise sustainability</h3>
+        <h4>Enterprise sustainability</h4>
         <div className="sustainability__lines">
           <div className="sustainability__line--wrapper wrapper-blue">
             <div className="sustainability__line sustainability__line--blue"></div>

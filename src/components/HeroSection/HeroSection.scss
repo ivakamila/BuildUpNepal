@@ -34,10 +34,7 @@
             width: 55%;
             color: #fff;
             font-size: 4rem;
-            font-weight: 400;
-            letter-spacing: -0.5px;
             line-height: 119%;
-            text-align: center;
 
             @media (min-width: $mediaMaxWidth) {
                 top: 35%;
@@ -353,7 +350,7 @@
         text-align: center;
         color: #79747E;
         font-size: 0.688rem;
-        line-height: 16px;
+        line-height: 1rem;
         font-weight: 500;
 
         span {
