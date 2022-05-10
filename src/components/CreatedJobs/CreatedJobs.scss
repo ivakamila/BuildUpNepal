@@ -1,0 +1,165 @@
+@import "../../utilities/_variables.scss";
+
+.created-jobs {
+    width: 79vw;
+    margin: 0 auto;
+    padding: 8em 0;
+
+    @media screen and (max-width: $mediaMobile) {
+        padding: 3em 0;
+        width: 90vw;
+    }
+
+    h2 {
+        margin: 0;
+
+        @media screen and (max-width: $mediaMobile) {
+            font-size: 1.75rem;
+            line-height: 2.25rem;
+        }
+    }
+
+    img {
+        display: block;
+        margin: 4em auto 0.75em;
+
+        @media screen and (max-width: $mediaMobile) {
+            max-width: 250px;
+            margin-top: 2em;
+        }
+    }
+
+    .created-jobs__number {
+        color: #000;
+        font-size: 8rem;
+        font-weight: 200;
+        line-height: 6.75rem;
+        letter-spacing: -2.25px;
+        margin: 0;
+
+        @media screen and (max-width: $mediaMobile) {
+            font-size: 4rem;
+            line-height: 4rem;
+        }
+    }
+
+    .info {
+        color: #79747E;
+        font-size: 1.125rem;
+        margin-bottom: 5em;
+        text-align: center;
+
+        @media screen and (max-width: $mediaMobile) {
+            margin-bottom: 3em;
+        }
+
+        span {
+            vertical-align: middle;
+            cursor: pointer;
+
+            &:hover {
+                color: $primaryTextColor;
+            }
+        }
+    }
+}
+
+.percentage-line {
+    @include percentage-line;
+    margin: 0 auto 2.5em; 
+    
+    .percentage__blue--med {
+        background: rgba(24, 99, 175, 0.6);
+
+        @media screen and (max-width: $mediaMobile) {
+            width: 25%;
+        }
+    }
+    
+    .percentage__blue--light {
+        background: rgba(24, 99, 175, 0.3);
+
+        @media screen and (max-width: $mediaMobile) {
+            width: 10%;
+        }
+    }
+}
+
+.percentage-line__container {
+    @include percentage-line__container;
+
+    .percentage-line__part {
+        p {
+            line-height: 1.5rem;
+        }
+    }
+}
+
+.sectors {
+    h3 {
+        color: #000;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 2rem;
+        text-align: left;
+        margin-bottom: 1em;
+    }
+
+    p {
+        margin-top: 0.5em;
+        font-size: 1rem;
+        line-height: 1.5rem;
+
+        @media screen and (max-width: $mediaMobile) {
+            line-height: 1rem;
+        }
+    }
+}
+
+.animated-line__container {
+    @include animated-line__container;
+
+    .animated-line__one {
+        width: 50%;
+    }
+
+    .animated-line__two {
+        width: 100%;
+    }
+
+    @keyframes lineOne {
+        0% {
+            width: 0;
+        }
+    
+        100% {
+            width: 50%;
+        }
+    }
+
+    @keyframes lineTwo {
+        0% {
+            width: 0;
+        }
+    
+        100% {
+            width: 100%;
+        }
+    }
+
+    .orange-line {
+        background: #F15E2B;
+    }
+
+    .orange-text {
+        color: #F15E2B;
+    }
+
+    .yellow-line {
+        background: #F5A61D;
+    }
+
+    .yellow-text {
+        color: #F5A61D;
+    }
+}

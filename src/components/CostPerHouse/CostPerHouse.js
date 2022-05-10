@@ -7,17 +7,23 @@ const CostPerHouse = () => {
     <div className="cost">
       <h3>Cost for 2 room house</h3>
       <img src={FiredBrick} alt="fire brick" />
-      <div className="cost__line--container">
-        <div className="cost__line--one"></div>
-        <p style={{ animationDelay: "2s" }} className="cost__fired-brick">
+      <div className="animated-line__container">
+        <div className="animated-line__one"></div>
+        <p
+          style={{ animationDelay: "2s" }}
+          className="animated-line__number--one"
+        >
           $4.000
         </p>
       </div>
       <p>Fired Bricks</p>
       <img src={EarthBrick} alt="CSEB brick" />
-      <div className="cost__line--container">
-        <div className="cost__line--two"></div>
-        <p style={{ animationDelay: "2s" }} className="cost__earth-brick">
+      <div className="animated-line__container">
+        <div className="animated-line__two"></div>
+        <p
+          style={{ animationDelay: "2s" }}
+          className="animated-line__number--two"
+        >
           $3.000
         </p>
       </div>
