@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/BuildUpNepal/static/css/main.8f557fa3.css",
-    "main.js": "/BuildUpNepal/static/js/main.cb6d739d.js",
+    "main.css": "/BuildUpNepal/static/css/main.5fdf0956.css",
+    "main.js": "/BuildUpNepal/static/js/main.f2776441.js",
     "static/media/Hero-slider-3.png": "/BuildUpNepal/static/media/Hero-slider-3.1a010e6ddb814cafed1e.png",
     "static/media/Hero-slider-1.png": "/BuildUpNepal/static/media/Hero-slider-1.300a8a85bf40e991d2bc.png",
     "static/media/Hero-slider-2.png": "/BuildUpNepal/static/media/Hero-slider-2.53291c51e4b9a4c6334e.png",
@@ -13,6 +13,7 @@
     "static/media/sand.svg": "/BuildUpNepal/static/media/sand.e29b417485fda602f2e499dd1c94ac2d.svg",
     "static/media/soil.svg": "/BuildUpNepal/static/media/soil.904e382354348faf0a796e98d7ba3241.svg",
     "static/media/cement.svg": "/BuildUpNepal/static/media/cement.730f60d2b39642b14200fdf493be642a.svg",
+    "static/media/entrepreneur.png": "/BuildUpNepal/static/media/entrepreneur.36f59619a373f311e405.png",
     "static/media/lower-cost-2.png": "/BuildUpNepal/static/media/lower-cost-2.5d742d49608e9df04e71.png",
     "static/media/lower-emmissions.png": "/BuildUpNepal/static/media/lower-emmissions.c86c967ce4d4ca487b62.png",
     "static/media/lower-cost-1.png": "/BuildUpNepal/static/media/lower-cost-1.f1c7f2aa89f7f025319f.png",
@@ -30,11 +31,11 @@
     "index.html": "/BuildUpNepal/index.html",
     "static/media/play-button.svg": "/BuildUpNepal/static/media/play-button.aeea83fce2b38183b4e296e50ca189b3.svg",
     "static/media/house-icon.svg": "/BuildUpNepal/static/media/house-icon.a0b43fa891ffb92c9552feac67b71514.svg",
-    "main.8f557fa3.css.map": "/BuildUpNepal/static/css/main.8f557fa3.css.map",
-    "main.cb6d739d.js.map": "/BuildUpNepal/static/js/main.cb6d739d.js.map"
+    "main.5fdf0956.css.map": "/BuildUpNepal/static/css/main.5fdf0956.css.map",
+    "main.f2776441.js.map": "/BuildUpNepal/static/js/main.f2776441.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f557fa3.css",
-    "static/js/main.cb6d739d.js"
+    "static/css/main.5fdf0956.css",
+    "static/js/main.f2776441.js"
   ]
 }
