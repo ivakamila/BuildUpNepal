@@ -89,30 +89,10 @@
     }
 }
 
-.benefits__links {
-    @include flex-center;
-    gap: 0.625em;
-    margin-bottom: 4.0625em;
+.link-containers {
+    @include link-containers;
 
-    @media screen and (max-width: $mediaMobile) {
-        flex-direction: column;
-    }
-
-    .benefits__link--container {
-        padding: 0.375em 1em 0.375em 0.5em;
-        border: 1px solid rgba(218, 218, 218, 0.63);
-        border-radius: 8px;
-
-        a {
-            @include flex-center;
-            gap: 0.5em;
-            text-decoration: none;
-            color: $smallTextColor;
-            font-size: 0.688rem;
-
-            &:hover {
-                color: $primaryTextColor;
-            }
-        }
+    .link-container {
+        @include link-container;
     }
 }

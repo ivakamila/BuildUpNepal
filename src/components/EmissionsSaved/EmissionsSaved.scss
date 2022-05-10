@@ -1,24 +1,17 @@
 @import "../../utilities/_variables.scss";
 
-.houses-chart__container {
+.emissions {
     background: $bgColorPrimary;
     width: 100vw;
     height: fit-content;
-    padding: 8em 0 4.125em;
+    padding: 8em 9.57em 4em;
 
-    @media screen and (max-width: $mediaMobile) {
-        padding: 1.375em 1em;
+    @media screen and (max-width: $mediaTablet) {
+        padding: 3em 2em;
     }
 
-    span {
-        @include flex-center;
-        font-size: 4rem;
-        color: #D24246;
-        margin-bottom: 0.5em;
-
-        @media screen and (max-width: $mediaMobile) {
-            display: none;
-        }
+    @media screen and (max-width: $mediaMobile) {
+        padding: 2em 1em;
     }
 
     h2 {
@@ -30,10 +23,59 @@
         }
     }
 
+    h3 {
+        @media screen and (max-width: $mediaMobile) {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+    }
+
+    img {
+        display: block;
+        margin: 4em auto;
+
+        @media screen and (max-width: $mediaMobile) {
+            max-width: 200px;
+            margin: 2em auto;
+        }
+    }
+
+    .emissions__large-text {
+        font-size: 4rem;
+        line-height: 4.75rem;
+        font-weight: 300;
+        margin-bottom: 0;
+        text-align: center;
+
+        @media screen and (max-width: $mediaMobile) {
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+    }
+
+    .link-containers {
+        @include link-containers;
+        margin-top: 3.875em;
+
+        @media screen and (max-width: $mediaMobile) {
+            margin-top: 1.5em;
+        }        
+    }
+
+    .link-container {
+        @include link-container;
+    }
+
+    .link-container__single {
+        @include link-container;
+        margin: 2em auto;
+    }
+
     p {
         font-size: 1.5rem;
         line-height: 2rem;
         text-align: center;
+ 
 
         @media screen and (max-width: $mediaMobile) {
             font-size: 1rem;
@@ -41,26 +83,7 @@
         }
     }
 
-    .houses-chart {
-        position:relative;
-        width: 80vw;
-        height: 40vh;
-        max-width: 1291px;
-        margin: 0 auto 1.85em;
-        overflow: auto;
-
-        @media screen and (min-width: $mediaMaxWidth) {
-            margin-bottom: 5em;
-        }
-
-        @media screen and (max-width: $mediaTablet) {
-            width: 100%;
-        }
-
-        @media screen and (max-width: $mediaMobile) {
-            margin: 0 1em;
-            margin-left: 0;
-            height: 50vh;
-        }
+    .chart {
+        @include chart;
     }
 }

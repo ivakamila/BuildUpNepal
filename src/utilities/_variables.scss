@@ -54,6 +54,35 @@ $greyColor: #DADADA;
     }
 }
 
+@mixin link-containers {
+    @include flex-center;
+    gap: 0.625em;
+    margin-bottom: 4.0625em;
+
+    @media screen and (max-width: $mediaMobile) {
+        flex-direction: column;
+    }
+}
+
+@mixin link-container {
+    padding: 0.375em 1em 0.375em 0.5em;
+    border: 1px solid rgba(218, 218, 218, 0.63);
+    border-radius: 8px;
+    width: fit-content;
+
+    a {
+        @include flex-center;
+        gap: 0.5em;
+        text-decoration: none;
+        color: $smallTextColor;
+        font-size: 0.688rem;
+
+        &:hover {
+            color: $primaryTextColor;
+        }
+    }
+}
+
 @mixin percentage-line {
     width: 100%;   
   
@@ -325,5 +354,28 @@ $greyColor: #DADADA;
         100% {
             width: 45vw;
         }
+    }
+}
+
+@mixin chart {
+    position:relative;
+    width: 80vw;
+    height: 40vh;
+    max-width: 1291px;
+    margin: 0 auto 1.85em;
+    overflow: auto;
+
+    @media screen and (min-width: $mediaMaxWidth) {
+        margin-bottom: 5em;
+    }
+
+    @media screen and (max-width: $mediaTablet) {
+        width: 100%;
+    }
+
+    @media screen and (max-width: $mediaMobile) {
+        margin: 0 1em;
+        margin-left: 0;
+        height: 50vh;
     }
 }

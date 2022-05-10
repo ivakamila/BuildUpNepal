@@ -129,12 +129,10 @@ const CreatedHousesChart = () => {
         Build up Nepal&apos;s mission is to make safe, eco-friendly housing
         affordable for all.
       </p>
-      <div className="houses-chart">
+      <div className="chart">
         <Bar data={data()} options={options} plugins={[ChartDataLabels]} />
       </div>
-      <p className="houses-chart__desc">
-        Cumulative total houses created over time.
-      </p>
+      <p>Cumulative total houses created over time.</p>
     </div>
   );
 };

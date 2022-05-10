@@ -31,14 +31,14 @@ const BrickBenefits = () => {
           );
         })}
       </div>
-      <div className="benefits__links">
-        <div className="benefits__link--container">
+      <div className="link-containers">
+        <div className="link-container">
           <a href="/" target="_blank" rel="noopener noreferrer">
             <span className="material-icons">link</span>Cost effectiveness of
             CSEB in Nepal by Resilient engineers
           </a>
         </div>
-        <div className="benefits__link--container">
+        <div className="link-container">
           <a href="/" target="_blank" rel="noopener noreferrer">
             <span className="material-icons">link</span>Max Fordham study of
             CSEB C02 emissions

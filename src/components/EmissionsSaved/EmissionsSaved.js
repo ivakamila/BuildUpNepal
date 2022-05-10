@@ -25,8 +25,8 @@ const EmmissionsSaved = () => {
           backgroundColor: (context: ScriptableContext<"bar">) => {
             const ctx = context.chart.ctx;
             const gradient = ctx.createLinearGradient(0, 100, 0, 300);
-            gradient.addColorStop(0, "#1863AF");
-            gradient.addColorStop(1, "#09ADEA");
+            gradient.addColorStop(0, "#1CA93B");
+            gradient.addColorStop(1, "#22C847");
             return gradient;
           },
           maxBarThickness: 50,
@@ -126,11 +126,11 @@ const EmmissionsSaved = () => {
     <div className="emissions">
       <h2>CO2 Saved</h2>
       <img src={EmissionsImg} alt="pollution in a city" />
-      <p>
+      <p className="emissions__large-text">
         Fired bricks account for 37% of CO2 emissions in Nepal. Our mission is
         to reduce it by 2%.
       </p>
-      <div className="emissions__link--container">
+      <div className="link-container__single">
         <a href="/" target="_blank" rel="noopener noreferrer">
           <span className="material-icons">link</span>World Bank report
         </a>
@@ -140,19 +140,17 @@ const EmmissionsSaved = () => {
         CSEB produces 50% less CO2 emissions (1), saving 9,5 tonnes per 3-room
         house build with CSEB instead of fired bricks (2).
       </p>
-      <div className="emissions__chart">
+      <div className="chart">
         <Bar data={data()} options={options} plugins={[ChartDataLabels]} />
       </div>
-      <p className="emissions__chart__desc">
-        CO2 emission saved over time (in Tonnes)
-      </p>
-      <div className="emissions__link--containers">
-        <div className="emissions__link--container">
+      <p>CO2 emission saved over time (in Tonnes)</p>
+      <div className="link-containers">
+        <div className="link-container">
           <a href="/" target="_blank" rel="noopener noreferrer">
             <span className="material-icons">link</span>(1) Max Fordham report
           </a>
         </div>
-        <div className="emissions__link--container">
+        <div className="link-container">
           <a href="/" target="_blank" rel="noopener noreferrer">
             <span className="material-icons">link</span>(2) Asian Institute of
             Technology &amp; Management
