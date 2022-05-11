@@ -39,7 +39,6 @@ const FiredBricksVideo = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             className="fired-bricks__video--player"
-            // style={{ paddingBottom: playVideo && "0" }}
           ></iframe>
         )}
       </div>

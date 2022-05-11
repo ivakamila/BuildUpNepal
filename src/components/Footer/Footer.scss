@@ -1,0 +1,19 @@
+@import "../../utilities/_variables.scss";
+
+.footer {
+    padding-bottom: 5.9375em;
+
+    img {
+        @include flex-center;
+        max-width: 156px;
+        margin: 0 auto;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        text-align: center;
+        margin-top: 4em;
+        margin-bottom: 0;
+    }
+}
