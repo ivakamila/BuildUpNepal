@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/BuildUpNepal/static/css/main.3e2a2d23.css",
-    "main.js": "/BuildUpNepal/static/js/main.3f154873.js",
+    "main.css": "/BuildUpNepal/static/css/main.bcf6d8de.css",
+    "main.js": "/BuildUpNepal/static/js/main.65456b93.js",
     "static/media/Hero-slider-3.png": "/BuildUpNepal/static/media/Hero-slider-3.1a010e6ddb814cafed1e.png",
     "static/media/Hero-slider-1.png": "/BuildUpNepal/static/media/Hero-slider-1.300a8a85bf40e991d2bc.png",
     "static/media/Hero-slider-2.png": "/BuildUpNepal/static/media/Hero-slider-2.53291c51e4b9a4c6334e.png",
@@ -12,6 +12,7 @@
     "static/media/video-3.png": "/BuildUpNepal/static/media/video-3.71bef0a0ffcc9e403d16.png",
     "static/media/brick.svg": "/BuildUpNepal/static/media/brick.c229b9fa401aaa7f37f2f59aae21384c.svg",
     "static/media/sand.svg": "/BuildUpNepal/static/media/sand.e29b417485fda602f2e499dd1c94ac2d.svg",
+    "static/media/waislitz.svg": "/BuildUpNepal/static/media/waislitz.dd8c88ce08da230f3e229e171bca4e12.svg",
     "static/media/jobs-created-1.svg": "/BuildUpNepal/static/media/jobs-created-1.1f8445ddf267af85c048874ef700821b.svg",
     "static/media/jobs-created-2.svg": "/BuildUpNepal/static/media/jobs-created-2.272fc28e589474d50ffd572d135e5fdd.svg",
     "static/media/co2-saved.svg": "/BuildUpNepal/static/media/co2-saved.2b470355b99a1489064714f0f73b40c5.svg",
@@ -27,13 +28,21 @@
     "static/media/poverty.png": "/BuildUpNepal/static/media/poverty.020c424d3a44c36eb68b.png",
     "static/media/lower-cost-1.png": "/BuildUpNepal/static/media/lower-cost-1.f1c7f2aa89f7f025319f.png",
     "static/media/dirty-bricks.png": "/BuildUpNepal/static/media/dirty-bricks.dabbe84ddcc0b3568ab7.png",
+    "static/media/bpf.svg": "/BuildUpNepal/static/media/bpf.f76661f5475510a593d8bfaab695b285.svg",
     "static/media/emissions-img.png": "/BuildUpNepal/static/media/emissions-img.3a160e0db9e4477b48f5.png",
     "static/media/tibet-relief-fund.svg": "/BuildUpNepal/static/media/tibet-relief-fund.f0486eebce685ba604a24f88e5dee658.svg",
+    "static/media/nepali-times.svg": "/BuildUpNepal/static/media/nepali-times.dce34c0c6ecf549a80b2279a69780210.svg",
+    "static/media/housing-forum.svg": "/BuildUpNepal/static/media/housing-forum.b6d11b353da14e8b2a7f3cbf874b21ec.svg",
+    "static/media/ashden.svg": "/BuildUpNepal/static/media/ashden.599ed044f0deb5030fdbe0e116ed7767.svg",
     "static/media/oxfam.svg": "/BuildUpNepal/static/media/oxfam.959dbf7f13832cad2addf241e7f5d7ea.svg",
     "static/media/hotlab.svg": "/BuildUpNepal/static/media/hotlab.892b983ac7d47c7bd549aec4aa1c90fa.svg",
+    "static/media/innovation-for-sdgs.svg": "/BuildUpNepal/static/media/innovation-for-sdgs.dc6508c6e78ebcd3468fc1112ffb9ce0.svg",
+    "static/media/ncf.svg": "/BuildUpNepal/static/media/ncf.f617797733ab85dbcaba53053afec86f.svg",
     "static/media/ewb.svg": "/BuildUpNepal/static/media/ewb.767163361d0d43372cd54f75667f919c.svg",
+    "static/media/social-impact-prize.svg": "/BuildUpNepal/static/media/social-impact-prize.e1ccc3bdb512541ed7996bba409f7d11.svg",
     "static/media/fired-brick.png": "/BuildUpNepal/static/media/fired-brick.b63df76b3c9f0710e0f2.png",
     "static/media/earth-brick.png": "/BuildUpNepal/static/media/earth-brick.72dae58be83a7337e579.png",
+    "static/media/bun-logo-2.svg": "/BuildUpNepal/static/media/bun-logo-2.c1743f765aa9ff7fb004168edbffb8a4.svg",
     "static/media/bun-logo.svg": "/BuildUpNepal/static/media/bun-logo.633504ff6c300ac35371c8f236393b11.svg",
     "static/media/co2-icon.svg": "/BuildUpNepal/static/media/co2-icon.1b2df1a7fdc56a151d49c5fd0fb202e6.svg",
     "static/media/people-icon.svg": "/BuildUpNepal/static/media/people-icon.7c5c5bdb8c33c5c430faedb13c27c4ee.svg",
@@ -41,11 +50,11 @@
     "index.html": "/BuildUpNepal/index.html",
     "static/media/play-button.svg": "/BuildUpNepal/static/media/play-button.aeea83fce2b38183b4e296e50ca189b3.svg",
     "static/media/house-icon.svg": "/BuildUpNepal/static/media/house-icon.a0b43fa891ffb92c9552feac67b71514.svg",
-    "main.3e2a2d23.css.map": "/BuildUpNepal/static/css/main.3e2a2d23.css.map",
-    "main.3f154873.js.map": "/BuildUpNepal/static/js/main.3f154873.js.map"
+    "main.bcf6d8de.css.map": "/BuildUpNepal/static/css/main.bcf6d8de.css.map",
+    "main.65456b93.js.map": "/BuildUpNepal/static/js/main.65456b93.js.map"
   },
   "entrypoints": [
-    "static/css/main.3e2a2d23.css",
-    "static/js/main.3f154873.js"
+    "static/css/main.bcf6d8de.css",
+    "static/js/main.65456b93.js"
   ]
 }
