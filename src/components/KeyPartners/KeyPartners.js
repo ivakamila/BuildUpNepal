@@ -27,7 +27,7 @@ const KeyPartners = () => {
           className="partner__logo partner__show-more"
           onClick={showMorePartners}
         >
-          <span className="material-icons">add</span>
+          <span className="material-icons-outlined">add</span>
           <p>Show More</p>
         </div>
       </div>

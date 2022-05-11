@@ -51,7 +51,9 @@ const HeroImpact = () => {
                   className="impact-item__count"
                 />
                 <p>{item.text}</p>
-                <span className="material-icons impact-item__info">info</span>
+                <span className="material-icons-outlined impact-item__info">
+                  info
+                </span>
               </div>
             );
           })}

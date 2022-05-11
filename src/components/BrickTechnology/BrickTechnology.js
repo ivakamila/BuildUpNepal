@@ -12,7 +12,7 @@ const BrickTechnology = () => {
       <p>
         Build up Nepal builds low-cost houses using CSEB Compressed Stabilized
         Earth Bricks, a recognized disaster resilient technology.{" "}
-        <span className="material-icons technology__info">info</span>
+        <span className="material-icons-outlined technology__info">info</span>
       </p>
       <div className="technology__formula">
         <div className="technology__formula--item">
@@ -33,7 +33,7 @@ const BrickTechnology = () => {
         <div className="technology__formula--item">
           <img src={BrickImg} alt="Brick" />
           <p>Earth Brick (CSEB)</p>
-          <span className="material-icons">info</span>
+          <span className="material-icons-outlined">info</span>
         </div>
       </div>
     </div>

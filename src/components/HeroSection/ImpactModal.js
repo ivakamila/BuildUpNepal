@@ -7,7 +7,10 @@ const ImpactModal = ({ show, close, item }) => {
         {show === "true" && (
           <div className="impact-modal">
             <h2>How we measure our impact</h2>
-            <span className="material-icons close-icon" onClick={close}>
+            <span
+              className="material-icons-outlined close-icon"
+              onClick={close}
+            >
               close
             </span>
             <div className="impact-modal__info">
@@ -18,7 +21,7 @@ const ImpactModal = ({ show, close, item }) => {
               </div>
             </div>
             <button onClick={close} className="impact-modal__close">
-              <span className="material-icons">close</span>
+              <span className="material-icons-outlined">close</span>
               Close
             </button>
           </div>

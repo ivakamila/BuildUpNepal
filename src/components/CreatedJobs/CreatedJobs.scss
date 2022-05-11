@@ -30,37 +30,11 @@
     }
 
     .created-jobs__number {
-        color: #000;
-        font-size: 8rem;
-        font-weight: 200;
-        line-height: 6.75rem;
-        letter-spacing: -2.25px;
-        margin: 0;
-
-        @media screen and (max-width: $mediaMobile) {
-            font-size: 4rem;
-            line-height: 4rem;
-        }
+        @include large-text;
     }
 
     .info {
-        color: #79747E;
-        font-size: 1.125rem;
-        margin-bottom: 5em;
-        text-align: center;
-
-        @media screen and (max-width: $mediaMobile) {
-            margin-bottom: 3em;
-        }
-
-        span {
-            vertical-align: middle;
-            cursor: pointer;
-
-            &:hover {
-                color: $primaryTextColor;
-            }
-        }
+        @include small-text;
     }
 }
 

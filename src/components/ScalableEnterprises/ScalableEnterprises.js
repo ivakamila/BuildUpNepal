@@ -12,7 +12,7 @@ const ScalableEnterprises = () => {
             <div className="percentage percentage__blue"></div>
             <p>
               75% operating &amp; growing{" "}
-              <span className="material-icons">info</span>
+              <span className="material-icons-outlined">info</span>
             </p>
           </div>
           <div className="percentage-line__part wrapper__red">

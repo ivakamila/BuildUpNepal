@@ -13,7 +13,7 @@ const BrickBenefits = () => {
       <div className="benefits__container">
         {BenefitsData.map((item, index) => {
           return (
-            <div className="benefits__info" key={uuid()}>
+            <div className="circle__card" key={uuid()}>
               <div
                 className="benefits__img"
                 style={{ backgroundImage: `url(${item.bgImage})` }}
@@ -24,9 +24,9 @@ const BrickBenefits = () => {
                   className="benefits__chart"
                 />
               </div>
-              <h3>{item.percentage}</h3>
+              <h4>{item.percentage}</h4>
               <p>{item.smallText}</p>
-              <span className="material-icons">info</span>
+              <span className="material-icons-outlined">info</span>
             </div>
           );
         })}
@@ -34,14 +34,14 @@ const BrickBenefits = () => {
       <div className="link-containers">
         <div className="link-container">
           <a href="/" target="_blank" rel="noopener noreferrer">
-            <span className="material-icons">link</span>Cost effectiveness of
-            CSEB in Nepal by Resilient engineers
+            <span className="material-icons-outlined">link</span>Cost
+            effectiveness of CSEB in Nepal by Resilient engineers
           </a>
         </div>
         <div className="link-container">
           <a href="/" target="_blank" rel="noopener noreferrer">
-            <span className="material-icons">link</span>Max Fordham study of
-            CSEB C02 emissions
+            <span className="material-icons-outlined">link</span>Max Fordham
+            study of CSEB C02 emissions
           </a>
         </div>
       </div>

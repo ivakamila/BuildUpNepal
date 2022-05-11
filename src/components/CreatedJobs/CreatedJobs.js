@@ -8,7 +8,7 @@ const CreatedJobs = () => {
       <img src={CreatedJobsImg} alt="female entrepreneur" />
       <h2 className="created-jobs__number">3034 Jobs</h2>
       <p className="info">
-        Created to date <span className="material-icons">info</span>
+        Created to date <span className="material-icons-outlined">info</span>
       </p>
       <div className="percentage-line">
         <h4>Demographics for jobs in production</h4>

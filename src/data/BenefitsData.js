@@ -13,12 +13,18 @@ export const BenefitsData = [
           data: [40, 60],
           backgroundColor: ["rgba(24, 99, 175, 0.6)", "rgba(0, 0, 0, 0)"],
           hoverOffset: 4,
-          borderColor: "#ffffff",
-          borderWidth: 2,
+          // borderColor: "#ffffff",
+          borderWidth: [0, 2, 2, 0],
         },
       ],
     },
     options: {
+      elements: {
+        arc: {
+          borderWidth: 0, // <-- Set this to zero
+          borderColor: "#fff",
+        },
+      },
       plugins: {
         tooltip: false,
         legend: false,
@@ -38,7 +44,7 @@ export const BenefitsData = [
           data: [25, 75],
           backgroundColor: ["rgba(24, 99, 175, 0.6)", "rgba(0, 0, 0, 0)"],
           hoverOffset: 4,
-          borderColor: "#ffffff",
+          // borderColor: "#ffffff",
           borderWidth: 2,
         },
       ],
@@ -63,7 +69,7 @@ export const BenefitsData = [
           data: [50, 50],
           backgroundColor: ["rgba(34, 200, 71, 0.5)", "rgba(0, 0, 0, 0)"],
           hoverOffset: 4,
-          borderColor: "#ffffff",
+          // borderColor: "#ffffff",
           borderWidth: 2,
         },
       ],

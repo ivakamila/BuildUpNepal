@@ -16,7 +16,7 @@ const Menu = () => {
     <>
       {activeMenu === false ? (
         <div className="menu-icon" onClick={openMenu}>
-          <span className="material-icons">menu</span>
+          <span className="material-icons-outlined">menu</span>
         </div>
       ) : (
         <div className="menu">
@@ -28,7 +28,10 @@ const Menu = () => {
               </a>
             ))}
           </div>
-          <span className="material-icons menu__close" onClick={closeMenu}>
+          <span
+            className="material-icons-outlined menu__close"
+            onClick={closeMenu}
+          >
             close
           </span>
         </div>

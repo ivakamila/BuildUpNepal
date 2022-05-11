@@ -9,7 +9,7 @@ const MeasureImpact = ({ showImpactMeasure, closeImpactMeasure }) => {
           <div className="impact-measure">
             <h2>How we measure our impact</h2>
             <span
-              className="material-icons close-icon"
+              className="material-icons-outlined close-icon"
               onClick={closeImpactMeasure}
             >
               close
@@ -27,7 +27,7 @@ const MeasureImpact = ({ showImpactMeasure, closeImpactMeasure }) => {
               onClick={closeImpactMeasure}
               className="impact-modal__close"
             >
-              <span className="material-icons">close</span>
+              <span className="material-icons-outlined">close</span>
               Close
             </button>
           </div>

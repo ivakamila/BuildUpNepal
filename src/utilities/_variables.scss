@@ -20,6 +20,41 @@ $greyColor: #DADADA;
     align-items: center;
 }
 
+@mixin large-text {
+    color: #000;
+    font-size: 8rem;
+    font-weight: 200;
+    line-height: 6.75rem;
+    letter-spacing: -2.25px;
+    margin: 0;
+    text-align: center;
+
+    @media screen and (max-width: $mediaMobile) {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+}
+
+@mixin small-text {
+    color: #79747E;
+    font-size: 1.125rem;
+    margin-bottom: 5em;
+    text-align: center;
+
+    @media screen and (max-width: $mediaMobile) {
+        margin-bottom: 3em;
+    }
+
+    span {
+        vertical-align: middle;
+        cursor: pointer;
+
+        &:hover {
+            color: $primaryTextColor;
+        }
+    }
+}
+
 @mixin swiper-pagination {
     max-width: fit-content;
     max-height: fit-content;
@@ -65,6 +100,7 @@ $greyColor: #DADADA;
 }
 
 @mixin link-container {
+    background: #fff;
     padding: 0.375em 1em 0.375em 0.5em;
     border: 1px solid rgba(218, 218, 218, 0.63);
     border-radius: 8px;
@@ -377,5 +413,86 @@ $greyColor: #DADADA;
         margin: 0 1em;
         margin-left: 0;
         height: 50vh;
+    }
+}
+
+@mixin circle-cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 4em auto 2em;
+    width: 75%;
+    overflow-y: auto;
+
+    @media screen and (max-width: $mediaDesktop) {
+        width: 90%;    
+    }
+
+    @media screen and (max-width: $mediaTablet) {
+        width: 88%;
+        justify-content: flex-start;
+        gap: 1.31em;
+        padding-bottom: 0.5em;
+        margin-right: 0;
+
+        .circle__card:last-child {
+            margin-right: 1.5em;
+        }
+    }
+
+    .circle__card {
+        @include flex-center;
+        flex-direction: column;
+        gap: 0;
+        width: 30%;
+
+        @media screen and (max-width: $mediaTablet) {
+            width: 100%;
+        }
+
+        .benefits__img {
+            background-repeat: no-repeat;
+            border-radius: 50%;
+        }
+
+        .benefits__chart {
+            width: 299px;
+            height: 299px;
+
+            @media screen and (max-width: $mediaMobile) {
+                width: 271px;
+                height: 271px;
+            }
+        }
+
+        h4 {
+            font-size: 1.75rem;
+            font-weight: 400;
+            line-height: 2.25rem;
+            margin-bottom: 0;
+
+            @media screen and (max-width: $mediaMobile) {
+                font-size: 1.375rem;
+                line-height: 1.75rem;
+            }
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            margin-top: 0;
+            text-align: center;
+
+            @media screen and (max-width: $mediaMobile) {
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+            }
+        }
+
+        span {
+            font-size: 1.25rem;
+            color: $smallTextColor;
+            cursor: pointer;
+        }
     }
 }
