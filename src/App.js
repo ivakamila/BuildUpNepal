@@ -8,6 +8,7 @@ import CreatedHousesChart from "./components/CreatedHousesChart/CreatedHousesCha
 import CreatedJobs from "./components/CreatedJobs/CreatedJobs";
 import EmmissionsSaved from "./components/EmissionsSaved/EmissionsSaved";
 import EntrepreneurImg from "./components/EntrepreneurImg/EntrepreneurImg";
+import FiredBricksVideo from "./components/FiredBricksVideo/FiredBricksVideo";
 import HeroSection from "./components/HeroSection/HeroSection";
 import Impact from "./components/Impact/Impact";
 import KeyPartners from "./components/KeyPartners/KeyPartners";
@@ -53,6 +54,9 @@ function App() {
       </LazyLoad>
       <LazyLoad height={200} offset={0}>
         <Impact />
+      </LazyLoad>
+      <LazyLoad height={200} offset={0}>
+        <FiredBricksVideo />
       </LazyLoad>
     </div>
   );
