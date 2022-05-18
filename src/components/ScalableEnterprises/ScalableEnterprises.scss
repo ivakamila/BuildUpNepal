@@ -3,14 +3,16 @@
 .enterprises {
     width: 79vw;
     text-align: center;
-    margin: 0 auto 8em;
+    margin: 0 auto;
+    padding-top: 7.94em;
+    padding-bottom: 0;
 
     @media screen and (max-width: $mediaMobile) {
-        margin-bottom: 3.19em;
         width: 90vw;
     }
 
     h2 {
+        margin: 0;
 
         @media screen and (max-width: $mediaMobile) {
             font-size: 1.85rem;
@@ -22,7 +24,6 @@
     p {
         font-size: 1.5rem;
         line-height: 2rem;
-        margin-bottom: 2.7em;
 
         @media screen and (max-width: $mediaMobile) {
             font-size: 1rem;
@@ -32,9 +33,13 @@
 
 .percentage-line {
     @include percentage-line;
-    margin: 0 auto 8em;
+    margin: 0 auto;
 }
 
 .percentage-line__container {
     @include percentage-line__container;
+
+    .icon-info-circled-alt:before { 
+        content: '\f086'; 
+    }
 }

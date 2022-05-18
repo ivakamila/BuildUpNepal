@@ -25,23 +25,34 @@
         width: 100%;
         position: relative;
         margin-top: 4em;
+        @include flex-center;
+
+        @media screen and (max-width: $mediaMobile) {
+            margin-top: 2em;
+        }
     
         .fired-bricks__video--img {
             width: 100%;
             height: 100%;
+            max-width: 1128px;
+
+            @media screen and (max-width: $mediaDesktop) {
+                width: 90%;
+            }
+        }
+
+        .icon-play-button:before { 
+            content: '\e810'; 
+            color: #fff;
+            font-size: 5.25rem;
+
+            @media screen and (max-width: $mediaMobile) {
+                font-size: 2.625rem;
+            }
         }
     
         .play-button {
-            position: absolute;
-            top: 45%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            cursor: pointer;
-    
-            @media screen and (max-width: $mediaMobile) {
-                width: 2.625em;
-                height: 2.625em;
-            }
+            @include play-button;
         }
     
         .fired-bricks__video--player {

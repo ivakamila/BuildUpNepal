@@ -6,10 +6,12 @@ import "./HeroSection.scss";
 
 const HeroSection = () => {
   return (
-    <div>
-      <HeroSlider />
+    <div className="hero-section" id="home">
+      <div className="hero-section__container">
+        <HeroSlider />
+        <HeroImpact />
+      </div>
       <Menu />
-      <HeroImpact />
     </div>
   );
 };

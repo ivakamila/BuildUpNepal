@@ -1,23 +1,26 @@
-import HouseIcon from "../assets/icons/house-icon.svg";
-import BricksIcon from "../assets/icons/bricks-icon.svg";
-import CarbonIcon from "../assets/icons/co2-icon.svg";
-import PeopleIcon from "../assets/icons/people-icon.svg";
+// import HouseIcon from "../assets/icons/house-icon.svg";
+// import BricksIcon from "../assets/icons/bricks-icon.svg";
+// import CarbonIcon from "../assets/icons/co2-icon.svg";
+// import PeopleIcon from "../assets/icons/people-icon.svg";
 
 export const ImpactData = [
   {
-    icon: PeopleIcon,
+    // icon: PeopleIcon,
+    icon: "icon-people-icon",
     count: 288,
     text: "Entrepreneurs",
     desc: "We have 287 active enterprises/ communities building with CSEB. You can see the details of each enterprise on the map below including a breakdown of how many houses they have built, jobs created and Co2 saved. On average each enterprise builds 10-20 houses per year and creates 8-10 jobs. The data is collected from our enterprises and is based on their reports.",
   },
   {
-    icon: HouseIcon,
+    // icon: HouseIcon,
+    icon: "icon-house-icon",
     count: 6009,
     text: "Houses",
     desc: "Each enterprise / community reports on regular basis how many houses have been built by their bricks. This is calculated by average 2500 bricks per house (standard for a 3-room house) We do our best to validate the data by regular field visits. Each house built means on average 25% savings for the community compared to using traditional materials.",
   },
   {
-    icon: BricksIcon,
+    // icon: BricksIcon,
+    icon: "icon-bricks-icon",
     count: 2896,
     text: "Jobs",
     desc: `1011 jobs in production of CSEB
@@ -27,7 +30,8 @@ export const ImpactData = [
     3-room house: 235 man-days. 300 man-days = one job for a year.`,
   },
   {
-    icon: CarbonIcon,
+    // icon: CarbonIcon,
+    icon: "icon-co2-icon",
     count: 44794,
     text: "Tons CO2 Saved",
     desc: `The fired brick industry is responsible for 37% of CO2 emissions from combustion in Nepal and is a major source of and Black carbon (World bank, 2020). Black carbon emissions in particular is contributing to pollution and melting of the Himalayan glacier which supplies drinking water for 1.5 billion South Asians.

@@ -19,12 +19,10 @@ const FiredBricksVideo = () => {
           alt="fired bricks"
           className="fired-bricks__video--img"
         />
-        <img
-          src={PlayButton}
-          alt="play-button"
-          className="play-button"
+        <span
+          className="icon-play-button play-button"
           onClick={handleClick}
-        />
+        ></span>
 
         {playVideo && (
           <iframe

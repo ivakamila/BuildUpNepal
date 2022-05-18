@@ -2,24 +2,29 @@
 
 .video-slider {
     width: 78vw;
-    margin: 0 auto 10.5em;
+    margin: 0 auto;
     text-align: center;
+    padding-top: 8em;
+    padding-bottom: 7.125em;
 
     @media screen and (max-width: $mediaMobile) {
         width: 100vw;
-        margin-bottom: 3.8em;
+        padding-top: 0;
+        padding-bottom: 3.8em;
     }
 
     h2 {
-
-        @media screen and (max-width: $mediaMobile) {
-            font-size: 1.75rem;
-            line-height: 2.25rem;
-        }
+        margin: 0 1em;
     }
 }
 
 .video-slider__swiper {
+    margin-top: 4em;
+
+    @media screen and (max-width: $mediaMobile) {
+        margin-top: 2em;
+    }
+
     .video__slide {
         position: relative;
         text-align: center;
@@ -31,7 +36,22 @@
             color: #ffffff;
             margin: 0 3.2em;
 
-            @media screen and (max-width: $mediaMobile) {
+            @media screen and (max-width: 1280px) {
+                font-size: 2rem;
+            }
+
+            @media screen and (max-width: 1190px) {
+                font-size: 1.7rem;
+                width: 100%;
+                margin: 0 auto;
+                padding: 0 1em;
+            }
+
+            @media screen and (max-width: $mediaDesktop) {
+                font-size: 1.3rem;
+            }
+
+            @media screen and (max-width: $mediaTablet) {
                 display: none;
             }
         }
@@ -46,6 +66,10 @@
             line-height: 1.75rem;
             text-align: center;
 
+            @media screen and (max-width: $mediaDesktop) {
+                font-size: 1rem;
+            }
+
             @media screen and (max-width: $mediaMobile) {
                 display: none;
             }
@@ -55,17 +79,20 @@
             width: 100%;
             height: 100%;
         }
-    
-        .play-button {
-            position: absolute;
-            top: 45%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            cursor: pointer;
+
+        .icon-play-button:before { 
+            content: '\e810'; 
 
             @media screen and (max-width: $mediaMobile) {
-                width: 2.625em;
-                height: 2.625em;
+                font-size: 2.625rem;
+            }
+        }
+    
+        .icon-play-button {
+            @include play-button;
+
+            @media screen and (max-width: $mediaMobile) {
+                top: 40%;
             }
         }
     
@@ -85,6 +112,11 @@
 
         &-bullet {
             @include swiper-pagination-bullet;
+            border: 4px solid $greyColor;
+
+            @media (max-width: $mediaMobile) {
+                border: 3px solid $greyColor;
+            }
         }
     
         &-bullet-active {

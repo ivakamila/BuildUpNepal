@@ -38,11 +38,7 @@ const HeroImpact = () => {
                 onClick={openModal}
                 id={index}
               >
-                <img
-                  src={item.icon}
-                  alt={item.text}
-                  className="impact-item__icon"
-                />
+                <span className={`${item.icon} impact-item__icon`}></span>
                 <CountUp
                   start={0}
                   end={item.count}
@@ -51,9 +47,7 @@ const HeroImpact = () => {
                   className="impact-item__count"
                 />
                 <p>{item.text}</p>
-                <span className="material-icons-outlined impact-item__info">
-                  info
-                </span>
+                <span className="icon-info-circled-alt"></span>
               </div>
             );
           })}

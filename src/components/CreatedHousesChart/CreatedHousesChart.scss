@@ -14,6 +14,18 @@
         padding: 1.375em 1em;
     }
 
+    .icon-house-icon:before { 
+        content: '\e80a'; 
+        @include flex-center;
+        font-size: 4rem;
+        color: #D24246;
+        margin-bottom: 0.5em;
+
+        @media screen and (max-width: $mediaMobile) {
+            display: none;
+        }
+    }
+
     span {
         @include flex-center;
         font-size: 4rem;
@@ -26,7 +38,7 @@
     }
 
     h2 {
-        margin: 0;
+        margin: 0 1em;
 
         @media screen and (max-width: $mediaMobile) {
             font-size: 1.75rem;
@@ -37,6 +49,8 @@
     p {
         font-size: 1.5rem;
         line-height: 2rem;
+        margin: 0.875em auto 1.90625em;
+        max-width: 742px;
         text-align: center;
 
         @media screen and (max-width: $mediaMobile) {

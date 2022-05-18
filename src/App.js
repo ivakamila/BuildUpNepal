@@ -1,4 +1,4 @@
-import LazyLoad from "react-lazyload";
+import { useEffect } from "react";
 import "./App.scss";
 import Awards from "./components/Awards/Awards";
 import BrickBenefits from "./components/BrickBenefits/BrickBenefits";
@@ -17,59 +17,33 @@ import KeyPartners from "./components/KeyPartners/KeyPartners";
 import LearnMore from "./components/LearnMore/LearnMore";
 import ScalableEnterprises from "./components/ScalableEnterprises/ScalableEnterprises";
 import VideoSlider from "./components/VideoSlider/VideoSlider";
+import "./fonts/css/fontello.css";
+import { animateScroll as scroll } from "react-scroll";
 
 function App() {
+  useEffect(() => {
+    setTimeout(() => scroll.scrollToTop(), 200);
+  }, []);
+
   return (
     <div className="App">
       <HeroSection />
-      <LazyLoad height={200} offset={0}>
-        <KeyPartners />
-      </LazyLoad>
-      <LazyLoad height={200} offset={0}>
-        <EntrepreneurImg />
-      </LazyLoad>
-      <LazyLoad height={200} offset={0}>
-        <BrickTechnology />
-      </LazyLoad>
-      <LazyLoad height={200} offset={0}>
-        <BrickBenefits />
-      </LazyLoad>
-      <LazyLoad height={200} offset={0}>
-        <CostPerHouse />
-      </LazyLoad>
-      <LazyLoad height={200} offset={0}>
-        <ScalableEnterprises />
-      </LazyLoad>
-      <LazyLoad height={200} offset={0}>
-        <VideoSlider />
-      </LazyLoad>
-      <LazyLoad height={200} offset={0}>
-        <CreatedHousesChart />
-      </LazyLoad>
-      <LazyLoad height={200} offset={0}>
-        <CreatedJobs />
-      </LazyLoad>
-      <LazyLoad height={200} offset={0}>
-        <EmmissionsSaved />
-      </LazyLoad>
-      <LazyLoad height={200} offset={0}>
-        <Challenges />
-      </LazyLoad>
-      <LazyLoad height={200} offset={0}>
-        <Impact />
-      </LazyLoad>
-      <LazyLoad height={200} offset={0}>
-        <FiredBricksVideo />
-      </LazyLoad>
-      <LazyLoad height={200} offset={0}>
-        <LearnMore />
-      </LazyLoad>
-      <LazyLoad height={200} offset={0}>
-        <Awards />
-      </LazyLoad>
-      <LazyLoad height={200} offset={0}>
-        <Footer />
-      </LazyLoad>
+      <KeyPartners />
+      <EntrepreneurImg />
+      <BrickTechnology />
+      <BrickBenefits />
+      <CostPerHouse />
+      <ScalableEnterprises />
+      <VideoSlider />
+      <CreatedHousesChart />
+      <CreatedJobs />
+      <EmmissionsSaved />
+      <Challenges />
+      <Impact />
+      <FiredBricksVideo />
+      <LearnMore />
+      <Awards />
+      <Footer />
     </div>
   );
 }

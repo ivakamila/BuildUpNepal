@@ -12,11 +12,6 @@
 
     h2 {
         margin: 0;
-
-        @media screen and (max-width: $mediaMobile) {
-            font-size: 1.75rem;
-            line-height: 2.25rem;
-        }
     }
 
     img {
@@ -33,14 +28,19 @@
         @include large-text;
     }
 
+    .icon-info-circled-alt:before { 
+        content: '\f086'; 
+    }
+
     .info {
         @include small-text;
+        margin-bottom: 4.25em;
     }
 }
 
 .percentage-line {
     @include percentage-line;
-    margin: 0 auto 2.5em; 
+    margin: 0 auto; 
     
     .percentage__blue--med {
         background: rgba(24, 99, 175, 0.6);
@@ -70,6 +70,7 @@
 }
 
 .sectors {
+
     h3 {
         color: #000;
         font-size: 1.5rem;
@@ -77,12 +78,17 @@
         line-height: 2rem;
         text-align: left;
         margin-bottom: 1em;
+        margin-top: 1.6em;
     }
 
     p {
         margin-top: 0.5em;
         font-size: 1rem;
         line-height: 1.5rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
 
         @media screen and (max-width: $mediaMobile) {
             line-height: 1rem;

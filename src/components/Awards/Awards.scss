@@ -1,14 +1,13 @@
 @import "../../utilities/_variables.scss";
 
 .awards {
-    padding: 8em 0;
+    padding: 8em 1em;
 
     @media screen and (max-width: $mediaMobile) {
-        padding: 4em 0;
+        padding: 4em 1em;
     }
 
     h2 {
-        margin: 0;
 
         @media screen and (max-width: $mediaMobile) {
             font-size: 1.75rem;
@@ -42,6 +41,7 @@
             background: $bgColorPrimary;
             margin: 0 auto;
             @include flex-center;
+            transition: all 0.5 s ease-in-out;
 
             &:hover {
                 -webkit-box-shadow: 2px 2px 10px 2px #000000; 
@@ -83,6 +83,10 @@
 
                 @media screen and (max-width: 1250px) {
                     width: 80%;
+                }
+
+                @media screen and (max-width: 740px) {
+                    font-size: 0.8rem;
                 }
             }
         }

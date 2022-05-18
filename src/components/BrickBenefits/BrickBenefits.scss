@@ -2,16 +2,15 @@
 
 .benefits {
     width: 100vw;
+    padding: 4em 1em 4.0625em;
 
-    h2 {
+    @media screen and (max-width: $mediaMobile) {
+        padding: 1.9375em 1em 3em;
+    }
+
+    h3 {
         color: $primaryTextColor;
-        font-size: 2rem;
-        line-height: 2.75rem;
-
-        @media screen and (max-width: $mediaMobile) {
-            font-size: 1.375rem;
-            line-height: 1.75rem;
-        }
+        margin: 0;
     }
 }
 

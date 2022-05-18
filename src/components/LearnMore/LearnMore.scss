@@ -38,11 +38,11 @@
             width: 90%;
         }
 
-        @media screen and (max-width: $mediaTablet) {
-            overflow-y: auto;
-            justify-content: flex-start;
+        @media screen and (max-width: 660px) {
             gap: 1em;
-            margin-right: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
         }
 
         @media screen and (max-width: $mediaMobile) {
@@ -58,13 +58,13 @@
             margin-bottom: 1.875em;
 
             @media screen and (max-width: 1150px) {
-                width: 198px;
-                height: 234px;
-            }
-
-            @media screen and (max-width: 980px) {
                 width: 176px;
                 height: 208px;
+            }
+
+            @media screen and (max-width: 880px) {
+                width: 136px;
+                height: 178px;
             }
         }
 
@@ -72,13 +72,18 @@
             @include flex-center;
             flex-direction: column;
             flex: 1;
-            justify-self: flex-start;
 
             p {
                 font-size: 1.375rem;
                 line-height: 1.75rem;
                 max-width: 220px;
+                width: 100%;
                 margin: 0;
+
+                @media screen and (max-width: 880px) {
+                    font-size: 1.1rem;
+                    max-width: 130px;
+                }
             }
 
             span {

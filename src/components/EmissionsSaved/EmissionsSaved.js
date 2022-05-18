@@ -6,12 +6,21 @@ import {
   BarElement,
   Tooltip,
   Legend,
+  Title,
 } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { Bar } from "react-chartjs-2";
 import EmissionsImg from "../../assets/emissions-img.png";
+import LazyLoad from "react-lazyload";
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Tooltip,
+  Legend,
+  Title
+);
 
 const EmmissionsSaved = () => {
   const data = () => {
@@ -41,6 +50,19 @@ const EmmissionsSaved = () => {
     maintainAspectRatio: false,
     responsive: true,
     plugins: {
+      title: {
+        display: true,
+        text: "CO2 emission saved over time (in Tonnes)",
+        color: "#000",
+        font: {
+          size: 24,
+          weight: 400,
+        },
+        position: "bottom",
+        padding: {
+          top: 29.58,
+        },
+      },
       legend: {
         display: false,
         font: {
@@ -64,10 +86,12 @@ const EmmissionsSaved = () => {
     onResize: (chart, size) => {
       if (size.width <= 510) {
         return (
-          (chart.options.plugins.datalabels.font.size = 14) &&
-          (chart.data.datasets[0].maxBarThickness = 18) &&
+          (chart.options.plugins.datalabels.font.size = 12) &&
+          (chart.data.datasets[0].maxBarThickness = 16) &&
           (chart.options.scales.y.ticks.font.size = 14) &&
-          (chart.options.scales.x.ticks.font.size = 14)
+          (chart.options.scales.x.ticks.font.size = 14) &&
+          (chart.options.plugins.title.font.size = 16) &&
+          (chart.options.plugins.title.padding.top = 15)
         );
       }
     },
@@ -110,7 +134,7 @@ const EmmissionsSaved = () => {
       delay: (context: ScriptableContext<"bar">) => {
         let delay = 0;
         if (context.type === "data" && context.mode === "default" && !delayed) {
-          delay = context.dataIndex * 1000 + context.dataIndex * 100;
+          delay = context.dataIndex * 500 + context.dataIndex * 100;
         }
         return delay;
       },
@@ -123,7 +147,7 @@ const EmmissionsSaved = () => {
   };
 
   return (
-    <div className="emissions">
+    <div className="emissions" id="co2-saved">
       <h2>CO2 Saved</h2>
       <img src={EmissionsImg} alt="pollution in a city" />
       <p className="emissions__large-text">
@@ -132,7 +156,7 @@ const EmmissionsSaved = () => {
       </p>
       <div className="link-container__single">
         <a href="/" target="_blank" rel="noopener noreferrer">
-          <span className="material-icons">link</span>World Bank report
+          <span className="icon-link-icon"></span>World Bank report
         </a>
       </div>
       <h3>Replacing dirty bricks at scale</h3>
@@ -140,19 +164,25 @@ const EmmissionsSaved = () => {
         CSEB produces 50% less CO2 emissions (1), saving 9,5 tonnes per 3-room
         house build with CSEB instead of fired bricks (2).
       </p>
-      <div className="chart">
-        <Bar data={data()} options={options} plugins={[ChartDataLabels]} />
+      <p className="text__small">Stockholm - Kathmandu, 2.5 tonne per person</p>
+      <div className="airplane-animation">
+        <span className="icon-airplane-1"></span>
+        {/* <span className="icon-airplane-icon"></span> */}
       </div>
-      <p>CO2 emission saved over time (in Tonnes)</p>
+      <LazyLoad height={200} offset={0}>
+        <div className="chart">
+          <Bar data={data()} options={options} plugins={[ChartDataLabels]} />
+        </div>
+      </LazyLoad>
       <div className="link-containers">
         <div className="link-container">
           <a href="/" target="_blank" rel="noopener noreferrer">
-            <span className="material-icons">link</span>(1) Max Fordham report
+            <span className="icon-link-icon"></span>(1) Max Fordham report
           </a>
         </div>
         <div className="link-container">
           <a href="/" target="_blank" rel="noopener noreferrer">
-            <span className="material-icons">link</span>(2) Asian Institute of
+            <span className="icon-link-icon"></span>(2) Asian Institute of
             Technology &amp; Management
           </a>
         </div>

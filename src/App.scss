@@ -17,6 +17,12 @@ h2 {
   letter-spacing: -0.25px;
   line-height: 4rem;
   text-align: center;
+  margin: 0;
+
+  @media screen and (max-width: $mediaMobile) {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
 }
 
 h3 {
@@ -25,6 +31,11 @@ h3 {
   font-weight: 400;
   line-height: 2.75rem;
   text-align: center;
+
+  @media screen and (max-width: $mediaMobile) {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+  } 
 }
 
 p {
@@ -34,4 +45,16 @@ p {
 
 span {
   color: $smallTextColor;
+}
+
+.icon-link-icon:before {
+  content: "\e80d";
+}
+
+.icon-info-circled-alt:before {
+  content: "\f086";
+
+  &:hover {
+    color: $primaryTextColor;
+  }
 }

@@ -7,32 +7,27 @@ import "swiper/scss";
 import "swiper/scss/pagination";
 import "swiper/scss/autoplay";
 import "swiper/scss/effect-fade";
-import { useEffect, useState } from "react";
 
 const HeroSlider = () => {
-  const [startSlider, setStartSlider] = useState(false);
-
   SwiperCore.use([Pagination, Autoplay, EffectFade]);
-
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setStartSlider(true);
-  //     console.log(startSlider);
-  //   }, 3000);
-  //   return () => clearTimeout(timer);
-  // }, [startSlider]);
 
   return (
     <div className="hero-slider">
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: true,
+        autoplay={
+          false
+          // delay: 3000,
+          // disableOnInteraction: true,
+        }
+        onSwiper={(Swiper) => {
+          setTimeout(() => {
+            Swiper.autoplay.start();
+          }, 3000);
+          console.log(Swiper);
         }}
-        onSwiper={(Swiper) => console.log(Swiper)}
-        // enabled={startSlider && true}
+        enabled={true}
         pagination={{
           el: ".swiper-pagination",
           clickable: true,

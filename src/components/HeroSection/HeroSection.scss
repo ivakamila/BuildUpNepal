@@ -1,17 +1,38 @@
 @import "../../utilities/_variables.scss";
 
+.hero-section {
+    height: fit-content;
+    margin-bottom: 8.4375em;
+
+    @media screen and (max-width: 1024px) {
+        margin-bottom: 30%;
+    }
+
+    @media screen and (width: 600px) and (height: 1024px),
+    (width: 600px) and (height: 960px) {
+        margin-bottom: 50%;
+    }
+
+    @media (max-width: $mediaMobile) {
+        margin-bottom: 28.2em;
+    }
+}
+
+.hero-section__container {
+    height: 100%;;
+    width: 100vw;
+
+    position: relative;
+    top: 0; 
+    left: 0;
+}
+
 /* Hero Slider */
 
 .hero-slider {
     width: 100vw;
-    height: 100vh;
+    max-height: 100vh;
     overflow: hidden;
-    position: relative;
-    max-height: 1080px;
-
-    @media only screen and (min-width: 768px) and (max-width: $mediaDesktop) {
-        max-height: 60vh;
-    }
 
     &__slide {
         z-index: -1;
@@ -19,10 +40,19 @@
         img {
             width: 100%;
             height: 100%;
+            object-fit: cover;
 
-            @media (max-width: $mediaMobile) {
+            @media screen and (min-width: $mediaDesktop) {
                 height: 100vh;
+            }
+
+            @media screen and (min-width: 1024px) and (min-height: 1366px) {
+                height: 50vh;
+            }
+
+            @media screen and (max-width: $mediaMobile) {
                 object-fit: cover;
+                height: 100vh;
             }
         }
     
@@ -36,22 +66,26 @@
             font-size: 4rem;
             line-height: 119%;
 
-            @media (min-width: $mediaMaxWidth) {
+
+            @media screen and (min-width: $mediaMaxWidth) {
                 top: 35%;
             }
 
-            @media (max-width: $mediaDesktop) {
+            @media screen and ( min-width: $mediaMobile) 
+            and (max-width: $mediaDesktop) {
+                top: 15em;
                 font-size: 3.5rem;
                 width: 65%;
-            }
-
-            @media (max-width: $mediaTablet) {
                 top: 38%;
-                width: 80%;
                 font-size: 2.5rem;
             }
 
-            @media (max-width: $mediaMobile) {
+            @media screen and (width: 600px) and (height: 1024px),
+            (width: 600px) and (height: 960px) {
+                top: 4.5em;
+            }
+
+            @media screen and (max-width: $mediaMobile) {
                 top: 40%;
                 font-size: 2em;
             }
@@ -60,27 +94,21 @@
 
     .swiper-pagination {
         @include swiper-pagination;
-        top: 28em;
-        left: 50%;
+        width: 100%;
+        z-index: 100;
+        bottom: 20.625em;
 
-        @media (min-width: $mediaMaxWidth) {
-            top: 70%;
-        }
-
-        @media (max-width: $mediaDesktop) {
-            top: 23em;
-        }
-
-        @media (max-width: $mediaTablet) {
-            top: 18em;
-        }
-
-        @media (max-width: $mediaMobile) {
+        @media screen and (max-width: 1024px) {
             top: 60%;
         }
 
-        @media (max-width: $mediaMobileSmall) {
-            top: 70%;
+        @media screen and (width: 600px) and (height: 1024px),
+        (width: 600px) and (height: 960px) {
+            top: 75%;
+        }
+
+        @media (max-width: $mediaMobile) {
+            top: 78%;
         }
 
         &-bullet {
@@ -114,6 +142,7 @@
     background: #fff;
     cursor: pointer;
     transition: all 300ms ease-out;
+    position: fixed;
 }
 
 .menu-icon {
@@ -122,6 +151,12 @@
     padding: 0.4em;
     display: flex;
     align-items: center;
+    border: 1px solid $smallTextColor;
+
+    .icon-menu-icon:before { 
+        content: '\e80e'; 
+        color: $primaryTextColor;
+    }
 
     &:hover {
         background: $primaryTextColor;
@@ -145,7 +180,8 @@
     right: 4.0625em;
     height: max-content;
     border-radius: 18px;
-    padding: 2.14em 3.8em 0 2.5em;
+    padding: 1.875em 3.375em 3em 2.1875em;
+    // padding: 2.14em 3.8em 0 2.5em;
     box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.2);
 
     @media (max-width: $mediaDesktop) {
@@ -164,15 +200,16 @@
 
     p {
         font-size: 0.7rem;
+        line-height: 1rem;
         font-weight: 500;
         color: #79747E;
-        margin: 0;
+        margin-top: 0;
+        margin-bottom: 1.9375em;
     }
 
     &__items {
         display: flex;
         flex-direction: column;
-        margin: 2.2em 0 3.4em 0;
 
         @media (max-width: $mediaDesktop) {
             margin: 2em 0 3em 0;
@@ -182,10 +219,10 @@
             margin: 1em 0;
         }
 
-        a {
+        .menu__link {
             color: $primaryTextColor;
             font-size: 1.5rem;
-            line-height: 1.5;
+            line-height: 2.75rem;
             text-decoration: none;
 
             &:hover {
@@ -196,7 +233,13 @@
                 font-size: 1.3rem;
             }
         }
+
+        .active {
+            color: #000 !important;
+        }
     }
+
+    .icon-close:before { content: '\e804'; }
 
     &__close {
         position: absolute;
@@ -220,31 +263,36 @@
 /* Hero Impact */
 
 .impact-container {
-    position: absolute;
-    bottom: -6.5em;
-    left: 50%;
-    transform: translateX(-50%);
     width: 88%;
     max-height: fit-content;
-    padding: 2em 10em;
+    padding: 3.25em 10em 2em;
     background: $bgColorPrimary;
     border-radius: 16px;
+    z-index: 100;
+
+    position: absolute;
+    bottom: -4.8125em;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media screen and (max-width: 1024px) {
+        top: 65%;
+    }
+
+    @media screen and (width: 600px) and (height: 1024px),
+    (width: 600px) and (height: 960px) {
+        top: 80%;
+    }
 
     @media (max-width: $mediaDesktop) {
-        padding: 2em 7em; 
-        top: 25em;
+        padding: 2.4375em 7em; 
     }
 
     @media (max-width: $mediaTablet) {
-        top: 23em;
-        padding: 1em 3em;
+        padding: 2.4375em 3em;
     }
 
     @media (max-width: $mediaMobile) {
-        top: 75%;
-    }
-
-    @media (max-width: $mediaMobileSmall) {
         top: 83%;
     }
 }
@@ -263,24 +311,62 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 0.5em;
+        gap: 0;
         cursor: pointer;
         letter-spacing: -0.5px;
+        transition: all 0.5s ease-in-out;
 
         .impact-item__icon {
+
             @media (max-width: $mediaDesktop) {
-                max-width: 3.5em;
+                font-size: 3.5rem;
             }
 
             @media (max-width: $mediaTablet) {
-                max-width: 2.5em;
+                font-size: 2.5em;
             }
         }
 
         &:hover {
-            transform: scale(1.1);
+            animation: liftUp 1s;
         }
 
+        @keyframes liftUp {
+            0% {
+              -webkit-transform: translateY(0);
+              transform: translateY(0);
+            }
+          
+            100%  {
+              -webkit-transform: translateY(-20px);
+              transform: translateY(-20px);
+            }
+          }
+
+        .icon-people-icon:before {
+            content: "\e80f";
+            color: #d24246;
+            font-size: 4rem;
+        }
+
+        .icon-house-icon:before {
+            content: "\e80a";
+            color: #d24246;
+            font-size: 4rem;
+        }
+
+        .icon-bricks-icon:before {
+            content: "\e802";
+            color: #d24246;
+            font-size: 4rem;
+        }
+
+        .icon-co2-icon:before {
+            content: "\e805";
+            color: #d24246;
+            font-size: 4rem;
+        }
+        
         &__count {
             font-size: 3rem;
             line-height: 76px;
@@ -303,7 +389,7 @@
 
         p {
             font-size: 1.5rem;
-            line-height: 100%;
+            line-height: 1.5rem;
             color: $primaryTextColor;
             margin: 0;
 
@@ -320,8 +406,15 @@
             }
         }
 
-        &__info {
-            margin-bottom: 2em;
+        .icon-info-circled-alt:before {
+            content: "\f086";
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        .icon-info-circled-alt {
+            font-size: 1.25rem;
+            margin-top: 1em;
+            margin-bottom: 2.4em;
 
             &:hover {
                 color: $primaryTextColor;
@@ -411,14 +504,15 @@
 .impact-modal, 
 .impact-measure {
     position: relative;
-    z-index: 100;
     height: fit-content;
     background: #fff;
+    box-shadow: 0px 8px 42px 6px rgba(24, 99, 175, 0.15), 
+        0px 4px 23px rgba(24, 99, 175, 0.15);
     border-radius: 8px;
     overflow: auto;
     padding: 3.4em 5.9em 2.4em 4em;
-    box-shadow: 0px 8px 42px 6px rgba(24, 99, 175, 0.15), 
-        0px 4px 23px rgba(24, 99, 175, 0.15);
+    margin-top: 10em;
+    z-index: 100;
 
     @media (max-width: $mediaDesktop) {
         width: 70%;
@@ -467,10 +561,24 @@
             align-items: center;
         }
 
+        .icon-bricks-icon:before { content: '\e802'; }
+        .icon-house-icon:before { content: '\e80a'; }
+        .icon-co2-icon:before { content: '\e805'; }
+        .icon-people-icon:before { content: '\e80f'; }
+
+        .icon-bricks-icon:before,
+        .icon-house-icon:before,
+        .icon-co2-icon:before,
+        .icon-people-icon:before { 
+            font-size: 4rem;
+            color: $redColor;
+        }
+
         h3 {
             font-size: 1.4rem;
             font-weight: 400;
             margin: 0;
+            text-align: left;
         }
         
         p {
@@ -486,6 +594,10 @@
                 font-size: .9rem;
             }
         }
+    }
+
+    .icon-close:before { 
+        content: '\e804'; 
     }
 
     .close-icon {
@@ -529,7 +641,7 @@
         box-shadow: 2px 2px 10px 2px #000000;
 	}
 
-    span {
+    .icon-close {
         color: #fff;
         font-size: 0.875rem;
         font-weight: 500;

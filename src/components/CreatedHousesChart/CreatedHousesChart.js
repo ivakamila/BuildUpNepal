@@ -6,11 +6,20 @@ import {
   BarElement,
   Tooltip,
   Legend,
+  Title,
 } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { Bar } from "react-chartjs-2";
+import LazyLoad from "react-lazyload";
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Tooltip,
+  Legend,
+  Title
+);
 
 const CreatedHousesChart = () => {
   const data = () => {
@@ -40,6 +49,19 @@ const CreatedHousesChart = () => {
     maintainAspectRatio: false,
     responsive: true,
     plugins: {
+      title: {
+        display: true,
+        text: "Cumulative total houses created over time.",
+        color: "#000",
+        font: {
+          size: 24,
+          weight: 400,
+        },
+        position: "bottom",
+        padding: {
+          top: 29.58,
+        },
+      },
       legend: {
         display: false,
         font: {
@@ -63,10 +85,12 @@ const CreatedHousesChart = () => {
     onResize: (chart, size) => {
       if (size.width <= 510) {
         return (
-          (chart.options.plugins.datalabels.font.size = 14) &&
-          (chart.data.datasets[0].maxBarThickness = 18) &&
+          (chart.options.plugins.datalabels.font.size = 12) &&
+          (chart.data.datasets[0].maxBarThickness = 16) &&
           (chart.options.scales.y.ticks.font.size = 14) &&
-          (chart.options.scales.x.ticks.font.size = 14)
+          (chart.options.scales.x.ticks.font.size = 14) &&
+          (chart.options.plugins.title.font.size = 16) &&
+          (chart.options.plugins.title.padding.top = 15)
         );
       }
     },
@@ -109,7 +133,7 @@ const CreatedHousesChart = () => {
       delay: (context: ScriptableContext<"bar">) => {
         let delay = 0;
         if (context.type === "data" && context.mode === "default" && !delayed) {
-          delay = context.dataIndex * 1000 + context.dataIndex * 100;
+          delay = context.dataIndex * 500 + context.dataIndex * 100;
         }
         return delay;
       },
@@ -122,17 +146,18 @@ const CreatedHousesChart = () => {
   };
 
   return (
-    <div className="houses-chart__container">
-      <span className="material-icons">house</span>
+    <div className="houses-chart__container" id="eco-friendly-housing">
+      <span className="icon-house-icon"></span>
       <h2>Eco-friendly, Safe and Affordable Homes</h2>
       <p>
         Build up Nepal&apos;s mission is to make safe, eco-friendly housing
         affordable for all.
       </p>
-      <div className="chart">
-        <Bar data={data()} options={options} plugins={[ChartDataLabels]} />
-      </div>
-      <p>Cumulative total houses created over time.</p>
+      <LazyLoad height={200} offset={0}>
+        <div className="chart">
+          <Bar data={data()} options={options} plugins={[ChartDataLabels]} />
+        </div>
+      </LazyLoad>
     </div>
   );
 };
