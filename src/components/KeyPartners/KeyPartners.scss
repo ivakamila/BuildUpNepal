@@ -17,6 +17,10 @@
     gap: 0.3125em;
     column-gap: 1em;
 
+    @media screen and (min-width: 1280px) {
+        column-gap: 1.5em;
+    }
+
     @media screen and (max-width: 1280px) {
         width: 90%;
         column-gap: 0.3125em;
@@ -34,6 +38,7 @@
         cursor: pointer;
         width: 137px;
         height: 114px;
+        margin: 0;
 
         @media screen and (max-width: 1280px) {
             width: 109px;

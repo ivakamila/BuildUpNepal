@@ -1,11 +1,13 @@
 import "./ScalableEnterprises.scss";
 import LazyLoad from "react-lazyload";
+// import ProjectMap from "../../project-map/project-map";
 
 const ScalableEnterprises = () => {
   return (
     <div className="enterprises" id="scalable-enterprises">
       <h2>Scalable Enterprises</h2>
       <p>Meet the enterprises &amp; communities</p>
+      {/* <ProjectMap /> */}
       <LazyLoad height={200} offset={0}>
         <div className="percentage-line">
           <h4>Enterprise sustainability</h4>
