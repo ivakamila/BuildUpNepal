@@ -122,7 +122,6 @@ const CreatedHousesChart = () => {
           font: {
             size: 17,
           },
-          stepSize: 1500,
         },
       },
     },
