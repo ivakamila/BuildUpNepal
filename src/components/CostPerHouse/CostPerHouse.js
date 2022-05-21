@@ -10,7 +10,7 @@ const CostPerHouse = () => {
       <LazyLoad height={200} offset={0}>
         <img src={FiredBrick} alt="fire brick" />
         <div className="animated-line__container">
-          <div className="animated-line__one"></div>
+          <div className="cost-line__one"></div>
           <p
             style={{ animationDelay: "2s" }}
             className="animated-line__number--one"
@@ -21,7 +21,7 @@ const CostPerHouse = () => {
         <p>Fired Bricks</p>
         <img src={EarthBrick} alt="CSEB brick" />
         <div className="animated-line__container">
-          <div className="animated-line__two"></div>
+          <div className="cost-line__two"></div>
           <p
             style={{ animationDelay: "2s" }}
             className="animated-line__number--two"

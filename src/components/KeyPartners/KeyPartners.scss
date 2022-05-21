@@ -2,68 +2,76 @@
 
 .partners {
     width: 100vw;
-    padding: 4em auto 6em;
+    padding: 4em 0 5em;
     text-align: center;
 }
 
 .partner__logos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(114px, max-content));
-    justify-content: center;
-    padding: initial;
-    margin: 2em auto 6em;
-    padding: 0 1em;
+    @include flex-center;
+    margin: 2em auto 0;
+    padding: 0 1em 1em;
     max-width: 1131px;
     gap: 0.3125em;
-    column-gap: 1em;
-
-    @media screen and (min-width: 1280px) {
-        column-gap: 1.5em;
-    }
 
     @media screen and (max-width: 1280px) {
         width: 90%;
-        column-gap: 0.3125em;
     }
 
     @media screen and (max-width: 1085px) {
         width: 95%;
-        column-gap: 0;
+    }
+
+    @media screen and (max-width: 840px) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        overflow-y: auto;
+        gap: 0.3125em;
+        margin-right: 0;
     }
 
     .partner__logo {
         @include flex-center;
         background: $bgColorPrimary;
         border-radius: 4px;
-        cursor: pointer;
         width: 137px;
         height: 114px;
-        margin: 0;
+        flex: 1;
+
+        img {
+            max-width: 90%;
+            max-height: 90%;
+
+            @media screen and (max-width: 840px) {
+                width: 123px;
+                height: 102px;
+            }
+        }
 
         @media screen and (max-width: 1280px) {
             width: 109px;
             height: 91px;
         }
 
-        @media screen and (max-width: 1085px) {
-            width: 106px;
-            height: 86px;
+        @media screen and (max-width: 840px) {
+            min-width: 137px;
+            min-height: 114px;
         }
+
     }
+    // .partner__show-more {
+    //     display: flex;
+    //     gap: 0.5em;
 
-    .partner__show-more {
-        display: flex;
-        gap: 0.5em;
+    //     .icon-plus-icon:before {
+    //         content: "\e811";
+    //     }
 
-        .icon-plus-icon:before {
-            content: "\e811";
-        }
-
-        .icon-plus-icon, p {
-            color: $primaryTextColor;
-            font-size: 0.875rem;
-            font-weight: 500;
-            letter-spacing: 0.1px;
-        }
-    }
+    //     .icon-plus-icon, p {
+    //         color: $primaryTextColor;
+    //         font-size: 0.875rem;
+    //         font-weight: 500;
+    //         letter-spacing: 0.1px;
+    //     }
+    // }
 }

@@ -20,6 +20,10 @@
 
 .video-slider__swiper {
     margin-top: 4em;
+    
+    &:hover {
+        cursor: pointer;
+    }
 
     @media screen and (max-width: $mediaMobile) {
         margin-top: 2em;

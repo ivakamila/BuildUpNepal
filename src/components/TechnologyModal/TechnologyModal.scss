@@ -1,0 +1,15 @@
+@import "../../utilities/_variables.scss";
+
+.modal-overlay {
+    @include modal;
+
+    h2, h4, li  {
+        text-align: left;
+        margin-left: 0;
+    }
+
+    .technology-modal__img {
+        height: 400px;
+        margin-top: 0.5em;
+    }
+}

@@ -1,13 +1,27 @@
 import "./BrickBenefits.scss";
+import { useState } from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Pie } from "react-chartjs-2";
 import { BenefitsData } from "../../data/BenefitsData";
 import { v4 as uuid } from "uuid";
 import LazyLoad from "react-lazyload";
+import BenefitsModals from "../BenefitsModals/BenefitsModals";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const BrickBenefits = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [itemIndex, setItemIndex] = useState("");
+
+  const openModal = (e) => {
+    setShowModal(true);
+    setItemIndex(e.currentTarget.id);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <div className="benefits">
       <h3>Benefits using Earth Brick (CSEB)</h3>
@@ -15,7 +29,12 @@ const BrickBenefits = () => {
         <div className="benefits__container">
           {BenefitsData.map((item, index) => {
             return (
-              <div className="circle__card" key={uuid()}>
+              <div
+                className="circle__card"
+                key={uuid()}
+                id={index}
+                onClick={openModal}
+              >
                 <div className="benefits__circle">
                   <img
                     srcSet={`${item.bgImage[1]} 1x,
@@ -32,12 +51,20 @@ const BrickBenefits = () => {
                 </div>
                 <h4>{item.percentage}</h4>
                 <p>{item.smallText}</p>
-                <span className="icon-info-circled-alt"></span>
+                <span
+                  className="icon-info-circled-alt"
+                  onClick={openModal}
+                ></span>
               </div>
             );
           })}
         </div>
       </LazyLoad>
+      <BenefitsModals
+        show={showModal.toString()}
+        item={itemIndex}
+        close={closeModal}
+      />
       <div className="link-containers">
         <div className="link-container">
           <a href="/" target="_blank" rel="noopener noreferrer">

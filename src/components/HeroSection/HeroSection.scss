@@ -2,19 +2,14 @@
 
 .hero-section {
     height: fit-content;
-    margin-bottom: 8.4375em;
+    margin-bottom: 2.4375em;
 
     @media screen and (max-width: 1024px) {
-        margin-bottom: 30%;
-    }
-
-    @media screen and (width: 600px) and (height: 1024px),
-    (width: 600px) and (height: 960px) {
-        margin-bottom: 50%;
+        margin-bottom: 8em;
     }
 
     @media (max-width: $mediaMobile) {
-        margin-bottom: 28.2em;
+        margin-bottom: 23.2em;
     }
 }
 
@@ -37,10 +32,11 @@
     &__slide {
         z-index: -1;
     
-        img {
+        .hero-slider__img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            filter: brightness(72%);
 
             @media screen and (min-width: $mediaDesktop) {
                 height: 100vh;
@@ -108,7 +104,7 @@
         }
 
         @media (max-width: $mediaMobile) {
-            top: 78%;
+            top: 75%;
         }
 
         &-bullet {
@@ -293,7 +289,7 @@
     }
 
     @media (max-width: $mediaMobile) {
-        top: 83%;
+        top: 78%;
     }
 }
 
@@ -328,20 +324,8 @@
         }
 
         &:hover {
-            animation: liftUp 1s;
+            @include hover-effect;
         }
-
-        @keyframes liftUp {
-            0% {
-              -webkit-transform: translateY(0);
-              transform: translateY(0);
-            }
-          
-            100%  {
-              -webkit-transform: translateY(-20px);
-              transform: translateY(-20px);
-            }
-          }
 
         .icon-people-icon:before {
             content: "\e80f";
@@ -408,7 +392,6 @@
 
         .icon-info-circled-alt:before {
             content: "\f086";
-            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         }
 
         .icon-info-circled-alt {
@@ -460,190 +443,27 @@
 
 /* Hero Impact Modal */
 
-.impact-overlay {
-    @include flex-center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    width: 100vw;
-    height: 100vh;
-    overflow-y: scroll;
-    background-color: rgba(255,255,255,0.7); 
-}
+.modal-overlay {
+    @include modal;
 
-.impact-modal {
-    width: 50%;
-
-    @media (max-width: $mediaMobileSmall) {
-        top: 10%;
-    }  
-}
-
-.impact-measure {
-    width: 70%;
-    top: 25%;
-
-    @media (max-width: $mediaDesktop) {
-        top: 22em;
-    }
-
-    @media (max-width: $mediaTablet) {
-        top: 20em;
-    }
-
-    @media (max-width: $mediaMobile) {
-        top: 30em; 
-    }
-
-    @media (max-width: $mediaMobileSmall) {
-        top: 34em;
-    } 
-}
-
-.impact-modal, 
-.impact-measure {
-    position: relative;
-    height: fit-content;
-    background: #fff;
-    box-shadow: 0px 8px 42px 6px rgba(24, 99, 175, 0.15), 
-        0px 4px 23px rgba(24, 99, 175, 0.15);
-    border-radius: 8px;
-    overflow: auto;
-    padding: 3.4em 5.9em 2.4em 4em;
-    margin-top: 10em;
-    z-index: 100;
-
-    @media (max-width: $mediaDesktop) {
+    .impact-measure {
         width: 70%;
-    }
+        top: 25%;
     
-    @media (max-width: $mediaTablet) {
-        width: 80%;
-        padding: 3em 4em 2em 3em; 
-    }
+        @media (max-width: $mediaDesktop) {
+            top: 22em;
+        }
     
-    @media (max-width: $mediaMobile) {
-        padding: 3em 2em; 
-    }
-    
-    @media (max-width: $mediaMobileSmall) {
-        width: 90%;
-    }
-
-    h2 {
-        font-size: 2.7rem;
-        font-weight: 400;
-        color: $primaryTextColor;
-        margin-top: 0;
-        margin-bottom: .5em;
-
         @media (max-width: $mediaTablet) {
-            margin-top: .2em;
-            font-size: 2rem;
+            top: 20em;
         }
-
-        @media (max-width: $mediaMobileSmall) {
-            margin-top: .7em;
-            font-size: 1.5rem;
-        }
-    }
-
-    .impact-modal__info {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 1em;
-        margin: 1em 0;
-
+    
         @media (max-width: $mediaMobile) {
-            flex-direction: column;
-            align-items: center;
+            top: 30em; 
         }
-
-        .icon-bricks-icon:before { content: '\e802'; }
-        .icon-house-icon:before { content: '\e80a'; }
-        .icon-co2-icon:before { content: '\e805'; }
-        .icon-people-icon:before { content: '\e80f'; }
-
-        .icon-bricks-icon:before,
-        .icon-house-icon:before,
-        .icon-co2-icon:before,
-        .icon-people-icon:before { 
-            font-size: 4rem;
-            color: $redColor;
-        }
-
-        h3 {
-            font-size: 1.4rem;
-            font-weight: 400;
-            margin: 0;
-            text-align: left;
-        }
-        
-        p {
-            text-align: left;
-            line-height: 1.5;
-            margin-top: 0;
-
-            @media (max-width: $mediaMobile) {
-                margin-bottom: 0;
-            }
-
-            @media (max-width: $mediaMobileSmall) {
-                font-size: .9rem;
-            }
-        }
-    }
-
-    .icon-close:before { 
-        content: '\e804'; 
-    }
-
-    .close-icon {
-        position: absolute;
-        top: 1em;
-        right: 1em;
-        background: #dae8f4;
-        padding: 5px;
-        border-radius: 50%;
-        transition: all 500ms ease-out;
-        cursor: pointer;
-
-        &:hover {
-            background: $primaryTextColor;
-            color: #fff;
-        }
-    }
-}
-
-.impact-modal__close {
-    @include flex-center;
-    gap: 8px;
-    max-width: 102px;
-    background: $primaryTextColor;
-    color: #fff;
-    font-size: 0.875rem;
-    font-weight: 500;
-    border: none;
-    border-radius: 100px;
-    padding: 10px 24px 10px 16px;
-    margin: 3em auto 0;
-    cursor: pointer;
-    position: relative;
-
-    @media (max-width: $mediaTablet) {
-        margin: 2em auto 0;
-    }
-	
-	&:hover {
-		-webkit-box-shadow: 2px 2px 10px 2px #000000; 
-        box-shadow: 2px 2px 10px 2px #000000;
-	}
-
-    .icon-close {
-        color: #fff;
-        font-size: 0.875rem;
-        font-weight: 500;
+    
+        @media (max-width: $mediaMobileSmall) {
+            top: 34em;
+        } 
     }
 }

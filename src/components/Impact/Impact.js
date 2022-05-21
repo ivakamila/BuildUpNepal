@@ -10,22 +10,26 @@ const Impact = () => {
     <div className="impact" id="impact-we-create">
       <h2>Multiplier effect &amp; SDG impact</h2>
       <p>288 enterprises build houses, crate jobs and saves CO2 long-term.</p>
-      <img src={ImpactImg} alt="Female earth bricks entrepreneur" />
       <LazyLoad height={200} offset={0}>
-        <p className="large-text">
-          <CountUp
-            start={0}
-            end={14803380}
-            duration={4}
-            separator=","
-            className="impact__count"
-          />{" "}
-          Bricks
-        </p>
-        <p className="small-text">
-          Earth Bricks (CSEB) produced to date{" "}
-          <span className="icon-info-circled-alt"></span>
-        </p>
+        <div className="impact__img">
+          <img src={ImpactImg} alt="Female earth bricks entrepreneur" />
+          <p className="large-text">
+            <CountUp
+              start={0}
+              end={14803380}
+              duration={4}
+              separator=","
+              className="impact__count"
+            />{" "}
+            Bricks
+          </p>
+          <div className="impact__img--info">
+            <p className="small-text">
+              Earth Bricks (CSEB) produced to date{" "}
+              <span className="icon-info-circled-alt"></span>
+            </p>
+          </div>
+        </div>
         <div className="impact__cards">
           {ImpactSectionData.map((item) => {
             return (

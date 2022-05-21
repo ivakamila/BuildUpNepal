@@ -81,22 +81,19 @@
         gap: 1.3em;
 
         @media screen and (max-width: $mediaMaxWidth) {
-            width: 203px;
             height: 205px;
         }
 
         @media screen and (max-width: $mediaDesktop) {
-            width: 188px;
             height: 190px;
         }
 
         @media screen and (max-width: 940px) {
-            max-width: 146px;
             max-height: 172px;
         }
 
         @media screen and (max-width: $mediaTablet) {
-            max-height: 152px;
+            max-height: 140px;
             gap: 0;
         }
 
@@ -105,8 +102,12 @@
         }
 
         @media screen and (max-width: $mediaMobile) {
-            max-height: 102px;
+            max-height: 100px;
             align-items: end;
+        }
+
+        @media screen and (max-width: 420px) {
+            max-height: 80px
         }
 
         img {
@@ -135,6 +136,7 @@
 
             @media screen and (max-width: $mediaTablet) {
                 font-size: 0.8rem;
+                line-height: 0.8rem;
             }
 
             @media screen and (max-width: $mediaMobile) {
@@ -144,6 +146,8 @@
 
             @media screen and (max-width: $mediaMobileSmall) {
                 font-size: 0.5rem;
+                line-height: 0.6rem;
+                margin-bottom: 0;
             }
         }
     }
@@ -168,6 +172,13 @@
                 top: 0.5em;
                 right: 0.5em;
                 font-size: 0.875rem;
+            }
+
+            @media screen and (max-width: 420px) {
+                display: none;
+                // top: 0.1em;
+                // right: 0.1em;
+                // font-size: 0.875rem;
             }
 
             &:hover {

@@ -1,6 +1,6 @@
-import HeroSliderOne from "../assets/Hero-slider-1.png";
-import HeroSliderTwo from "../assets/Hero-slider-2.png";
-import HeroSliderThree from "../assets/Hero-slider-3.png";
+import HeroSliderOne from "../assets/hero-slider/Hero-slider-1.png";
+import HeroSliderTwo from "../assets/hero-slider/Hero-slider-2.jpg";
+import HeroSliderThree from "../assets/hero-slider/Hero-slider-3.jpg";
 
 export const HeroSliderData = [
   {

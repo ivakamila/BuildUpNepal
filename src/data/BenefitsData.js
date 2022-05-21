@@ -7,6 +7,8 @@ import LowerCostTwo2x from "../assets/benefits/lower-cost-two-2x.jpg";
 import LowerEmissions from "../assets/benefits/lower-emissions.jpg";
 import LowerEmissions1x from "../assets/benefits/lower-emissions-1x.jpg";
 import LowerEmissions2x from "../assets/benefits/lower-emissions-2x.jpg";
+import BenefitsModalOne from "../assets/benefits/benefits-modal-1.png";
+import BenefitsModalTwo from "../assets/benefits/benefits-modal-2.jpg";
 
 export const BenefitsData = [
   {
@@ -37,6 +39,31 @@ export const BenefitsData = [
         duration: 3000,
       },
     },
+    modalTitle: "40% lower cost when building a CSEB wall",
+    modal: (
+      <>
+        <p>
+          CSEB bricks are produced by local materials, and cost less than fired
+          bricks.
+        </p>
+        <ul>
+          <li>Transportation is reduced as bricks are produced locally</li>
+          <li>
+            Less mortar - as the mortar is poured through the holes in the
+            bricks
+          </li>
+          <li>
+            Less manpower as the LEGO shape of the bricks makes it fast and easy
+            to build
+          </li>
+          <li>Plaster is not needed – you can paint directly on the bricks </li>
+          <li>
+            A CSEB wall of 150 mm thickness is as strong as a fired brick wall
+            of 230 mm reducing the overall material required in the wall.{" "}
+          </li>
+        </ul>
+      </>
+    ),
   },
   {
     bgImage: [LowerCostTwo, LowerCostTwo1x, LowerCostTwo2x],
@@ -66,6 +93,24 @@ export const BenefitsData = [
         duration: 3000,
       },
     },
+    modalTitle: "25% lower cost when building a 2-room house",
+    modal: (
+      <>
+        <p>
+          When building a small 2-room house the overall cost is reduced by 25%.
+        </p>
+        <img
+          src={BenefitsModalOne}
+          alt="cost breakdown for house"
+          className="modal__img"
+        />
+        <img
+          src={BenefitsModalTwo}
+          alt="earth brick house"
+          className="modal__img"
+        />
+      </>
+    ),
   },
   {
     bgImage: [LowerEmissions, LowerEmissions1x, LowerEmissions2x],
@@ -95,5 +140,23 @@ export const BenefitsData = [
         duration: 3000,
       },
     },
+    modalTitle: "50% lower emisions than fired bricks",
+    modal: (
+      <>
+        <p>
+          When building a small 2-room house the overall cost is reduced by 25%.
+        </p>
+        <img
+          src={BenefitsModalOne}
+          alt="cost breakdown for house"
+          className="modal__img"
+        />
+        <img
+          src={BenefitsModalTwo}
+          alt="earth brick house"
+          className="modal__img"
+        />
+      </>
+    ),
   },
 ];

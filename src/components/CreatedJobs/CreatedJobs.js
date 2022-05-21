@@ -1,34 +1,55 @@
 import "./CreatedJobs.scss";
-import CreatedJobsImg from "../../assets/entrepreneur.png";
+import { useState } from "react";
+import CreatedJobsImg from "../../assets/jobsImg.png";
 import LazyLoad from "react-lazyload";
+import JobsModal from "../JobsModal/JobsModal";
 
 const CreatedJobs = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = (e) => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <div className="created-jobs" id="we-create-jobs">
       <h2>We create jobs and economic growth</h2>
-      <img src={CreatedJobsImg} alt="female entrepreneur" />
-      <h2 className="created-jobs__number">3034 Jobs</h2>
-      <p className="info">
-        Created to date <span className="icon-info-circled-alt"></span>
-      </p>
+      <div className="created-jobs__img">
+        <img src={CreatedJobsImg} alt="female entrepreneur" />
+        <h2 className="large-text">2788 Jobs</h2>
+        <p className="info">
+          Created to date{" "}
+          <span
+            className="icon-info-circled-alt info-icon"
+            onClick={openModal}
+          ></span>
+        </p>
+      </div>
+      <JobsModal show={showModal.toString()} close={closeModal} />
       <LazyLoad height={200} offset={0}>
         <div className="percentage-line">
           <h4>Demographics for jobs in production</h4>
           <div className="percentage-line__container">
             <div className="percentage-line__part wrapper__blue">
               <div className="percentage percentage__blue"></div>
-              <p>75% disadvantaged groups</p>
+              <p className="percentage__text--blue">75% disadvantaged groups</p>
             </div>
             <div className="percentage-line__part wrapper__red">
               <div className="percentage percentage__blue--med"></div>
-              <p>15% women</p>
+              <p className="percentage__text--red">15% women</p>
             </div>
             <div className="percentage-line__part wrapper__grey">
               <div className="percentage percentage__blue--light"></div>
-              <p>10% youth</p>
+              <p className="percentage__text--grey">10% youth</p>
             </div>
           </div>
         </div>
+      </LazyLoad>
+      <LazyLoad height={200} offset={0}>
         <div className="sectors">
           <h3>Sectors</h3>
           <div className="animated-line__container">
@@ -37,7 +58,7 @@ const CreatedJobs = () => {
               style={{ animationDelay: "2s" }}
               className="animated-line__number--one orange-text"
             >
-              1,012
+              1,011
             </p>
           </div>
           <p>Jobs in production</p>
@@ -47,7 +68,7 @@ const CreatedJobs = () => {
               style={{ animationDelay: "2s" }}
               className="animated-line__number--two yellow-text"
             >
-              2,022
+              1,885
             </p>
           </div>
           <p>Jobs in construction</p>

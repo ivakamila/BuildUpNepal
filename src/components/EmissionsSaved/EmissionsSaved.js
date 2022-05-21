@@ -1,4 +1,5 @@
 import "./EmissionsSaved.scss";
+import { useState } from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -10,7 +11,7 @@ import {
 } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { Bar } from "react-chartjs-2";
-import EmissionsImg from "../../assets/emissions-img.png";
+import EmissionsImg from "../../assets/emissionsImg.png";
 import LazyLoad from "react-lazyload";
 
 ChartJS.register(
@@ -23,13 +24,15 @@ ChartJS.register(
 );
 
 const EmmissionsSaved = () => {
+  // const [delayed, setDelayed] = useState(false);
+
   const data = () => {
     return {
       labels: ["2016", "2017", "2018", "2019", "2020", "2021"],
       datasets: [
         {
           label: "First dataset",
-          data: [0.5, 10, 11000, 27000, 39000, 44000],
+          data: [820, 3690, 11480, 19784, 32949, 44794],
           fill: "start",
           backgroundColor: (context: ScriptableContext<"bar">) => {
             const ctx = context.chart.ctx;
@@ -123,7 +126,6 @@ const EmmissionsSaved = () => {
           font: {
             size: 17,
           },
-          //   stepSize: 1500,
         },
       },
     },
@@ -141,7 +143,7 @@ const EmmissionsSaved = () => {
     },
     layout: {
       padding: {
-        top: 25,
+        top: 30,
       },
     },
   };
@@ -149,27 +151,30 @@ const EmmissionsSaved = () => {
   return (
     <div className="emissions" id="co2-saved">
       <h2>CO2 Saved</h2>
-      <img src={EmissionsImg} alt="pollution in a city" />
-      <p className="emissions__large-text">
-        Fired bricks account for 37% of CO2 emissions in Nepal. Our mission is
-        to reduce it by 2%.
-      </p>
-      <div className="link-container__single">
-        <a href="/" target="_blank" rel="noopener noreferrer">
-          <span className="icon-link-icon"></span>World Bank report
-        </a>
+      <div className="emissions__img">
+        <img src={EmissionsImg} alt="pollution in a city" />
+        <p className="large-text">
+          Fired bricks account for 37% of CO2 emissions in Nepal. Our mission is
+          to reduce it by 2%.
+        </p>
+        <div className="link-container__single">
+          <a href="/" target="_blank" rel="noopener noreferrer">
+            <span className="icon-link-icon"></span>World Bank report
+          </a>
+        </div>
       </div>
       <h3>Replacing dirty bricks at scale</h3>
       <p>
         CSEB produces 50% less CO2 emissions (1), saving 9,5 tonnes per 3-room
         house build with CSEB instead of fired bricks (2).
       </p>
-      <p className="text__small">Stockholm - Kathmandu, 2.5 tonne per person</p>
-      <div className="airplane-animation">
-        <span className="icon-airplane-1"></span>
-        {/* <span className="icon-airplane-icon"></span> */}
-      </div>
       <LazyLoad height={200} offset={0}>
+        <p className="text__small">
+          Stockholm - Kathmandu, 2.5 tonne per person
+        </p>
+        <div className="airplane-animation">
+          <span className="icon-airplane-1"></span>
+        </div>
         <div className="chart">
           <Bar data={data()} options={options} plugins={[ChartDataLabels]} />
         </div>

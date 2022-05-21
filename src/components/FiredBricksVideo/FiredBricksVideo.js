@@ -18,6 +18,7 @@ const FiredBricksVideo = () => {
           src={FiredBrickImg}
           alt="fired bricks"
           className="fired-bricks__video--img"
+          onClick={handleClick}
         />
         <span
           className="icon-play-button play-button"
@@ -28,10 +29,7 @@ const FiredBricksVideo = () => {
           <iframe
             width="100%"
             height="100%"
-            src={
-              playVideo &&
-              "https://www.youtube.com/embed/j04oORVdXTE?autoplay=1&mute=1"
-            }
+            src={playVideo && "https://youtube.com/embed/Gp3dHKLXaJM"}
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

@@ -42,7 +42,11 @@ const HeroSlider = () => {
         {HeroSliderData.map((slide) => {
           return (
             <SwiperSlide key={uuid()}>
-              <img src={slide.img} alt={slide.label} />
+              <img
+                src={slide.img}
+                alt={slide.label}
+                className="hero-slider__img"
+              />
               <h2>{slide.desc}</h2>
             </SwiperSlide>
           );

@@ -4,7 +4,7 @@
     background: $bgColorPrimary;
     width: 100vw;
     height: fit-content;
-    padding: 8em 9.57em 4em;
+    padding: 8em 0 4em;
 
     @media screen and (max-width: $mediaTablet) {
         padding: 3em 2em;
@@ -32,27 +32,83 @@
         }
     }
 
-    img {
-        display: block;
-        margin: 4em auto;
+    .emissions__img {
+        @include image-with-text;
+        border-radius: 16px;
+        width: 78%;
 
-        @media screen and (max-width: $mediaMobile) {
-            max-width: 200px;
-            margin: 2em auto;
+        @media screen and (max-width: $mediaTablet) {
+            width: 90%;
         }
-    }
 
-    .emissions__large-text {
-        font-size: 4rem;
-        line-height: 4.75rem;
-        font-weight: 300;
-        margin-bottom: 0;
-        text-align: center;
-        max-width: 1126px;
+        img {
+            border-radius: 16px;
+        }
 
-        @media screen and (max-width: $mediaMobile) {
-            font-size: 2rem;
-            line-height: 2.5rem;
+        .large-text {
+            top: 24%;
+            font-size: 4rem;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+            line-height: 4.75rem;
+            max-width: 882px;
+
+            @media screen and (max-width: 1220px) {
+                font-size: 3.5rem;
+                line-height: 4rem;
+            }
+
+            @media screen and (max-width: 1060px) {
+                font-size: 3rem;
+                line-height: 3.5rem;
+            }
+
+            @media screen and (max-width: 910px) {
+                font-size: 2.5rem;
+                line-height: 3rem;
+            }
+
+            @media screen and (max-width: 720px) {
+                font-size: 2rem;
+                line-height: 2.5rem;
+            }
+
+            @media screen and (max-width: 600px) {
+                font-size: 1.3rem;
+                line-height: 1.8rem;
+                top: 20%;
+            }
+        }
+    
+        .link-container__single {
+            @include link-container;
+            position: absolute;
+            left: 50%;
+            bottom: 16%;
+            transform: translateX(-50%);
+            background: transparent;
+
+            @media screen and (max-width: 600px) {
+                padding: 0.2em 0.5em;
+                bottom: 12%;
+            }
+
+            a {
+                color: #fff;
+
+                @media screen and (max-width: 600px) {
+                    font-size: 0.6rem;
+                }
+            }
+
+            .icon-link-icon:before { 
+                content: '\e80d'; 
+            }
+
+            span {
+                color: #fff;
+                bottom: 10%;
+            }
         }
     }
 
@@ -60,22 +116,13 @@
         @include link-containers;
         margin-top: 3.875em;
 
+        .link-container {
+            @include link-container;
+        }
+
         @media screen and (max-width: $mediaMobile) {
             margin-top: 1.5em;
         }        
-    }
-
-    .link-container {
-        @include link-container;
-    }
-
-    .link-container__single {
-        @include link-container;
-        margin: 2em auto 4em;
-    }
-
-    .icon-link-icon:before { 
-        content: '\e80d'; 
     }
 
     p {
@@ -102,33 +149,39 @@
 
     .icon-airplane-1:before { 
         content: '\e822'; 
-        width: 500px;
-        animation: flyingPlane 4s linear forwards;
+    }
+
+    .airplane-animation {
+        width: 520px;
+        max-width: 90vw;
+        margin: 0 auto 4em;
+        text-align: center;
+        position: relative;
 
         @media screen and (max-width: $mediaMobile) {
             width: 250px;
         }
-    }
 
-    // @keyframes flyingPlane {
-    //     0% {
-    //         width: 0;
-    //         left: 0;
-    //       }
-        
-    //     100% {
-    //         width: 100%;
-    //     }
-    // }
-
-    .airplane-animation {
-        width: 500px;
-        max-width: 90vw;
-        margin: 0 auto 4em;
-        text-align: center;
-
-        span {
+        span:before {
             font-size: 3rem;
+            visibility: hidden;
+            animation: flyingPlane 3s linear forwards;
+            animation-delay: 3.5s;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+
+            @keyframes flyingPlane {
+                0% {
+                    width: 0;
+                }
+            
+                100% {
+                    width: 100%;
+                    visibility: visible;
+                }
+            }
 
             @media screen and (max-width: $mediaMobile) {
                 font-size: 1.5rem;

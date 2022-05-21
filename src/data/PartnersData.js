@@ -1,91 +1,43 @@
-import Hotlab from "../assets/partners/hotlab.svg";
-import Oxfam from "../assets/partners/oxfam.svg";
-import TibetReliefFund from "../assets/partners/tibet-relief-fund.svg";
-import Ewb from "../assets/partners/ewb.svg";
+import Cin from "../assets/key-partners/cin-logotype-large.svg";
+import Dca from "../assets/key-partners/dca.svg";
+import Dfat from "../assets/key-partners/dfat.svg";
+import Ewb from "../assets/key-partners/ewb.svg";
+import Oxfam from "../assets/key-partners/oxfam.svg";
+import PracticalAction from "../assets/key-partners/practical-action.svg";
+import Trf from "../assets/key-partners/tuki-nepal.svg";
+import Youness from "../assets/key-partners/yunus.svg";
 
 export const PartnersData = [
   {
-    img: Hotlab,
-    name: "Hotlab",
+    img: Cin,
+    name: "CIN",
+  },
+  {
+    img: Dca,
+    name: "DCA",
+  },
+  {
+    img: Dfat,
+    name: "DFAT",
+  },
+  {
+    img: Ewb,
+    name: "EWB",
   },
   {
     img: Oxfam,
     name: "Oxfam",
   },
   {
-    img: TibetReliefFund,
-    name: "Tibet Relief Fund",
+    img: PracticalAction,
+    name: "Practical Action",
   },
   {
-    img: Ewb,
-    name: "Engineers Without Borders",
+    img: Trf,
+    name: "TRF",
   },
   {
-    img: Hotlab,
-    name: "Hotlab",
-  },
-  {
-    img: Oxfam,
-    name: "Oxfam",
-  },
-  {
-    img: TibetReliefFund,
-    name: "Tibet Relief Fund",
-  },
-  {
-    img: Ewb,
-    name: "Engineers Without Borders",
-  },
-  {
-    img: Hotlab,
-    name: "Hotlab",
-  },
-  {
-    img: Oxfam,
-    name: "Oxfam",
-  },
-  {
-    img: TibetReliefFund,
-    name: "Tibet Relief Fund",
-  },
-  {
-    img: Ewb,
-    name: "Engineers Without Borders",
-  },
-  {
-    img: Hotlab,
-    name: "Hotlab",
-  },
-  {
-    img: Oxfam,
-    name: "Oxfam",
-  },
-  {
-    img: TibetReliefFund,
-    name: "Tibet Relief Fund",
-  },
-  {
-    img: Ewb,
-    name: "Engineers Without Borders",
-  },
-  {
-    img: TibetReliefFund,
-    name: "Tibet Relief Fund",
-  },
-  {
-    img: Hotlab,
-    name: "Hotlab",
-  },
-  {
-    img: Oxfam,
-    name: "Oxfam",
-  },
-  {
-    img: TibetReliefFund,
-    name: "Tibet Relief Fund",
-  },
-  {
-    img: Ewb,
-    name: "Engineers Without Borders",
+    img: Youness,
+    name: "Youness",
   },
 ];

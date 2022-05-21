@@ -14,18 +14,18 @@ const ScalableEnterprises = () => {
           <div className="percentage-line__container">
             <div className="percentage-line__part wrapper__blue">
               <div className="percentage percentage__blue"></div>
-              <p>
+              <p className="percentage__text--blue">
                 75% operating &amp; growing{" "}
                 <span className="icon-info-circled-alt"></span>
               </p>
             </div>
             <div className="percentage-line__part wrapper__red">
               <div className="percentage percentage__red"></div>
-              <p>15% struggling</p>
+              <p className="percentage__text--red">15% struggling</p>
             </div>
             <div className="percentage-line__part wrapper__grey">
               <div className="percentage percentage__grey"></div>
-              <p>10% closed</p>
+              <p className="percentage__text--grey">10% closed</p>
             </div>
           </div>
         </div>

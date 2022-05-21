@@ -1,0 +1,9 @@
+@import "../../utilities/_variables.scss";
+
+.modal-overlay {
+    @include modal;
+
+    img {
+        max-width: 200px;
+    }
+}

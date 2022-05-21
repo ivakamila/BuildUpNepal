@@ -13,8 +13,10 @@ const LearnMore = () => {
           {LearnMoreData.map((item) => {
             return (
               <div className="learn-more__doc" key={uuid()}>
-                <img src="" alt="" />
-                <p>{item.title}</p>
+                <a href={item.link} target="_blank">
+                  <img src={item.img} alt="report screenshot" />
+                  <p>{item.title}</p>
+                </a>
               </div>
             );
           })}

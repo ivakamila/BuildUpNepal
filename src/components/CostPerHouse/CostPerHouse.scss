@@ -38,4 +38,38 @@
 
 .animated-line__container {
     @include animated-line__container;
+
+    .cost-line__one {
+        height: 0.5em;
+        background: $redColor;
+        border-radius: 6px;
+        animation: costOne 2s linear forwards;
+    }
+    
+    @keyframes costOne {
+        0% {
+            width: 0;
+        }
+    
+        100% {
+            width: 65vw;
+        }
+    }
+
+    .cost-line__two {
+        height: 0.5em;
+        background: $primaryTextColor;
+        border-radius: 6px;
+        animation: costTwo 2s linear forwards;
+    }
+    
+    @keyframes costTwo {
+        0% {
+            width: 0;
+        }
+    
+        100% {
+            width: 45vw;
+        }
+    }
 }

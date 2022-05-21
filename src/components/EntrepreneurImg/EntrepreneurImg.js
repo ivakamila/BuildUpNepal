@@ -10,7 +10,7 @@ const EntrepreneurImg = () => {
           “I earn 850 Nrs ($7) per day making eco-friendly bricks. It is hard
           work, but I can feed my two daughters, so it is worth it”
         </h2>
-        <p>Saraswati BK – Female entrepreneur</p>
+        <p>Maya Nepali - CSEB worker</p>
       </div>
     </div>
   );

@@ -1,0 +1,28 @@
+@import "../../utilities/_variables.scss";
+
+.modal-overlay {
+    @include modal;
+
+    .modal__container {
+        width: 50%;
+    }
+
+    .modal__info--column {
+        display: flex;
+        flex-direction: column;
+
+        p {
+            margin-top: 0;
+        }
+
+        ul {
+            margin-top: 0;
+        }
+        
+        .modal__img {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+    }
+}

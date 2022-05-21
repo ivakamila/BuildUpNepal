@@ -14,27 +14,39 @@
         margin: 0;
     }
 
-    img {
-        display: block;
-        margin: 4em auto 0.75em;
-
-        @media screen and (max-width: $mediaMobile) {
-            max-width: 250px;
-            margin-top: 2em;
+    .created-jobs__img {
+        @include image-with-text;
+    
+        .icon-info-circled-alt:before { 
+            content: '\f086'; 
+            color: #fff;
         }
-    }
 
-    .created-jobs__number {
-        @include large-text;
-    }
+        .info-icon:hover {
+                color: $primaryTextColor;
+        }
+    
+        .info {
+            @include small-text;
+            color: #fff;
+            position: absolute;
+            top: 57%;
+            left: 50%;
+            transform: translateX(-50%);
 
-    .icon-info-circled-alt:before { 
-        content: '\f086'; 
-    }
+            @media screen and (max-width: 1240px) {
+                top: 60%;
+            }
 
-    .info {
-        @include small-text;
-        margin-bottom: 4.25em;
+            @media screen and (max-width: 910px) {
+                top: 63%;
+            }
+
+            @media screen and (max-width: 620px) {
+                top: 65%;
+                font-size: 1rem;
+            }
+        }
     }
 }
 
@@ -44,18 +56,10 @@
     
     .percentage__blue--med {
         background: rgba(24, 99, 175, 0.6);
-
-        @media screen and (max-width: $mediaMobile) {
-            width: 25%;
-        }
     }
     
     .percentage__blue--light {
         background: rgba(24, 99, 175, 0.3);
-
-        @media screen and (max-width: $mediaMobile) {
-            width: 10%;
-        }
     }
 }
 

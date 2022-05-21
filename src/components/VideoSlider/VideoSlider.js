@@ -33,7 +33,10 @@ const VideoSlider = () => {
             pauseOnMouseEnter: true,
           }}
           onSlideChange={() => setPlayVideo(false)}
-          onClick={(Swiper) => setVideoIndex(Swiper.clickedIndex)}
+          onClick={(Swiper) => {
+            setPlayVideo(true);
+            setVideoIndex(Swiper.clickedIndex);
+          }}
           watchSlidesProgress={true}
           pagination={{
             el: ".swiper-pagination",

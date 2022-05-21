@@ -3,6 +3,7 @@ import { ImpactData } from "../../data/ImpactData";
 import CountUp from "react-countup";
 import ImpactModal from "./ImpactModal";
 import MeasureImpact from "./MeasureImpact";
+import { v4 as uuid } from "uuid";
 
 const HeroImpact = () => {
   const [showModal, setShowModal] = useState(false);
@@ -34,7 +35,7 @@ const HeroImpact = () => {
             return (
               <div
                 className="impact-item"
-                key={index}
+                key={uuid()}
                 onClick={openModal}
                 id={index}
               >

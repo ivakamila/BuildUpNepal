@@ -4,30 +4,25 @@ import { v4 as uuid } from "uuid";
 const MeasureImpact = ({ showImpactMeasure, closeImpactMeasure }) => {
   return (
     <>
-      <div className={showImpactMeasure === "true" ? "impact-overlay" : ""}>
+      <div className={showImpactMeasure === "true" ? "modal-overlay" : ""}>
         {showImpactMeasure === "true" && (
           <div className="impact-measure">
             <h2>How we measure our impact</h2>
             <span
-              className="material-icons-outlined close-icon"
+              className="icon-close close-icon"
               onClick={closeImpactMeasure}
-            >
-              close
-            </span>
+            ></span>
             {ImpactData.map((item) => (
-              <div className="impact-modal__info" key={uuid()}>
-                <img src={item.icon} alt={item.text} />
+              <div className="modal__info" key={uuid()}>
+                <span className={item.icon}></span>
                 <div>
                   <h3>{item.text}</h3>
                   <p>{item.desc}</p>
                 </div>
               </div>
             ))}
-            <button
-              onClick={closeImpactMeasure}
-              className="impact-modal__close"
-            >
-              <span className="material-icons-outlined">close</span>
+            <button onClick={closeImpactMeasure} className="modal__close">
+              <span className="icon-close"></span>
               Close
             </button>
           </div>

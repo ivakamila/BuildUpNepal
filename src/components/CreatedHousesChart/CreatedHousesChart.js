@@ -24,11 +24,11 @@ ChartJS.register(
 const CreatedHousesChart = () => {
   const data = () => {
     return {
-      labels: ["2016", "2017", "2018", "2019", "2020", "2021", "2022"],
+      labels: ["2016", "2017", "2018", "2019", "2020", "2021"],
       datasets: [
         {
           label: "First dataset",
-          data: [795, 1480, 3710, 5339, 5978, 6018, 6823],
+          data: [110, 495, 1540, 2654, 4430, 6009],
           fill: "start",
           backgroundColor: (context: ScriptableContext<"bar">) => {
             const ctx = context.chart.ctx;

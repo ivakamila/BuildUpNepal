@@ -5,11 +5,11 @@ import { useState } from "react";
 import LazyLoad from "react-lazyload";
 
 const KeyPartners = () => {
-  const [visiblePartners, setVisiblePartners] = useState(7);
+  const [visiblePartners, setVisiblePartners] = useState(8);
 
-  const showMorePartners = () => {
-    setVisiblePartners(visiblePartners + visiblePartners + 1);
-  };
+  // const showMorePartners = () => {
+  //   setVisiblePartners(visiblePartners + visiblePartners + 1);
+  // };
 
   return (
     <div className="partners" id="key-partners">
@@ -25,13 +25,13 @@ const KeyPartners = () => {
               />
             </div>
           ))}
-          <div
+          {/* <div
             className="partner__logo partner__show-more"
             onClick={showMorePartners}
           >
             <span className="icon-plus-icon"></span>
             <p>Show More</p>
-          </div>
+          </div> */}
         </div>
       </LazyLoad>
     </div>
