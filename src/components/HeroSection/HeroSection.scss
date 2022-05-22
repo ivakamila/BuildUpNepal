@@ -9,7 +9,7 @@
     }
 
     @media (max-width: $mediaMobile) {
-        margin-bottom: 23.2em;
+        margin-bottom: 19.2em;
     }
 }
 
@@ -51,6 +51,12 @@
                 height: 100vh;
             }
         }
+
+        .hero-slider__img:last-of-type {
+            @media screen and (max-width: $mediaMobile) {
+                object-position: 30% 0;
+            }
+        }
     
         h2 {
             position: absolute;
@@ -84,6 +90,7 @@
             @media screen and (max-width: $mediaMobile) {
                 top: 40%;
                 font-size: 2em;
+                width: 90%;
             }
         }
     }
@@ -104,7 +111,7 @@
         }
 
         @media (max-width: $mediaMobile) {
-            top: 75%;
+            top: 71%;
         }
 
         &-bullet {
@@ -271,8 +278,8 @@
     left: 50%;
     transform: translateX(-50%);
 
-    @media screen and (max-width: 1024px) {
-        top: 65%;
+    @media screen and (max-width: 1140px) {
+        padding: 3.25em 8.5em 2em;
     }
 
     @media screen and (width: 600px) and (height: 1024px),
@@ -280,16 +287,26 @@
         top: 80%;
     }
 
-    @media (max-width: $mediaDesktop) {
+    @media screen and (max-width: $mediaDesktop) {
         padding: 2.4375em 7em; 
+        top: 65%;
     }
 
-    @media (max-width: $mediaTablet) {
+    @media screen and (max-width: 960px) {
+        padding: 2.4375em 5em; 
+    }
+
+    @media screen and (max-width: $mediaTablet) {
         padding: 2.4375em 3em;
     }
 
-    @media (max-width: $mediaMobile) {
-        top: 78%;
+    @media screen and (max-width: 620px) {
+        padding: 2.4375em 2em;
+    }
+
+    @media screen and (max-width: $mediaMobile) {
+        top: 74%;
+        padding: 2.4375em 3em;
     }
 }
 
@@ -329,26 +346,30 @@
 
         .icon-people-icon:before {
             content: "\e80f";
-            color: #d24246;
-            font-size: 4rem;
         }
 
         .icon-house-icon:before {
             content: "\e80a";
-            color: #d24246;
-            font-size: 4rem;
         }
 
         .icon-bricks-icon:before {
             content: "\e802";
-            color: #d24246;
-            font-size: 4rem;
         }
 
         .icon-co2-icon:before {
             content: "\e805";
+        }
+
+        .icon-people-icon:before,
+        .icon-house-icon:before,
+        .icon-bricks-icon:before,
+        .icon-co2-icon:before {
             color: #d24246;
             font-size: 4rem;
+
+            @media screen and (max-width: $mediaMobileSmall) {
+                font-size: 3rem;
+            }
         }
         
         &__count {

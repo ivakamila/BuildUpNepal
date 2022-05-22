@@ -1,11 +1,5 @@
-// import HouseIcon from "../assets/icons/house-icon.svg";
-// import BricksIcon from "../assets/icons/bricks-icon.svg";
-// import CarbonIcon from "../assets/icons/co2-icon.svg";
-// import PeopleIcon from "../assets/icons/people-icon.svg";
-
 export const ImpactData = [
   {
-    // icon: PeopleIcon,
     icon: "icon-people-icon",
     count: 288,
     text: "Entrepreneurs",
@@ -21,7 +15,6 @@ export const ImpactData = [
     ),
   },
   {
-    // icon: HouseIcon,
     icon: "icon-house-icon",
     count: 6009,
     text: "Houses",
@@ -38,21 +31,22 @@ export const ImpactData = [
     ),
   },
   {
-    // icon: BricksIcon,
     icon: "icon-bricks-icon",
     count: 2896,
     text: "Jobs",
     desc: (
-      <p>
-        1885 jobs in construction of houses. Each enterprise reports how many
-        staff they employ in the production. We measure construction work by the
-        days required to build a house. A 4-room house: 235 man-days. 300
-        man-days = one job for a year.
-      </p>
+      <>
+        <p>1011 jobs in production of CSEB</p>
+        <p>1885 jobs in construction of houses</p>
+        <p>
+          Each enterprise reports how many staff they employ in the production.
+          We measure construction work by the days required to build a house. A
+          4-room house: 235 man-days. 300 man-days = one job for a year.
+        </p>
+      </>
     ),
   },
   {
-    // icon: CarbonIcon,
     icon: "icon-co2-icon",
     count: 44794,
     text: "Tons CO2 Saved",
@@ -74,11 +68,17 @@ export const ImpactData = [
         house. For a 3 room house this equals 9.5 ton of CO2 emissions compared
         to using fired bricks. (a flight between London-Kathmandu-London emits
         approx. 2.8 ton CO2. Numbers are based on research by{" "}
-        <a href="https://www.buildupnepal.com/wp-content/uploads/2022/02/carbon-evaluation-of-compressed-stabilised-earth-blocks-cseb-in-nepal-summary.pdf">
+        <a
+          href="https://www.buildupnepal.com/wp-content/uploads/2022/02/carbon-evaluation-of-compressed-stabilised-earth-blocks-cseb-in-nepal-summary.pdf"
+          target="_blank"
+        >
           Max fordham
         </a>{" "}
         and{" "}
-        <a href="https://www.buildupnepal.com/wp-content/uploads/2022/02/carbon-evaluation-of-compressed-stabilised-earth-blocks-cseb-in-nepal-summary.pdf">
+        <a
+          href="https://www.buildupnepal.com/wp-content/uploads/2022/02/carbon-evaluation-of-compressed-stabilised-earth-blocks-cseb-in-nepal-summary.pdf"
+          target="_blank"
+        >
           ICIMOD Nepal and Asian Institute of Technology
         </a>
         .

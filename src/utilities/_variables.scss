@@ -230,11 +230,7 @@ $greyColor: #DADADA;
             p {
                 text-align: left;
                 line-height: 1.5;
-                margin-top: 0;
-    
-                @media (max-width: $mediaMobile) {
-                    margin-bottom: 0;
-                }
+                margin: 0;
     
                 @media (max-width: $mediaMobileSmall) {
                     font-size: .9rem;
@@ -274,7 +270,7 @@ $greyColor: #DADADA;
         border: none;
         border-radius: 100px;
         padding: 10px 24px 10px 16px;
-        margin: 3em auto 0;
+        margin: 5.75em auto 0;
         cursor: pointer;
         position: relative;
     

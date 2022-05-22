@@ -9,14 +9,17 @@ const HeroImpact = () => {
   const [showModal, setShowModal] = useState(false);
   const [itemIndex, setItemIndex] = useState("");
   const [measureImpact, setMeasureImpact] = useState(false);
+  const [startCount, setStartCount] = useState(true);
 
   const openModal = (e) => {
     setShowModal(true);
     setItemIndex(e.currentTarget.id);
+    setStartCount(false);
   };
 
   const closeModal = () => {
     setShowModal(false);
+    setStartCount(true);
   };
 
   const showImpactMeasure = () => {
@@ -40,13 +43,20 @@ const HeroImpact = () => {
                 id={index}
               >
                 <span className={`${item.icon} impact-item__icon`}></span>
-                <CountUp
-                  start={0}
-                  end={item.count}
-                  duration={2}
-                  separator=","
-                  className="impact-item__count"
-                />
+                {startCount ? (
+                  <CountUp
+                    start={0}
+                    end={item.count}
+                    duration={2}
+                    redraw={false}
+                    separator=","
+                    className="impact-item__count"
+                  />
+                ) : (
+                  <h3 className="impact-item__count" style={{ margin: 0 }}>
+                    {item.count}
+                  </h3>
+                )}
                 <p>{item.text}</p>
                 <span className="icon-info-circled-alt"></span>
               </div>
