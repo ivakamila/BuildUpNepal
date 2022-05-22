@@ -73,7 +73,11 @@ const BrickBenefits = () => {
           </a>
         </div>
         <div className="link-container">
-          <a href="/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.buildupnepal.com/wp-content/uploads/2022/02/carbon-evaluation-of-compressed-stabilised-earth-blocks-cseb-in-nepal-summary.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span className="icon-link-icon"></span>Max Fordham study of CSEB
             C02 emissions
           </a>

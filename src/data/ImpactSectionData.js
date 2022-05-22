@@ -12,18 +12,18 @@ export const ImpactSectionData = [
   },
   {
     img: [HousesBuilt],
-    title: "6,018",
+    title: "6,009",
     desc: "Houses built",
   },
   {
     img: [JobsCreatedOne, JobsCreatedTwo],
     // imgTwo: JobsCreatedTwo,
-    title: "3,034",
+    title: "2,896",
     desc: "Jobs created",
   },
   {
     img: [EmissionsSaved],
-    title: "44,854",
+    title: "44,794",
     desc: "Tons CO2 saved",
   },
 ];

@@ -65,7 +65,11 @@ const Impact = () => {
         </div>
       </LazyLoad>
       <div className="link-container">
-        <a href="/" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.buildupnepal.com/wp-content/uploads/2022/05/impact-assessment-2021-cerad-yunus-social-business-center-final-report.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Data collected &amp; verifed by: Younus Social Business Center, CERAD
           Center for Research &amp; Development.
         </a>

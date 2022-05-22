@@ -158,7 +158,11 @@ const EmmissionsSaved = () => {
           to reduce it by 2%.
         </p>
         <div className="link-container__single">
-          <a href="/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.buildupnepal.com/wp-content/uploads/2022/05/dirty-stacks-high-stakes-an-overview-of-brick-sector-in-south-asia.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span className="icon-link-icon"></span>World Bank report
           </a>
         </div>
@@ -181,12 +185,20 @@ const EmmissionsSaved = () => {
       </LazyLoad>
       <div className="link-containers">
         <div className="link-container">
-          <a href="/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.buildupnepal.com/wp-content/uploads/2022/02/carbon-evaluation-of-compressed-stabilised-earth-blocks-cseb-in-nepal-summary.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span className="icon-link-icon"></span>(1) Max Fordham report
           </a>
         </div>
         <div className="link-container">
-          <a href="/" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.buildupnepal.com/wp-content/uploads/2022/02/carbon-evaluation-of-compressed-stabilised-earth-blocks-cseb-in-nepal-summary.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span className="icon-link-icon"></span>(2) Asian Institute of
             Technology &amp; Management
           </a>

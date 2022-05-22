@@ -13,16 +13,19 @@ const TechnologyModal = ({ show, close }) => {
               <div>
                 <p>
                   CSEB Compressed Stablized Earth Bricks, is a recognized
-                  climate friendly and disaster resilient technology. Nepal
-                  approved the CSEB technology in 2017. It is also approved and
-                  widely used in India, Thailand, Malaysia, New Mexico, New
-                  Zealand among other countries. CSEB bricks are produced
-                  locally by compressing a mix of sand and soil (or stone-dust)
-                  with 10% cement in a machine. After compression, the bricks
-                  are stacked and cured (watered) for 21 days, the cement sets
-                  and bonds with the sand stabilizing the brick. No fuel or
-                  burning is required and half the cement-mortar in construction
-                  means 50% less CO2 emissions than fired bricks.
+                  climate friendly and disaster resilient technology. Nepal{" "}
+                  <a href="https://www.buildupnepal.com/wp-content/uploads/2020/04/design-catalogue-volume-2-1.pdf">
+                    approved the CSEB technology
+                  </a>{" "}
+                  in 2017. It is also approved and widely used in India,
+                  Thailand, Malaysia, New Mexico, New Zealand among other
+                  countries. CSEB bricks are produced locally by compressing a
+                  mix of sand and soil (or stone-dust) with 10% cement in a
+                  machine. After compression, the bricks are stacked and cured
+                  (watered) for 21 days, the cement sets and bonds with the sand
+                  stabilizing the brick. No fuel or burning is required and half
+                  the cement-mortar in construction means 50% less CO2 emissions
+                  than fired bricks.
                 </p>
                 <p>
                   Disaster resilience: When building with CSEB the bricks
