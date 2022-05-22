@@ -16,9 +16,9 @@
 
     .icon-house-icon:before { 
         content: '\e80a'; 
-        @include flex-center;
-        font-size: 4rem;
         color: #D24246;
+        font-size: 4rem;
+        @include flex-center;
         margin-bottom: 0.5em;
 
         @media screen and (max-width: $mediaMobile) {

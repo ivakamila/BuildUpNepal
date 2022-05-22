@@ -170,9 +170,9 @@
         animation: fadeIn 4s;
 
         @keyframes fadeIn {
-            0% {opacity:0;}
-            100% {opacity:1;}
-          }
+            0% {opacity: 0;}
+            100% {opacity:1 ;}
+        }
 
         .impact__card--image {
             margin: 0;
@@ -190,7 +190,6 @@
 
             @media screen and (max-width: $mediaDesktop) {
                 justify-content: flex-start;
-                margin-bottom: 0;
             }
 
             .impact__card--image-one {
