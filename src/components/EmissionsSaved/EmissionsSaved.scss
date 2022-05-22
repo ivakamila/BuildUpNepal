@@ -154,12 +154,13 @@
     .airplane-animation {
         width: 520px;
         max-width: 90vw;
-        margin: 0 auto 4em;
+        margin: 0 auto 3.8125em;
         text-align: center;
         position: relative;
 
         @media screen and (max-width: $mediaMobile) {
             width: 250px;
+            margin-bottom: 2.5em;
         }
 
         span:before {
@@ -185,6 +186,7 @@
 
             @media screen and (max-width: $mediaMobile) {
                 font-size: 1.5rem;
+                margin-top: 0.5em;
             }
         }
     }

@@ -98,13 +98,16 @@
     
             @media screen and (max-width: 680px) {
                 top: 70%;
-                font-size: 1rem;
             }
         }
     
         .small-text {
             @include small-text;
             color: #fff;
+
+            @media screen and (max-width: 680px) {
+               font-size: 1rem;
+            }
         }
 
         .icon-info-circled-alt:before { 
