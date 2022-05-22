@@ -1,20 +1,28 @@
 import "./TechnologyModal.scss";
-import TechnologyModalImg from "../../assets/technology-modal-img.png";
+import TechnologyModalImg from "../../assets/technology-modal-img.jpg";
 
 const TechnologyModal = ({ show, close }) => {
   return (
     <>
-      <div className={show === "true" ? "modal-overlay" : ""}>
+      <div className={show === "true" ? "technology-modal__overlay" : ""}>
         {show === "true" && (
-          <div className="modal__container">
+          <div className="technology-modal">
             <h2>Low-cost, eco friendly brick technology</h2>
             <span className="icon-close close-icon" onClick={close}></span>
-            <div className="modal__info">
+            <div className="technology-modal__info">
               <div>
+                <img
+                  src={TechnologyModalImg}
+                  alt="A man working with earth bricks"
+                  className="technology-modal__img"
+                />
                 <p>
                   CSEB Compressed Stablized Earth Bricks, is a recognized
                   climate friendly and disaster resilient technology. Nepal{" "}
-                  <a href="https://www.buildupnepal.com/wp-content/uploads/2020/04/design-catalogue-volume-2-1.pdf">
+                  <a
+                    href="https://www.buildupnepal.com/wp-content/uploads/2020/04/design-catalogue-volume-2-1.pdf"
+                    target="_blank"
+                  >
                     approved the CSEB technology
                   </a>{" "}
                   in 2017. It is also approved and widely used in India,
@@ -39,7 +47,10 @@ const TechnologyModal = ({ show, close }) => {
                 <h4>Benefits of CSEB interlocking bricks</h4>
                 <ul>
                   <li>35-50% lower cost, driving adoption at scale</li>
-                  <li>Disaster resistant, ensuring safe houses</li>
+                  <br />
+                  <li>
+                    <strong>Disaster resistant, ensuring safe houses</strong>
+                  </li>
                   <li>
                     Creates local jobs, reducing poverty and forced migration
                   </li>
@@ -48,11 +59,6 @@ const TechnologyModal = ({ show, close }) => {
                   </li>
                 </ul>
               </div>
-              <img
-                src={TechnologyModalImg}
-                alt="A man working with earth bricks"
-                className="technology-modal__img"
-              />
             </div>
             <button onClick={close} className="modal__close">
               <span className="icon-close"></span>

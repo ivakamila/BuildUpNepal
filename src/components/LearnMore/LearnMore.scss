@@ -34,15 +34,6 @@
         align-items: baseline;
         gap: 4.25em;
 
-        // width: 90%;
-        // @include flex-center;
-        // align-items: flex-start;
-        // justify-content: flex-start;
-        // margin: 4em auto 0;
-        // margin-right: 0;
-        // overflow-y: auto;
-        // gap: 4.25em;
-
         @media screen and (max-width: 1240px) {
             gap: 3em;
         }
@@ -63,6 +54,7 @@
             flex: 1;
 
             img {
+                border: 1px solid $greyColor;
                 border-radius: 8px;
                 width: 220px;
                 height: 260px;
@@ -88,6 +80,7 @@
 
                 @media screen and (max-width: 880px) {
                     font-size: 1rem;
+                    line-height: 1.4rem;
                     max-width: 130px;
                 }
             }
@@ -101,13 +94,5 @@
                 text-decoration: none;
             }
         }
-
-        // .learn-more__doc:last-of-type {
-        //     margin-right: 4em;
-
-        //     @media screen and (max-width: $mediaMobileSmall) {
-        //         margin-right: 2em;
-        //     }
-        // }
     }
 }

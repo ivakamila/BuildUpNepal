@@ -35,7 +35,7 @@ export const LearnMoreData = [
   {
     img: Img6,
     title: "Carbon savings of CSEB - ICIMOD & Asian institute of Technology",
-    link: "https://www.buildupnepal.com/wp-content/uploads/2022/02/carbon-evaluation-of-compressed-stabilised-earth-blocks-cseb-in-nepal-summary.pdf",
+    link: "https://www.buildupnepal.com/wp-content/uploads/2022/05/ait_icimod-carbon-savings-w-cseb.pdf",
   },
   {
     img: Img7,

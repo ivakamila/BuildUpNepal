@@ -31,7 +31,7 @@ $greyColor: #DADADA;
 
     @media screen and (max-width: $mediaMobile) {
         font-size: 4rem;
-        line-height: 4rem;
+        line-height: 6rem;
     }
 }
 
@@ -107,6 +107,10 @@ $greyColor: #DADADA;
     border-radius: 8px;
     width: fit-content;
 
+    @media screen and (max-width: $mediaMobile) {
+        width: 85%;
+    }
+
     a {
         @include flex-center;
         gap: 0.5em;
@@ -114,6 +118,10 @@ $greyColor: #DADADA;
         color: $smallTextColor;
         font-size: 0.688rem;
         letter-spacing: 0.5px;
+
+        @media screen and (max-width: $mediaMobile) {
+            justify-content: flex-start;
+        }
 
         span {
             font-size: 1.125rem;
@@ -226,10 +234,19 @@ $greyColor: #DADADA;
                 margin: 0;
                 text-align: left;
             }
+
+            h4 {
+                font-size: 1.4rem;
+
+                @media (max-width: $mediaMobileSmall) {
+                    font-size: 1.1rem;
+              }
+            }
             
-            p {
+            p, li {
+                font-size: 1.375rem;
                 text-align: left;
-                line-height: 1.5;
+                line-height: 1.75rem;
                 margin: 0;
     
                 @media (max-width: $mediaMobileSmall) {
@@ -721,6 +738,10 @@ $greyColor: #DADADA;
     
         100% {
             width: 45vw;
+
+            @media screen and (max-width: $mediaMobile) {
+                width: 35vw;
+            }
         }
     }
 }
@@ -806,8 +827,8 @@ $greyColor: #DADADA;
             }
 
             @media screen and (max-width: 500px) {
-                width: 155px;
-                height: 155px;
+                width: 145px;
+                height: 145px;
             }
         }
 

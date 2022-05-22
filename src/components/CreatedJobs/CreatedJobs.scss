@@ -53,24 +53,106 @@
 .percentage-line {
     @include percentage-line;
     margin: 0 auto; 
+
+    .percentage-line__container {
+        @include percentage-line__container;
+    
+        .percentage-line__part {
+            p {
+                line-height: 1.5rem;
+            }
+        }
+
+        .percentage-line__one {
+            width: 26%;
+    
+            @media screen and (max-width: $mediaMobile) {
+                width: 100%;
+            }
+    
+            .percentage__blue {
+                animation: blueLine 1s linear forwards;
+                animation-delay: 0;
+    
+                @media screen and (min-width: $mediaMobile) {
+                    @keyframes blueLine {
+                        0% {
+                            width: 0;
+                          }
+                        
+                          100% {
+                            width: 26%;
+                          }
+                    }
+                }
+            }
+
+            @media screen and (max-width: $mediaMobile) {
+                width: 35%;
+      
+                @keyframes blueMed {
+                    0% {
+                        width: 0;
+                      }
+                    
+                    100% {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    
+        .percentage-line__two {
+            width: 74%;
+    
+            @media screen and (max-width: $mediaMobile) {
+                width: 100%;
+            }
+    
+            .percentage__blue--med {
+                animation: blueMed 1s linear forwards;
+                animation-delay: 1s;
+                animation-fill-mode: both;
+          
+                @media screen and (min-width: $mediaMobile) {
+          
+                    @keyframes blueMed {
+                        0% {
+                            width: 0;
+                            color: #fff;
+                          }
+                        
+                          100% {
+                            width: 100%;
+                            color: #000;
+                          }
+                    }
+                }
+          
+                @media screen and (max-width: $mediaMobile) {
+                    width: 100%;
+          
+                    @keyframes blueMed {
+                        0% {
+                            width: 0;
+                          }
+                        
+                        100% {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
     
     .percentage__blue--med {
         background: rgba(24, 99, 175, 0.6);
     }
     
-    .percentage__blue--light {
-        background: rgba(24, 99, 175, 0.3);
-    }
-}
-
-.percentage-line__container {
-    @include percentage-line__container;
-
-    .percentage-line__part {
-        p {
-            line-height: 1.5rem;
-        }
-    }
+    // .percentage__blue--light {
+    //     background: rgba(24, 99, 175, 0.3);
+    // }
 }
 
 .sectors {
@@ -105,6 +187,21 @@
 
     .animated-line__one {
         width: 50%;
+
+        @media screen and (max-width: $mediaMobileSmall) {
+            width: 40%;
+            animation: lineOneMobile; 
+
+            @keyframes lineOneMobile {
+                0% {
+                    width: 0;
+                }
+            
+                100% {
+                    width: 40%;
+                }
+            }
+        }
     }
 
     .animated-line__two {

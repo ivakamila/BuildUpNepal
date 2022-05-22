@@ -306,7 +306,8 @@
 
     @media screen and (max-width: $mediaMobile) {
         top: 74%;
-        padding: 2.4375em 3em;
+        padding: 2.4375em 1em;
+        width: 95%;
     }
 }
 
@@ -318,6 +319,7 @@
     @media (max-width: $mediaMobile) {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        row-gap: 2.375em;
     }
 
     .impact-item {
@@ -388,7 +390,8 @@
             }
 
             @media (max-width: $mediaMobileSmall) {
-                font-size: 1.5rem;
+                font-size: 2.375rem;
+                line-height: 3.063rem;
             }
         }
 
@@ -404,10 +407,6 @@
 
             @media (max-width: $mediaTablet) {
                 font-size: 1rem;
-            }
-
-            @media (max-width: $mediaMobileSmall) {
-                font-size: .8rem;
             }
         }
 
@@ -429,7 +428,9 @@
             }
 
             @media (max-width: $mediaMobileSmall) {
-                font-size: 1.1rem;
+                font-size: 1.25rem;
+                margin-bottom: 0;
+                margin-top: 0.5em;
             }
         }
     }
@@ -442,6 +443,10 @@
     padding: 0.05em 1em;
     background: #fff;
     border-radius: 8px;
+
+    @media screen and (max-width: $mediaMobile) {
+        margin-top: 2.563em;
+    }
 
     p {
         text-align: center;

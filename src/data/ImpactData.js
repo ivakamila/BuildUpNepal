@@ -76,7 +76,7 @@ export const ImpactData = [
         </a>{" "}
         and{" "}
         <a
-          href="https://www.buildupnepal.com/wp-content/uploads/2022/02/carbon-evaluation-of-compressed-stabilised-earth-blocks-cseb-in-nepal-summary.pdf"
+          href="https://www.buildupnepal.com/wp-content/uploads/2022/05/ait_icimod-carbon-savings-w-cseb.pdf "
           target="_blank"
         >
           ICIMOD Nepal and Asian Institute of Technology

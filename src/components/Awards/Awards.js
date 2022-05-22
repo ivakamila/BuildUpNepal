@@ -21,6 +21,7 @@ const Awards = () => {
           <div className="awards__card">
             <a
               href="https://ashden.org/news/nepal-returning-migrants-lead-a-green-recovery-from-coronavirus/"
+              target="_blank"
               className="awards__card--link"
             >
               Nepal returning migrants lead a green recovery from corona virus

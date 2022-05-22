@@ -7,7 +7,7 @@ import LowerCostTwo2x from "../assets/benefits/lower-cost-two-2x.jpg";
 import LowerEmissions from "../assets/benefits/lower-emissions.jpg";
 import LowerEmissions1x from "../assets/benefits/lower-emissions-1x.jpg";
 import LowerEmissions2x from "../assets/benefits/lower-emissions-2x.jpg";
-import BenefitsModalOne from "../assets/benefits/benefits-modal-1.png";
+import BenefitsModalOne from "../assets/benefits/benefits-modal-1.jpg";
 import BenefitsModalTwo from "../assets/benefits/benefits-modal-2.jpg";
 
 export const BenefitsData = [
@@ -144,18 +144,38 @@ export const BenefitsData = [
     modal: (
       <>
         <p>
-          When building a small 2-room house the overall cost is reduced by 25%.
+          The fired brick industry is responsible for 37% of CO2 emissions from
+          combustion in Nepal and is a major source of and Black carbon (
+          {
+            <a
+              href="https://www.buildupnepal.com/wp-content/uploads/2022/05/dirty-stacks-high-stakes-an-overview-of-brick-sector-in-south-asia.pdf"
+              target="_blank"
+            >
+              World bank, 2020
+            </a>
+          }
+          ). Black carbon emissions in particular is contributing to pollution
+          and melting of the Himalayan glacier which supplies drinking water for
+          1.5 billion South Asians. Our technology saves 40-60% of CO2 emissions
+          per house. For a 3 room house this equals 9.5 ton of CO2 emissions
+          compared to using fired bricks. (a flight between
+          London-Kathmandu-London emits approx. 2.8 ton CO2. Numbers are based
+          on research by{" "}
+          <a
+            href="https://www.buildupnepal.com/wp-content/uploads/2022/02/carbon-evaluation-of-compressed-stabilised-earth-blocks-cseb-in-nepal-summary.pdf"
+            target="_blank"
+          >
+            Max fordham
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://www.buildupnepal.com/wp-content/uploads/2022/05/ait_icimod-carbon-savings-w-cseb.pdf "
+            target="_blank"
+          >
+            ICIMOD Nepal and Asian Institute of Technology
+          </a>
+          .
         </p>
-        <img
-          src={BenefitsModalOne}
-          alt="cost breakdown for house"
-          className="modal__img"
-        />
-        <img
-          src={BenefitsModalTwo}
-          alt="earth brick house"
-          className="modal__img"
-        />
       </>
     ),
   },

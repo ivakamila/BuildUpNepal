@@ -178,6 +178,7 @@ const EmmissionsSaved = () => {
         </p>
         <div className="airplane-animation">
           <span className="icon-airplane-1"></span>
+          <span className="icon-airplane-icon"></span>
         </div>
         <div className="chart">
           <Bar data={data()} options={options} plugins={[ChartDataLabels]} />
@@ -195,7 +196,7 @@ const EmmissionsSaved = () => {
         </div>
         <div className="link-container">
           <a
-            href="https://www.buildupnepal.com/wp-content/uploads/2022/02/carbon-evaluation-of-compressed-stabilised-earth-blocks-cseb-in-nepal-summary.pdf"
+            href="https://www.buildupnepal.com/wp-content/uploads/2022/05/ait_icimod-carbon-savings-w-cseb.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >

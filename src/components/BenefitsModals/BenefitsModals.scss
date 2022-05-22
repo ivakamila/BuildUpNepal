@@ -3,16 +3,20 @@
 .modal-overlay {
     @include modal;
 
-    .modal__container {
-        width: 50%;
-    }
-
     .modal__info--column {
         display: flex;
         flex-direction: column;
 
         p {
             margin-top: 0;
+            font-size: 1.375rem;
+            text-align: left;
+            line-height: 1.75rem;
+            margin: 0;
+
+            @media (max-width: $mediaMobileSmall) {
+                font-size: .9rem;
+            }
         }
 
         ul {
@@ -21,8 +25,13 @@
         
         .modal__img {
             width: 100%;
-            max-width: 900px;
+            height: 100%;
             margin: 0 auto;
+        }
+
+        .modal__img:first-of-type {
+            margin-bottom: 2em;
+            margin-top: 2em;
         }
     }
 }

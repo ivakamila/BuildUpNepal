@@ -1,15 +1,197 @@
 @import "../../utilities/_variables.scss";
 
-.modal-overlay {
-    @include modal;
 
-    h2, h4, li  {
-        text-align: left;
-        margin-left: 0;
+.technology-modal__overlay {
+    @include flex-center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: rgba(255,255,255,0.7); 
+    
+    .technology-modal {
+        margin: auto;
+        position: relative;
+        height: fit-content;
+        background: #fff;
+        box-shadow: 0px 8px 42px 6px rgba(24, 99, 175, 0.15), 
+            0px 4px 23px rgba(24, 99, 175, 0.15);
+        border-radius: 8px;
+        overflow: auto;
+        padding: 3.4em 0 2.4em 4em;
+        margin-top: 10em;
+        z-index: 100;
+        width: 80%;
+
+        @media screen and (max-width: 1060px) {
+            width: 85%;
+        }
+        
+        @media (max-width: $mediaTablet) {
+            width: 80%;
+            padding: 3em 3em 2em 3em; 
+        }
+        
+        @media (max-width: $mediaMobile) {
+            padding: 3em 0; 
+        }
+        
+        @media (max-width: $mediaMobileSmall) {
+            width: 90%;
+            top: 10%;
+        }
+    
+        h2 {
+            font-size: 2.7rem;
+            font-weight: 400;
+            color: $primaryTextColor;
+            margin-bottom: .5em;
+            margin-left: 0;
+            text-align: left;
+    
+            @media (max-width: $mediaTablet) {
+                margin-top: .2em;
+                font-size: 2rem;
+                line-height: 3rem;
+            }
+    
+            @media (max-width: $mediaMobile) {
+                margin: 0.7em 1em 0;
+            }
+
+            @media screen and (max-width: $mediaMobileSmall) {
+                font-size: 1.5rem;
+            }
+        }
+    
+        .technology-modal__info {
+            margin: 1em 0;
+    
+            @media (max-width: 860px) {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            h4 {
+                font-size: 1.4rem;
+                text-align: left;
+
+                @media (max-width: $mediaMobile) {
+                    margin: 2em 1.5em 1em;
+                }
+
+                @media (max-width: $mediaMobileSmall) {
+                    font-size: 1.1rem;
+              }
+            }
+            
+            p, li {
+                font-size: 1.375rem;
+                text-align: left;
+                line-height: 1.75rem;
+                margin: 0;
+                margin-right: 1em;
+
+                @media screen and (max-width: $mediaTablet) {
+                    padding-right: 0;
+                }
+
+                @media (max-width: $mediaMobile) {
+                    margin: 0 1.5em;
+                }
+    
+                @media (max-width: $mediaMobileSmall) {
+                    font-size: .9rem;
+                }
+            }
+
+            .technology-modal__img {
+                max-width: 400px;
+                min-height: 600px;
+                margin: 0.5em 0 1em 1em;
+                object-fit: cover;
+                float: right;
+        
+                @media screen and (max-width: 1080px) {
+                    min-height: 500px;
+                    min-width: 350px;
+
+                    @media screen and (max-width: 920px) {
+                        min-height: 400px;
+                        max-width: 270px;
+                    }
+                }
+        
+                @media screen and (max-width: $mediaTablet) {
+                    min-height: 350px;
+                    max-width: 100%;
+                    margin-bottom: 2em;
+                }
+        
+                @media screen and (max-width: 680px) {
+                    min-height: 300px;
+                }
+        
+                @media screen and (max-width: $mediaMobile) {
+                    min-height: 250px;
+                    width: 100%;
+                }
+            }
+        }
+    
+        .icon-close:before { 
+            content: '\e804'; 
+        }
+    
+        .close-icon {
+            position: absolute;
+            top: 1em;
+            right: 1em;
+            background: #dae8f4;
+            padding: 5px;
+            border-radius: 50%;
+            transition: all 500ms ease-out;
+            cursor: pointer;
+    
+            &:hover {
+                background: $primaryTextColor;
+                color: #fff;
+            }
+        }
     }
-
-    .technology-modal__img {
-        height: 400px;
-        margin-top: 0.5em;
+    
+    .modal__close {
+        @include flex-center;
+        gap: 8px;
+        max-width: 102px;
+        background: $primaryTextColor;
+        color: #fff;
+        font-size: 0.875rem;
+        font-weight: 500;
+        border: none;
+        border-radius: 100px;
+        padding: 10px 24px 10px 16px;
+        margin: 5.75em auto 0;
+        cursor: pointer;
+        position: relative;
+    
+        @media (max-width: $mediaTablet) {
+            margin: 2em auto 0;
+        }
+        
+        &:hover {
+            -webkit-box-shadow: 2px 2px 10px 2px #000000; 
+            box-shadow: 2px 2px 10px 2px #000000;
+        }
+    
+        .icon-close {
+            color: #fff;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
     }
 }

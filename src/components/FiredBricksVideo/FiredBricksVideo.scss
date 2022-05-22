@@ -23,8 +23,9 @@
 
     .fired-bricks__video {
         width: 100%;
+        max-width: 1128px;
+        margin: 4em auto 0;
         position: relative;
-        margin-top: 4em;
         @include flex-center;
 
         @media screen and (max-width: $mediaMobile) {
@@ -60,6 +61,7 @@
             top: 0;
             left: 0;
             z-index: 100;
+            max-width: 100%;
         }
     }
 }

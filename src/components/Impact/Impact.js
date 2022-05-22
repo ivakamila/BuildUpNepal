@@ -9,7 +9,10 @@ const Impact = () => {
   return (
     <div className="impact" id="impact-we-create">
       <h2>Multiplier effect &amp; SDG impact</h2>
-      <p>288 enterprises build houses, crate jobs and saves CO2 long-term.</p>
+      <p>
+        Our 288 enterprises are building houses, creating jobs and saving CO2
+        emissions year-after-year.
+      </p>
       <div className="impact__img">
         <img src={ImpactImg} alt="Female earth bricks entrepreneur" />
         <LazyLoad height={200} offset={0}>
@@ -26,8 +29,7 @@ const Impact = () => {
         </LazyLoad>
         <div className="impact__img--info">
           <p className="small-text">
-            Earth Bricks (CSEB) produced to date{" "}
-            <span className="icon-info-circled-alt"></span>
+            Produced to date <span className="icon-info-circled-alt"></span>
           </p>
         </div>
       </div>

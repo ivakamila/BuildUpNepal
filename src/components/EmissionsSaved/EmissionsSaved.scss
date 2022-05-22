@@ -15,8 +15,6 @@
     }
 
     h2 {
-        margin-top: 0;
-
         @media screen and (max-width: $mediaMobile) {
             font-size: 1.75rem;
             line-height: 2.25rem;
@@ -39,6 +37,10 @@
 
         @media screen and (max-width: $mediaTablet) {
             width: 90%;
+        }
+
+        @media screen and (max-width: $mediaMobile) {
+            margin-bottom: 4em;
         }
 
         img {
@@ -88,16 +90,20 @@
             transform: translateX(-50%);
             background: transparent;
 
-            @media screen and (max-width: 600px) {
+            @media screen and (max-width: $mediaMobile) {
+                background: #fff;
                 padding: 0.2em 0.5em;
-                bottom: 12%;
+                bottom: -2.5em;
+                width: 60%;
+                @include flex-center;
             }
 
             a {
                 color: #fff;
 
-                @media screen and (max-width: 600px) {
+                @media screen and (max-width: $mediaMobile) {
                     font-size: 0.6rem;
+                    color: $smallTextColor;
                 }
             }
 
@@ -108,6 +114,10 @@
             span {
                 color: #fff;
                 bottom: 10%;
+
+                @media screen and (max-width: $mediaMobile) {
+                    color: $smallTextColor;
+                }
             }
         }
     }
@@ -150,9 +160,15 @@
     .icon-airplane-1:before { 
         content: '\e822'; 
     }
+    .icon-airplane-icon:before { 
+        content: '\e821'; 
+        font-size: 2rem;
+        max-width: 516px;
+        text-align: right;
+    }
 
     .airplane-animation {
-        width: 520px;
+        width: 460px;
         max-width: 90vw;
         margin: 0 auto 3.8125em;
         text-align: center;

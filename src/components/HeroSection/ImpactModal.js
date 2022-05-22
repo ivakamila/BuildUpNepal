@@ -9,7 +9,7 @@ const ImpactModal = ({ show, close, item }) => {
             <h2>How we measure our impact</h2>
             <span className="icon-close close-icon" onClick={close}></span>
             <div className="modal__info">
-              <span className={ImpactData[item].icon}></span>
+              <span className={`${ImpactData[item].icon} modal__icon`}></span>
               <div>
                 <h3>{ImpactData[item].text}</h3>
                 <p>{ImpactData[item].desc}</p>

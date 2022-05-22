@@ -51,7 +51,7 @@ const CreatedHousesChart = () => {
     plugins: {
       title: {
         display: true,
-        text: "Cumulative total houses created over time.",
+        text: "Culminative number of houses built over time.",
         color: "#000",
         font: {
           size: 24,

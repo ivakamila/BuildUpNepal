@@ -44,6 +44,7 @@
         background: $redColor;
         border-radius: 6px;
         animation: costOne 2s linear forwards;
+        width: 65vw;
     }
     
     @keyframes costOne {
@@ -52,7 +53,7 @@
         }
     
         100% {
-            width: 65vw;
+            width: 100%;
         }
     }
 
@@ -61,6 +62,22 @@
         background: $primaryTextColor;
         border-radius: 6px;
         animation: costTwo 2s linear forwards;
+        width: 45vw;
+
+        @media screen and (max-width: $mediaMobileSmall) {
+            width: 35vw;
+            animation: costTwoMobile; 
+
+            @keyframes costTwoMobile {
+                0% {
+                    width: 0;
+                }
+            
+                100% {
+                    width: 35vw;
+                }
+            }
+        }
     }
     
     @keyframes costTwo {
@@ -70,6 +87,10 @@
     
         100% {
             width: 45vw;
+
+            @media screen and (max-width: $mediaMobileSmall) {
+                width: 35vw;
+            }
         }
     }
 }

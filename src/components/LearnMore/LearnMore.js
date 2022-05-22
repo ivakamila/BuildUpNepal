@@ -6,8 +6,7 @@ import "./LearnMore.scss";
 const LearnMore = () => {
   return (
     <div className="learn-more" id="learn-more">
-      <h2>Learn More</h2>
-      <p>Lorem ipsum dolor</p>
+      <h2>Independent evaluations and reports</h2>
       <LazyLoad height={200} offset={0}>
         <div className="learn-more__docs">
           {LearnMoreData.map((item) => {
