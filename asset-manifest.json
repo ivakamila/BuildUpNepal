@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/BuildUpNepal/static/css/main.fea7ed32.css",
+    "main.css": "/BuildUpNepal/static/css/main.1cfd8835.css",
     "main.js": "/BuildUpNepal/static/js/main.0ec5768b.js",
     "static/media/Key-partners-img.png": "/BuildUpNepal/static/media/Key-partners-img.1094b180841572c151ec.png",
     "static/media/Hero-slider-1.png": "/BuildUpNepal/static/media/Hero-slider-1.300a8a85bf40e991d2bc.png",
@@ -70,11 +70,11 @@
     "static/media/bun-logo.svg": "/BuildUpNepal/static/media/bun-logo.633504ff6c300ac35371c8f236393b11.svg",
     "static/media/fontello.woff2?41378239": "/BuildUpNepal/static/media/fontello.4d9a5ac931bc0fbf0746.woff2",
     "index.html": "/BuildUpNepal/index.html",
-    "main.fea7ed32.css.map": "/BuildUpNepal/static/css/main.fea7ed32.css.map",
+    "main.1cfd8835.css.map": "/BuildUpNepal/static/css/main.1cfd8835.css.map",
     "main.0ec5768b.js.map": "/BuildUpNepal/static/js/main.0ec5768b.js.map"
   },
   "entrypoints": [
-    "static/css/main.fea7ed32.css",
+    "static/css/main.1cfd8835.css",
     "static/js/main.0ec5768b.js"
   ]
 }
