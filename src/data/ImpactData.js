@@ -32,7 +32,7 @@ export const ImpactData = [
   },
   {
     icon: "icon-bricks-icon",
-    count: 2896,
+    count: 2788,
     text: "Jobs",
     desc: (
       <>

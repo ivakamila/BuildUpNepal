@@ -16,19 +16,16 @@
         margin: 0 1em;
     }
 
-    .brick-technology__text {
-        font-size: 1.5rem;
-        line-height: 2rem;
+    .p-large {
         width: 55%;
-        margin: 0.65625em auto 4em;
+        margin: 0.875em auto 4em;
+        text-align: center;
 
         @media screen and (max-width: $mediaDesktop) {
             width: 75%;
         }
 
         @media screen and (max-width: $mediaMobile) {
-            font-size: 1rem;
-            line-height: 1.5rem;
             margin-bottom: 2em;
         }
 

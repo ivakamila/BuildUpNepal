@@ -17,7 +17,12 @@ const KeyPartners = () => {
       <LazyLoad height={200} offset={0}>
         <div className="partner__logos">
           {PartnersData.slice(0, visiblePartners).map((item) => (
-            <div className="partner__logo" key={uuid()}>
+            <div
+              className={
+                item.name === "DFAT" ? "partner__logo--dfat" : "partner__logo"
+              }
+              key={uuid()}
+            >
               <img
                 src={item.img}
                 alt={item.name}

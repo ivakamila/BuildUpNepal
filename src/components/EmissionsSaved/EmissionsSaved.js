@@ -168,7 +168,7 @@ const EmmissionsSaved = () => {
         </div>
       </div>
       <h3>Replacing dirty bricks at scale</h3>
-      <p>
+      <p className="p-large">
         CSEB produces 50% less CO2 emissions (1), saving 9,5 tonnes per 3-room
         house build with CSEB instead of fired bricks (2).
       </p>

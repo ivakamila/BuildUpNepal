@@ -32,7 +32,9 @@ const CreatedJobs = () => {
       <JobsModal show={showModal.toString()} close={closeModal} />
       <LazyLoad height={200} offset={0}>
         <div className="percentage-line">
-          <h4>Demographics for jobs in production</h4>
+          <h4 className="percentage-line__title">
+            Demographics for jobs in production
+          </h4>
           <div className="percentage-line__container">
             <div className="percentage-line__part percentage-line__one">
               <div className="percentage percentage__blue"></div>
@@ -42,18 +44,6 @@ const CreatedJobs = () => {
               <div className="percentage percentage__blue--med"></div>
               <p className="percentage__text--red">74% men</p>
             </div>
-            {/* <div className="percentage-line__part wrapper__blue">
-              <div className="percentage percentage__blue"></div>
-              <p className="percentage__text--blue">75% disadvantaged groups</p>
-            </div>
-            <div className="percentage-line__part wrapper__red">
-              <div className="percentage percentage__blue--med"></div>
-              <p className="percentage__text--red">15% women</p>
-            </div>
-            <div className="percentage-line__part wrapper__grey">
-              <div className="percentage percentage__blue--light"></div>
-              <p className="percentage__text--grey">10% youth</p>
-            </div> */}
           </div>
         </div>
       </LazyLoad>

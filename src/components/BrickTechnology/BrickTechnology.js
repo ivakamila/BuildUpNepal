@@ -21,7 +21,7 @@ const BrickTechnology = () => {
   return (
     <div className="technology" id="brick-technology">
       <h2>Low-cost, eco friendly brick technology</h2>
-      <p className="brick-technology__text">
+      <p className="p-large">
         Build up Nepal builds low-cost houses using CSEB Compressed Stabilized
         Earth Bricks, a recognized disaster resilient technology.{" "}
         <span

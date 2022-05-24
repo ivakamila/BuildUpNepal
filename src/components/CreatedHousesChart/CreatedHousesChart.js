@@ -148,7 +148,7 @@ const CreatedHousesChart = () => {
     <div className="houses-chart__container" id="eco-friendly-housing">
       <span className="icon-house-icon"></span>
       <h2>Eco-friendly, Safe and Affordable Homes</h2>
-      <p>
+      <p className="p-large">
         Build up Nepal&apos;s mission is to make safe, eco-friendly housing
         affordable for all.
       </p>

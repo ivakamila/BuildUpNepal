@@ -7,20 +7,10 @@
         display: flex;
         flex-direction: column;
 
-        p {
+        p, li {
             margin-top: 0;
-            font-size: 1.375rem;
             text-align: left;
-            line-height: 1.75rem;
             margin: 0;
-
-            @media (max-width: $mediaMobileSmall) {
-                font-size: .9rem;
-            }
-        }
-
-        ul {
-            margin-top: 0;
         }
         
         .modal__img {

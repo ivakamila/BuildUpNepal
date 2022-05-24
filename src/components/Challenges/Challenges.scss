@@ -1,13 +1,15 @@
 @import "../../utilities/_variables.scss";
 
 .challenges {
-    padding: 8em 0 4.0625em;
+    padding: 8em 0 4em;
 
     @media screen and (max-width: $mediaMobile) {
         padding: 4em 0 3em;
     }
 
     h2 {
+        margin: 0 1em; 
+
         @media screen and (max-width: $mediaMobile) {
             font-size: 1.75rem;
             line-height: 2.25rem;

@@ -9,14 +9,11 @@ import "swiper/scss/autoplay";
 import "swiper/scss/effect-fade";
 import { useState } from "react";
 import LazyLoad from "react-lazyload";
+import ReactPlayer from "react-player";
 
 const VideoSlider = () => {
   const [playVideo, setPlayVideo] = useState(false);
   const [videoIndex, setVideoIndex] = useState(null);
-
-  const handleClick = () => {
-    setPlayVideo(true);
-  };
 
   SwiperCore.use([Pagination, Autoplay, EffectFade]);
 
@@ -59,23 +56,18 @@ const VideoSlider = () => {
                 />
                 <h3>{slide.quote}</h3>
                 <p>{slide.smallText}</p>
-                <span className="icon-play-button" onClick={handleClick}></span>
+                <span className="icon-play-button"></span>
                 {playVideo && (
-                  <iframe
+                  <ReactPlayer
                     width="100%"
                     height="100%"
-                    src={
-                      playVideo
-                        ? `${VideoSliderData[videoIndex].url}?autoplay=1&mute=1`
-                        : VideoSliderData[videoIndex].url
-                    }
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
+                    playing={true}
+                    url={VideoSliderData[videoIndex].url}
+                    controls={true}
+                    muted
                     className="video__slide--player"
                     style={{ paddingBottom: playVideo && "3em" }}
-                  ></iframe>
+                  />
                 )}
               </SwiperSlide>
             );

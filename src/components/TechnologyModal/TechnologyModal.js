@@ -1,4 +1,5 @@
 import "./TechnologyModal.scss";
+import "../../App.scss";
 import TechnologyModalImg from "../../assets/technology-modal-img.jpg";
 
 const TechnologyModal = ({ show, close }) => {
@@ -35,22 +36,20 @@ const TechnologyModal = ({ show, close }) => {
                   the cement-mortar in construction means 50% less CO2 emissions
                   than fired bricks.
                 </p>
+                <br />
                 <p>
-                  Disaster resilience: When building with CSEB the bricks
-                  interlock just like LEGO. Vertical rebar is anchored in the
-                  foundation and placed evenly throughout the walls, connected
-                  with horizontal seismic bands interconnecting the house,
-                  making it highly earthquake resistant. In flood prone areas
-                  the foundation is also raised to avoid the effects of monsoon
-                  flooding, intensified by climate change.
+                  <strong>Disaster resilience:</strong> When building with CSEB
+                  the bricks interlock just like LEGO. Vertical rebar is
+                  anchored in the foundation and placed evenly throughout the
+                  walls, connected with horizontal seismic bands interconnecting
+                  the house, making it highly earthquake resistant. In flood
+                  prone areas the foundation is also raised to avoid the effects
+                  of monsoon flooding, intensified by climate change.
                 </p>
                 <h4>Benefits of CSEB interlocking bricks</h4>
                 <ul>
                   <li>35-50% lower cost, driving adoption at scale</li>
-                  <br />
-                  <li>
-                    <strong>Disaster resistant, ensuring safe houses</strong>
-                  </li>
+                  <li>Disaster resistant, ensuring safe houses</li>
                   <li>
                     Creates local jobs, reducing poverty and forced migration
                   </li>

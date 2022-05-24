@@ -6,7 +6,7 @@ const ScalableEnterprises = () => {
   return (
     <div className="enterprises" id="scalable-enterprises">
       <h2>Scalable Enterprises</h2>
-      <p>Meet the enterprises &amp; communities</p>
+      <p className="p-large">Meet the enterprises &amp; communities</p>
       {/* <ProjectMap /> */}
       <LazyLoad height={200} offset={0}>
         <div className="percentage-line">

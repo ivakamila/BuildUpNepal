@@ -9,7 +9,7 @@ const Impact = () => {
   return (
     <div className="impact" id="impact-we-create">
       <h2>Multiplier effect &amp; SDG impact</h2>
-      <p>
+      <p className="p-large">
         Our 288 enterprises are building houses, creating jobs and saving CO2
         emissions year-after-year.
       </p>

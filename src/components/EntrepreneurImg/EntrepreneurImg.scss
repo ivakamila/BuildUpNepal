@@ -12,7 +12,7 @@
         object-fit: cover;
 
         @media screen and (max-width: $mediaMobile) {
-            height: 100vh;
+            height: 60vh;
         }
     }
 
@@ -28,7 +28,7 @@
         }
 
         @media screen and (max-width: $mediaMobile) {
-            padding: 2em 0.8em;
+            padding: 2em 0.8em 0.5em;
         }
 
         h2 {

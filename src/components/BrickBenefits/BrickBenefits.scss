@@ -20,6 +20,11 @@
 
 .link-containers {
     @include link-containers;
+    margin-top: 2em;
+
+    @media screen and (max-width: $mediaTablet) {
+        flex-direction: column;
+    }
 
     .link-container {
         @include link-container;

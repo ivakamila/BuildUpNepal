@@ -64,7 +64,7 @@ $greyColor: #DADADA;
     transform: translateX(-50%);
     display: flex;
     gap: 1em;
-    z-index: 1;
+    z-index: -1;
 }
 
 @mixin swiper-pagination-bullet {
@@ -114,7 +114,6 @@ $greyColor: #DADADA;
     a {
         @include flex-center;
         gap: 0.5em;
-        text-decoration: none;
         color: $smallTextColor;
         font-size: 0.688rem;
         letter-spacing: 0.5px;
@@ -146,11 +145,15 @@ $greyColor: #DADADA;
     background-color: rgba(255,255,255,0.7); 
 
     .modal__container {
-        width: 80%;
+        width: 70%;
 
         @media (max-width: $mediaMobileSmall) {
-            top: 10%;
+            top: 2em;
         }  
+    }
+
+    .impact-measure {
+        top: 1em;
     }
     
     .modal__container, 
@@ -164,7 +167,6 @@ $greyColor: #DADADA;
         border-radius: 8px;
         overflow: auto;
         padding: 3.4em 5.9em 2.4em 4em;
-        margin-top: 10em;
         z-index: 100;
     
         @media (max-width: $mediaDesktop) {
@@ -185,11 +187,13 @@ $greyColor: #DADADA;
         }
     
         h2 {
-            font-size: 2.7rem;
+            font-size: 2.813rem;
+            line-height: 3.25rem;
             font-weight: 400;
             color: $primaryTextColor;
             margin-top: 0;
             margin-bottom: .5em;
+            margin-left: 0;
             text-align: left;
     
             @media (max-width: $mediaTablet) {
@@ -200,6 +204,7 @@ $greyColor: #DADADA;
             @media (max-width: $mediaMobileSmall) {
                 margin-top: .7em;
                 font-size: 1.5rem;
+                line-height: 2rem;
             }
         }
     
@@ -229,7 +234,8 @@ $greyColor: #DADADA;
             }
     
             h3 {
-                font-size: 1.4rem;
+                font-size: 1.375rem;
+                line-height: 1.85rem;
                 font-weight: 400;
                 margin: 0;
                 text-align: left;
@@ -244,14 +250,8 @@ $greyColor: #DADADA;
             }
             
             p, li {
-                font-size: 1.375rem;
                 text-align: left;
-                line-height: 1.75rem;
                 margin: 0;
-    
-                @media (max-width: $mediaMobileSmall) {
-                    font-size: .9rem;
-                }
             }
         }
     
@@ -337,6 +337,10 @@ $greyColor: #DADADA;
     left: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
+
+    &:hover {
+        color: $redColor;
+    }
 }
 
 @mixin image-with-text {
@@ -367,7 +371,7 @@ $greyColor: #DADADA;
 
         @media screen and (max-width: $mediaTablet) {
             font-size: 5rem;
-            top: 38%;
+            top: 30%;
         }
 
         @media screen and (max-width: $mediaMobile) {
@@ -695,6 +699,7 @@ $greyColor: #DADADA;
 
     .animated-line__number--two {
         color: $primaryTextColor;
+        margin-bottom: 0;
     }
 
     @keyframes fadeIn {
@@ -764,7 +769,7 @@ $greyColor: #DADADA;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    margin: 0 auto 2em;
+    margin: 0 auto;
     width: 75%;
     overflow-y: auto;
     padding-top: 4em;
@@ -809,6 +814,7 @@ $greyColor: #DADADA;
             grid-template-columns: 1fr;
             width: 299px;
             height: 299px;
+            object-fit: cover;
 
 
             @media screen and (max-width: 1024px) {
@@ -839,6 +845,7 @@ $greyColor: #DADADA;
             grid-column-start: 1;
             width: 100%;
             height: 100%;
+            max-height: 299px;
         }
 
         .benefits__chart {
@@ -848,29 +855,17 @@ $greyColor: #DADADA;
         }
 
         h4 {
-            font-size: 1.75rem;
             font-weight: 400;
-            line-height: 2.25rem;
-            margin-bottom: 0;
-
-            @media screen and (max-width: $mediaMobile) {
-                font-size: 1.1rem;
-                line-height: 1.5rem;
-            }
+            margin-top: 1.14em;
+            margin-bottom: 0.14em;
         }
 
-        p {
-            font-size: 1rem;
-            line-height: 1.5rem;
+        p, ul {
             margin-top: 0;
             text-align: center;
             width: 80%;
-
-            @media screen and (max-width: $mediaMobile) {
-                font-size: 0.875rem;
-                line-height: 1.25rem;
-            }
         }
+
 
         span {
             font-size: 1.25rem;

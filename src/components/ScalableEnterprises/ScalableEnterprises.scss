@@ -4,7 +4,7 @@
     width: 79vw;
     text-align: center;
     margin: 0 auto;
-    padding-top: 7.94em;
+    padding-top: 8em;
     padding-bottom: 0;
 
     @media screen and (max-width: $mediaMobile) {
@@ -12,8 +12,6 @@
     }
 
     h2 {
-        margin: 0;
-
         @media screen and (max-width: $mediaMobile) {
             font-size: 1.85rem;
             line-height: 2.25rem;

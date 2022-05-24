@@ -1,7 +1,7 @@
 import "./FiredBricksVideo.scss";
 import FiredBrickImg from "../../assets/fired-brick-video.png";
-import PlayButton from "../../assets/play-button.svg";
 import { useState } from "react";
+import ReactPlayer from "react-player";
 
 const FiredBricksVideo = () => {
   const [playVideo, setPlayVideo] = useState(false);
@@ -13,29 +13,22 @@ const FiredBricksVideo = () => {
   return (
     <div className="fired-bricks">
       <h2>Fired Bricks are a major climate issue</h2>
-      <div className="fired-bricks__video">
+      <div className="fired-bricks__video" onClick={handleClick}>
         <img
           src={FiredBrickImg}
           alt="fired bricks"
           className="fired-bricks__video--img"
-          onClick={handleClick}
         />
-        <span
-          className="icon-play-button play-button"
-          onClick={handleClick}
-        ></span>
-
+        <span className="icon-play-button" onClick={handleClick}></span>
         {playVideo && (
-          <iframe
+          <ReactPlayer
             width="100%"
             height="100%"
-            src={playVideo && "https://youtube.com/embed/Gp3dHKLXaJM"}
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
+            playing={playVideo && true}
+            controls={true}
+            url="https://youtube.com/embed/Gp3dHKLXaJM?autoplay=1&mute=1"
             className="fired-bricks__video--player"
-          ></iframe>
+          />
         )}
       </div>
     </div>

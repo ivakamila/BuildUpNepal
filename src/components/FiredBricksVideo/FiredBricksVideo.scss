@@ -11,49 +11,48 @@
     }
 
     h2 {
-        margin: 0;
-
         @media screen and (max-width: $mediaMobile) {
-            font-size: 1.75rem;
-            line-height: 2.25rem;
             width: 80%;
             margin: 0 auto;
         }
     }
 
     .fired-bricks__video {
-        width: 100%;
+        width: 78vw;
         max-width: 1128px;
         margin: 4em auto 0;
         position: relative;
         @include flex-center;
 
+        &:hover {
+            cursor: pointer;
+        }
+
         @media screen and (max-width: $mediaMobile) {
             margin-top: 2em;
+            width: 90vw;
         }
     
         .fired-bricks__video--img {
             width: 100%;
             height: 100%;
             max-width: 1128px;
-
-            @media screen and (max-width: $mediaDesktop) {
-                width: 90%;
-            }
         }
 
         .icon-play-button:before { 
             content: '\e810'; 
-            color: #fff;
-            font-size: 5.25rem;
 
             @media screen and (max-width: $mediaMobile) {
                 font-size: 2.625rem;
             }
         }
-    
-        .play-button {
+
+        .icon-play-button {
             @include play-button;
+
+            @media screen and (max-width: $mediaMobile) {
+                top: 40%;
+            }
         }
     
         .fired-bricks__video--player {
@@ -61,6 +60,7 @@
             top: 0;
             left: 0;
             z-index: 100;
+            width: 78vw;
             max-width: 100%;
         }
     }

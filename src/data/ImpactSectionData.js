@@ -17,7 +17,6 @@ export const ImpactSectionData = [
   },
   {
     img: [JobsCreatedOne, JobsCreatedTwo],
-    // imgTwo: JobsCreatedTwo,
     title: "2,896",
     desc: "Jobs created",
   },

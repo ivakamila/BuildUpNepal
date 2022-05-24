@@ -1,13 +1,17 @@
 @import "../../utilities/_variables.scss";
 
 .created-jobs {
-    width: 79vw;
+    width: 78vw;
     margin: 0 auto;
     padding: 8em 0;
 
+    @media screen and (max-width: $mediaTablet) {
+        width: 90vw;
+        padding: 4em 2em;
+    }
+
     @media screen and (max-width: $mediaMobile) {
         padding: 3em 0;
-        width: 90vw;
     }
 
     h2 {
@@ -53,6 +57,11 @@
 .percentage-line {
     @include percentage-line;
     margin: 0 auto; 
+
+    p {
+        margin-top: 0.5em;
+        margin-bottom: 1.5em;
+    }
 
     .percentage-line__container {
         @include percentage-line__container;
@@ -149,10 +158,6 @@
     .percentage__blue--med {
         background: rgba(24, 99, 175, 0.6);
     }
-    
-    // .percentage__blue--light {
-    //     background: rgba(24, 99, 175, 0.3);
-    // }
 }
 
 .sectors {
